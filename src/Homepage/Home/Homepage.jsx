@@ -1,5 +1,7 @@
+
 import Blog from "../Blog";
 import Counter from "../Counter";
+import Features from "../Features";
 
 const Homepage = () => {
   return (
@@ -7,8 +9,10 @@ const Homepage = () => {
       <h1>This is homepage.</h1>
       <Blog></Blog>
       <Counter></Counter>
+    <Features></Features>
     </div>
   );
+
 };
 
 export default Homepage;
