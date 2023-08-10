@@ -1,8 +1,9 @@
+import Features from "../Features";
 
 const Homepage = () => {
     return (
         <div>
-            <h1>This is homepage.</h1>
+            <Features/>
         </div>
     );
 };
