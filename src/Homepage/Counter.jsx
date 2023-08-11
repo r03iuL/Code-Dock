@@ -1,11 +1,10 @@
 const Counter = () => {
   return (
-    <div className="my-[5%]">
-      <div className=" text-center mx-auto text-3xl uppercase  font-bold py-[2%] flex flex-col w-1/3">
-        <h3 className="">Counter</h3>
-        <div className="divider "></div>
+    <div className="my-5">
+      <div className=" text-center mx-auto text-3xl font-mono font-semibold py-[2%] flex flex-col ">
+        <h1>Trusted by developers worlwide </h1>
       </div>
-      <div className=" text-center my-8 lg:my-5 lg:mb-[5%] mx-[8%] p-[3%] bg-sky-100 flex flex-col  gap-y-4 lg:flex-row lg:justify-around items-center">
+      <div className=" text-center my-8 lg:my-5 lg:mb-[5%] mx-[8%] py-[8%] bg-sky-100 flex flex-col  gap-y-4 lg:flex-row lg:justify-around items-center">
         <div className="flex items-center">
           <div className="">
             <p className="text-blue-800 text-4xl font-bold">200+</p>
