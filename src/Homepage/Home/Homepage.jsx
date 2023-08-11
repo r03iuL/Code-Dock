@@ -12,10 +12,10 @@ const Homepage = () => {
   return (
     <div className="px-[5%] mx-auto max-w-7xl ">
       <Hero></Hero>
-      <Blog></Blog>
       <Counter></Counter>
       <Features></Features>
       <Faq></Faq>
+      <Blog></Blog>
      <AboutUs></AboutUs>
     </div>
   );
