@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
 
     const navbarStart =
-        <div className="grid lg:flex lg:gap-5">
+        <div className="grid lg:flex lg:gap-5 text-xl font-semibold">
             <Link to='/'>Features</Link>
             <Link to='/'>Blog</Link>
             <Link to='/blog'>About Us</Link>
         </div>
 
     const navbarEnd =
-        <div className="grid lg:flex lg:gap-5">
+        <div className="grid lg:flex lg:gap-5 text-xl font-semibold">
             <div className="form-control">
                 <input type="text" placeholder="Search" className="input bg-white input-bordered w-24 md:w-auto" />
             </div>
@@ -19,7 +19,7 @@ const Navbar = () => {
         </div>
 
     return (
-        <div className="navbar bg-slate-100 text-black">
+        <div className="navbar bg-blue-300 text-black">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
