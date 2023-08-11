@@ -11,7 +11,7 @@ const Homepage = () => {
       <Hero></Hero>
       <Blog></Blog>
       <Counter></Counter>
-        <Features></Features>
+      <Features></Features>
       <Faq></Faq>
     </div>
   );
