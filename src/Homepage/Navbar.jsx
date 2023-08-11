@@ -2,16 +2,24 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const navbarStart = (
-    <div className="grid lg:flex lg:gap-5 text-xl font-semibold">
-      <Link to="/">Features</Link>
-      <Link>Code Editor</Link>
-      <Link to="/">Blog</Link>
-      <Link to="/blog">About Us</Link>
-    </div>
+    <ul className="lg:flex gap-4 text-lg font-semibold">
+      <li>
+        <Link to="/">Features</Link>
+      </li>
+      <li>
+        <Link>Code Editor</Link>
+      </li>
+      <li>
+        <Link to="/">Blog</Link>
+      </li>
+      <li>
+        <Link to="/blog">About Us</Link>
+      </li>
+    </ul>
   );
 
   const navbarEnd = (
-    <div className="grid lg:flex lg:gap-5 text-lg font-semibold">
+    <div className="grid lg:flex lg:gap-5 items-center text-lg font-semibold">
       <div className="form-control">
         <input
           type="text"
@@ -25,7 +33,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar bg-blue-300 text-black items-center">
+    <div className="container mx-auto navbar bg-blue-300 text-black flex justify-between items-center px-5">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -46,25 +54,21 @@ const Navbar = () => {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-slate-100 rounded-box w-52 gap-5 my-autos"
+            className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-slate-200 rounded-box w-52 gap-5 my-auto z-10"
           >
             {navbarStart}
             {navbarEnd}
           </ul>
         </div>
         <div>
-          <h2 className="font-bold font-mono text-3xl mx-3 ">
+          <h2 className="font-bold font-mono text-3xl">
             C0de<span>_&gt;</span>d0ck
           </h2>
         </div>
       </div>
-      <div className="navbar hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 gap-5">
-          <div className="flex justify-evenly">
-            <div className="navbar-start mr-40">{navbarStart}</div>
-            <div className="navbar-end">{navbarEnd}</div>
-          </div>
-        </ul>
+      <div className="navbar p-0 hidden lg:flex justify-between items-center">
+        <div className="navbar-start">{navbarStart}</div>
+        <div className="navbar-end">{navbarEnd}</div>
       </div>
     </div>
   );

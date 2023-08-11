@@ -13,14 +13,14 @@ const AboutUs = () => {
   }, []);
   return (
     <section className="lg:w-3/4 mx-auto">
-      <div className="text-center my-6 w-3/4 mx-auto">
-        <h2 className="text-2xl my-4">About Us</h2>
-        <p className="text-lg text-justify">
-          We're Reactronauts, a hub for sharing code and ideas. Our platform
+      <div className="text-center my-6 container mx-auto">
+      <h2 className="text-center text-3xl lg:text-5xl font-semibold mb-5">About Us</h2>
+      <p className="px-6 lg:w-9/12 mx-auto ">
+      We're Reactronauts, a hub for sharing code and ideas. Our platform
           makes coding collaboration effortless, helping developers connect,
           learn, and create together. Join us to explore the world of code
           sharing and take your projects to new heights.
-        </p>
+      </p>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
         {about.map((member) => (
