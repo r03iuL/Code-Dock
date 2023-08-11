@@ -1,0 +1,50 @@
+[
+    {
+        "id":"1",
+        "name": "Robiul Islam",
+        "image": "https://i.ibb.co/YckXBnY/Profile.jpg",
+        "fb": "https://www.facebook.com/r03iuL",
+        "github": "https://github.com/r03iuL",
+        "linkedin": "https://www.linkedin.com/in/r03iul/"
+    },
+    {
+        "id":"2",
+        "name": "Bayshakhe Pramanik",
+        "image": "https://i.ibb.co/jksHW8d/profile-image.jpg?fbclid=IwAR0etwa71T4hj4vvPM-_OiReLGzeSDh30prVLLOuQOTLv8fJfzpzHezGbDk",
+        "fb": "https://www.facebook.com/sopnobalika.pinky.1",
+        "github": "https://github.com/Bayshakhe",
+        "linkedin": "https://www.linkedin.com/in/bayshakhe-pramanik190/"
+    },
+    {
+        "id":"3",
+        "name": "Mahbubur Rahman",
+        "image": "https://i.ibb.co/5sy6Hx5/1691724153809.jpg?fbclid=IwAR0etwa71T4hj4vvPM-_OiReLGzeSDh30prVLLOuQOTLv8fJfzpzHezGbDk",
+        "fb": "https://www.facebook.com/md.loviv/",
+        "github": "https://github.com/mahbubur-rahman1",
+        "linkedin": "https://www.linkedin.com/in/mahbubur-rahman-491068283/"
+    },
+    {
+        "id":"4",
+        "name": "Rabiul Ahsan",
+        "image": "https://i.ibb.co/mFY4YvC/rabiul.jpg",
+        "fb": "https://www.facebook.com/rabiul.ahsan.21",
+        "github": "https://github.com/rabiulahsan",
+        "linkedin": "https://www.linkedin.com/in/rabiul-ahsan/"
+    },
+    {
+        "id":"5",
+        "name": "Istiak Ahmed",
+        "image": "https://i.ibb.co/b7HS7Qk/istiak.jpg",
+        "fb": "https://www.facebook.com/ironmanaa/",
+        "github": "https://github.com/istiakantu",
+        "linkedin": "https://www.linkedin.com/in/istiak-ahmed-a35b89278/"
+    },
+    {
+        "id":"6",
+        "name": "Taslima Akter Papia",
+        "image": "https://i.ibb.co/RNTNkwq/papia-6cd9c3d4.png",
+        "fb": "https://www.facebook.com/taslimapapiasunfy2/",
+        "github": "https://github.com/taslimaakterpapia",
+        "linkedin": "https://www.linkedin.com/in/taslima-akter-papia-1852a8280/"
+    }
+]
