@@ -1,3 +1,5 @@
+import AboutUs from "../AboutUs";
+
 
 import Blog from "../Blog";
 import Counter from "../Counter";
@@ -6,6 +8,7 @@ import Faq from "../Faq";
 
 
 const Homepage = () => {
+
   return (
     <div className="px-[5%] mx-auto max-w-7xl ">
       <h1>This is homepage.</h1>
@@ -13,8 +16,10 @@ const Homepage = () => {
       <Counter></Counter>
       <Features></Features>
       <Faq></Faq>
+     <AboutUs></AboutUs>
     </div>
   );
+
 };
 
 export default Homepage;
