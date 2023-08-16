@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import { BiSolidDashboard, BiSolidTimer, BiLogOutCircle } from 'react-icons/bi';
+import { BsChatText } from 'react-icons/bs';
 import { RiGitRepositoryLine } from 'react-icons/ri';
 import { AiFillProject } from 'react-icons/ai';
 import { MdOutlineFavorite } from 'react-icons/md';
@@ -22,6 +23,11 @@ const DashboardLayout = () => {
     {
       url: "/dashboard/repositories",
       featureName: "Repositories",
+      icon: <RiGitRepositoryLine className="text-lg mr-1"></RiGitRepositoryLine>
+    },
+    {
+      url: "/dashboard/createNew",
+      featureName: "Create New Repository",
       icon: <RiGitRepositoryLine className="text-lg mr-1"></RiGitRepositoryLine>
     },
     {
@@ -96,7 +102,10 @@ const DashboardLayout = () => {
               </div>
             </div>
           </li>
-          <li className="text-center font-bold text-xl">Profile Name</li>
+          <li className="text-center font-bold text-xl mt-2 mb-5">Profile Name</li>
+          <li>
+            <BsChatText className="text-black"></BsChatText>
+          </li>
           {navlinks.map((e, i) => (
             <li className="text-lg" key={i}>
               <NavLink

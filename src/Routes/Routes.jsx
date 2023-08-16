@@ -30,6 +30,10 @@ export const router = createBrowserRouter([
         element: 'recentActivities',
       },
       {
+        path: 'createNew',
+        element: 'createNew',
+      },
+      {
         path: 'repositories',
         element: 'Repositories',
       },
