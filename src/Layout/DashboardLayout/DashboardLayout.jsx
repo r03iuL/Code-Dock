@@ -1,8 +1,9 @@
 import React from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import { BiSolidDashboard, BiSolidTimer, BiLogOutCircle } from 'react-icons/bi';
-import { BsChatText } from 'react-icons/bs';
-import { RiGitRepositoryLine } from 'react-icons/ri';
+import { PiChatTextBold } from 'react-icons/pi';
+import { IoMdNotifications } from 'react-icons/io';
+import { RiGitRepositoryLine, RiGitPullRequestFill } from 'react-icons/ri';
 import { AiFillProject } from 'react-icons/ai';
 import { MdOutlineFavorite } from 'react-icons/md';
 import { SlUserFollowing } from 'react-icons/sl';
@@ -103,9 +104,11 @@ const DashboardLayout = () => {
             </div>
           </li>
           <li className="text-center font-bold text-xl mt-2 mb-5">Profile Name</li>
-          <li>
-            <BsChatText className="text-black"></BsChatText>
-          </li>
+          <div className="flex justify-center gap-6 text-3xl text-gray-700 mb-8">
+            <PiChatTextBold></PiChatTextBold>
+            <IoMdNotifications></IoMdNotifications>
+            <RiGitPullRequestFill></RiGitPullRequestFill>
+          </div>
           {navlinks.map((e, i) => (
             <li className="text-lg" key={i}>
               <NavLink
