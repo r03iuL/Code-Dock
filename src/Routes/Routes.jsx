@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Main from "../Layout/Main";
 import Homepage from "../Homepage/Home/Homepage";
 import DashboardLayout from "../Layout/DashboardLayout/DashboardLayout";
+import CreateNewRepo from "../Pages/CreateNewRepo";
 
 export const router = createBrowserRouter([
   {
@@ -31,7 +32,7 @@ export const router = createBrowserRouter([
       },
       {
         path: 'createNew',
-        element: 'createNew',
+        element: <CreateNewRepo></CreateNewRepo>,
       },
       {
         path: 'repositories',
