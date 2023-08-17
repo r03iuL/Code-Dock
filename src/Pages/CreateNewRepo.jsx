@@ -31,12 +31,11 @@ const CreateNewRepo = () => {
                             {...register("repoName")}
                         />
                         <br />
-                        <select className="mb-5 p-5 text-2xl bg-indigo-400" {...register("repoType")}>
+                        <select className="mb-5 p-5 text-2xl bg-indigo-400 rounded-lg" {...register("repoType")}>
                             <option value="Single">Single</option>
                             <option value="Group">Group</option>
                         </select>
-                        <br />
-                        <select className="mb-5 p-5 text-2xl bg-indigo-400" {...register("repoCategory")}>
+                        <select className="mb-5 ms-8 p-5 text-2xl bg-indigo-400 rounded-lg" {...register("repoCategory")}>
                             <option value="Private">Private</option>
                             <option value="Public">Public</option>
                         </select>
