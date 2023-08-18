@@ -62,7 +62,7 @@ export const router = createBrowserRouter([
       },
       {
         path: 'createNew',
-        element: 'createNew',
+        element: <CreateNewRepo></CreateNewRepo>,
       },
       {
         path: 'repositories',
