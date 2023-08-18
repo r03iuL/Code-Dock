@@ -3,6 +3,7 @@ import Main from "../Layout/Main";
 import Homepage from "../Homepage/Home/Homepage";
 import DashboardLayout from "../Layout/DashboardLayout/DashboardLayout";
 
+
 import CreateNewRepo from "../Pages/CreateNewRepo";
 import Login from "../Shared/Login";
 import Repositories from "../DashboardPages/Repositories";
@@ -10,6 +11,10 @@ import Favourites from "../DashboardPages/Favourites";
 import Trending from "../DashboardPages/trending";
 import RecentRepo from "../DashboardPages/RecentRepo";
 import DashBoard from "../DashboardPages/DashBoard";
+
+import Projects from "../Pages/DashboardFeaturesPage/Projects";
+import Following from "../Pages/DashboardFeaturesPage/Following/Following";
+
 
 import Login from "../Shared/Login";
 import SignUp from "../Shared/SignUp";
@@ -65,7 +70,7 @@ export const router = createBrowserRouter([
       },
       {
         path: 'projects',
-        element: 'Projects',
+        element: <Projects />,
       },
       {
         path: 'favourites',
@@ -73,7 +78,7 @@ export const router = createBrowserRouter([
       },
       {
         path: 'following',
-        element: 'Following',
+        element: <Following />,
       },
       {
         path: 'trending',
