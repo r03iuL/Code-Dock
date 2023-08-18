@@ -1,6 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../Layout/Main";
 import Homepage from "../Homepage/Home/Homepage";
+import DashboardLayout from "../Layout/DashboardLayout/DashboardLayout";
+import Projects from "../Pages/DashboardFeaturesPage/Projects";
+import Following from "../Pages/DashboardFeaturesPage/Following/Following";
 
 export const router = createBrowserRouter([
   {
@@ -16,4 +19,42 @@ export const router = createBrowserRouter([
       }
     ],
   },
+  {
+    path: '/dashboard',
+    element: <DashboardLayout></DashboardLayout>,
+    children:[
+      {
+        path: '/dashboard/main',
+        element: 'dashboard 1st children',
+      },
+      {
+        path: 'recentActivities',
+        element: 'recentActivities',
+      },
+      {
+        path: 'createNew',
+        element: 'createNew',
+      },
+      {
+        path: 'repositories',
+        element: 'Repositories',
+      },
+      {
+        path: 'projects',
+        element: <Projects />,
+      },
+      {
+        path: 'favourites',
+        element: 'Favourites',
+      },
+      {
+        path: 'following',
+        element: <Following />,
+      },
+      {
+        path: 'trending',
+        element: 'Trending',
+      },
+    ]
+  }
 ]);
