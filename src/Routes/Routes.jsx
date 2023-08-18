@@ -2,11 +2,18 @@ import { createBrowserRouter } from "react-router-dom";
 import Main from "../Layout/Main";
 import Homepage from "../Homepage/Home/Homepage";
 import DashboardLayout from "../Layout/DashboardLayout/DashboardLayout";
+import CreateNewRepo from "../Pages/CreateNewRepo";
 import Login from "../Shared/Login";
+import Repositories from "../DashboardPages/Repositories";
+import Favourites from "../DashboardPages/Favourites";
+import Trending from "../DashboardPages/Trending";
+import RecentRepo from "../DashboardPages/RecentRepo";
+import DashBoard from "../DashboardPages/DashBoard";
+import Projects from "../Pages/DashboardFeaturesPage/Projects";
+import Following from "../Pages/DashboardFeaturesPage/Following/Following";
 import SignUp from "../Shared/SignUp";
 import PrivateRoute from "./PrivateRoute";
 import Secret from "../Shared/Secret";
-import CreateNewRepo from "../Pages/CreateNewRepo";
 
 export const router = createBrowserRouter([
   {
@@ -41,35 +48,35 @@ export const router = createBrowserRouter([
     children: [
       {
         path: "/dashboard/main",
-        element: "dashboard 1st children",
+        element: <DashBoard></DashBoard>,
       },
       {
-        path: "recentactivities",
-        element: "recentActivities",
+        path: "recentActivities",
+        element: <RecentRepo></RecentRepo>,
       },
       {
-        path: "new",
+        path: "createNew",
         element: <CreateNewRepo></CreateNewRepo>,
       },
       {
         path: "repositories",
-        element: "Repositories",
+        element: <Repositories></Repositories>,
       },
       {
         path: "projects",
-        element: "Projects",
+        element: <Projects />,
       },
       {
         path: "favourites",
-        element: "Favourites",
+        element: <Favourites></Favourites>,
       },
       {
         path: "following",
-        element: "Following",
+        element: <Following />,
       },
       {
         path: "trending",
-        element: "Trending",
+        element: <Trending></Trending>,
       },
     ],
   },
