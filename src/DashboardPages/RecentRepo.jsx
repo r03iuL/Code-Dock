@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { FaSearch } from "react-icons/fa";
-import RepoCard from "./repoCard";
+import RepoCard from "./RepoCard";
 
 const RecentRepo = () => {
   const [repos, setRepos] = useState([]);
