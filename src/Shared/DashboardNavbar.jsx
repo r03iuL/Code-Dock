@@ -1,10 +1,8 @@
 import React from "react";
-import {
-  BiBookAdd,
-  BiSearchAlt2,
-} from "react-icons/bi";
+import { BiBookAdd, BiSearchAlt2 } from "react-icons/bi";
 import { BsChatRightQuote } from "react-icons/bs";
 import { MdSupportAgent } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const DashboardNavbar = () => {
   return (
@@ -21,9 +19,21 @@ const DashboardNavbar = () => {
           />
         </div>
         <div className="flex items-center gap-3 text-3xl">
-          <BiBookAdd></BiBookAdd>
-          <MdSupportAgent></MdSupportAgent>
-          <BsChatRightQuote></BsChatRightQuote>
+          <p className="cursor-pointer" title="create new repositories">
+            <Link to="/dashboard/new">
+              <BiBookAdd></BiBookAdd>
+            </Link>
+          </p>
+          <p className="cursor-pointer" title="support">
+            <Link to="">
+              <MdSupportAgent></MdSupportAgent>
+            </Link>
+          </p>
+          <p className="cursor-pointer" title="give feedback">
+            <Link to="">
+              <BsChatRightQuote></BsChatRightQuote>
+            </Link>
+          </p>
         </div>
       </div>
     </div>
