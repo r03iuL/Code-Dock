@@ -19,8 +19,9 @@ const CreateNewRepo = () => {
       repoType,
     };
 
+    console.log(newRepoDetails);
     // posting new repository
-    fetch(`https://localhost:5000/new-repository`, {
+    fetch("http://localhost:5000/new", {
       method: "POST",
       headers: {
         "content-type": "application/json",
