@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Main from "../Layout/Main";
 import Homepage from "../Homepage/Home/Homepage";
 import DashboardLayout from "../Layout/DashboardLayout/DashboardLayout";
+
 import CreateNewRepo from "../Pages/CreateNewRepo";
 import Login from "../Shared/Login";
 import Repositories from "../DashboardPages/Repositories";
@@ -9,6 +10,13 @@ import Favourites from "../DashboardPages/Favourites";
 import Trending from "../DashboardPages/trending";
 import RecentRepo from "../DashboardPages/RecentRepo";
 import DashBoard from "../DashboardPages/DashBoard";
+
+import Login from "../Shared/Login";
+import SignUp from "../Shared/SignUp";
+import PrivateRoute from "./PrivateRoute";
+import Secret from "../Shared/Secret";
+
+
 
 export const router = createBrowserRouter([
   {
@@ -20,9 +28,19 @@ export const router = createBrowserRouter([
         element: <Homepage></Homepage>,
       },
       {
-        path: '/login',
-        element: <Login></Login>,
-      }
+
+        path:'login',
+        element:<Login></Login>
+    },
+    {
+        path:'signup',
+        element:<SignUp></SignUp>
+    },
+    {
+        path:'secret',
+        element:<PrivateRoute><Secret></Secret></PrivateRoute>
+    }
+
     ],
   },
   {
@@ -39,7 +57,7 @@ export const router = createBrowserRouter([
       },
       {
         path: 'createNew',
-        element: <CreateNewRepo></CreateNewRepo>,
+        element: 'createNew',
       },
       {
         path: 'repositories',
