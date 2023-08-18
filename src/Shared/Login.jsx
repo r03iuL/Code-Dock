@@ -4,7 +4,6 @@ import { AuthContext } from '../providers/AuthProvider';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import Swal from 'sweetalert2'
-
 import GoogleSignIn from "../Shared/GoogleSignIn";
 import login from '../../src/assets/login.json'
 import { Player } from '@lottiefiles/react-lottie-player';
@@ -64,17 +63,20 @@ const Login = () => {
     return (
         <>
          <Helmet>
-                <title>Bistro Boss | Login </title>
+                <title>CodeDock | Login </title>
             </Helmet>
-        <div className="hero min-h-screen bg-base-200">
-            <div className="hero-content flex-col lg:flex-row">
+      <div className="min-h-screen ">
+      <h1 className="text-5xl font-bold text-center pt-10 pb-5">Login now!</h1>
+      <div className="hero  bg-base-200">        
+            <div className="hero-content flex-col lg:flex-row-reverse">
+                
                 <div className="text-center md:w-1/2 lg:text-left">
-                    <h1 className="text-5xl font-bold md:ml-10">Login now!</h1>
+                    
                     <Player
                             autoplay
                             loop
                             src={login}
-                            style={{ height: '450px' }}
+                            style={{ height: '500px' }}
                         >
                         </Player>
                 </div>
@@ -120,6 +122,7 @@ const Login = () => {
                 </div>
             </div>
         </div>
+      </div>
         </>
     );
 };
