@@ -2,8 +2,6 @@ import { createBrowserRouter } from "react-router-dom";
 import Main from "../Layout/Main";
 import Homepage from "../Homepage/Home/Homepage";
 import DashboardLayout from "../Layout/DashboardLayout/DashboardLayout";
-
-
 import CreateNewRepo from "../Pages/CreateNewRepo";
 import Login from "../Shared/Login";
 import Repositories from "../DashboardPages/Repositories";
@@ -11,17 +9,11 @@ import Favourites from "../DashboardPages/Favourites";
 import Trending from "../DashboardPages/Trending";
 import RecentRepo from "../DashboardPages/RecentRepo";
 import DashBoard from "../DashboardPages/DashBoard";
-
 import Projects from "../Pages/DashboardFeaturesPage/Projects";
 import Following from "../Pages/DashboardFeaturesPage/Following/Following";
-
-
-
 import SignUp from "../Shared/SignUp";
 import PrivateRoute from "./PrivateRoute";
 import Secret from "../Shared/Secret";
-
-
 
 export const router = createBrowserRouter([
   {
@@ -29,61 +21,63 @@ export const router = createBrowserRouter([
     element: <Main></Main>,
     children: [
       {
-        path: '/',
+        path: "/",
         element: <Homepage></Homepage>,
       },
       {
-
-        path:'login',
-        element:<Login></Login>
-    },
-    {
-        path:'signup',
-        element:<SignUp></SignUp>
-    },
-    {
-        path:'secret',
-        element:<PrivateRoute><Secret></Secret></PrivateRoute>
-    }
-
+        path: "login",
+        element: <Login></Login>,
+      },
+      {
+        path: "signup",
+        element: <SignUp></SignUp>,
+      },
+      {
+        path: "secret",
+        element: (
+          <PrivateRoute>
+            <Secret></Secret>
+          </PrivateRoute>
+        ),
+      },
     ],
   },
   {
-    path: '/dashboard',
+    path: "/dashboard",
     element: <DashboardLayout></DashboardLayout>,
-    children:[
+    children: [
       {
-        path: '/dashboard/main',
+        path: "/dashboard/main",
         element: <DashBoard></DashBoard>,
       },
       {
-        path: 'recentActivities',
+        path: "recentActivities",
         element: <RecentRepo></RecentRepo>,
       },
       {
-        path: 'createNew',
-        element: 'createNew',
+        path: "createNew",
+        element: <CreateNewRepo></CreateNewRepo>,
       },
       {
-        path: 'repositories',
+        path: "repositories",
         element: <Repositories></Repositories>,
       },
       {
-        path: 'projects',
+        path: "projects",
         element: <Projects />,
       },
       {
-        path: 'favourites',
+        path: "favourites",
         element: <Favourites></Favourites>,
       },
       {
-        path: 'following',
+        path: "following",
         element: <Following />,
       },
       {
-        path: 'trending',
+        path: "trending",
         element: <Trending></Trending>,
       },
-    ]
-  }
+    ],
+  },
 ]);
