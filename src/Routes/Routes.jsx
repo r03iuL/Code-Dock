@@ -8,7 +8,7 @@ import CreateNewRepo from "../Pages/CreateNewRepo";
 import Login from "../Shared/Login";
 import Repositories from "../DashboardPages/Repositories";
 import Favourites from "../DashboardPages/Favourites";
-import Trending from "../DashboardPages/trending";
+import Trending from "../DashboardPages/Trending";
 import RecentRepo from "../DashboardPages/RecentRepo";
 import DashBoard from "../DashboardPages/DashBoard";
 
