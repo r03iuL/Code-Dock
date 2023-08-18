@@ -1,33 +1,45 @@
-/* eslint-disable no-undef */
-
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 
 const CreateNewRepo = () => {
   const {
     register,
+    handleSubmit,
+    reset,
     formState: { errors },
   } = useForm();
 
-  fetch(`localhost/`, {
-    method: "POST",
-    headers: {
-      "content-type": "application/json",
-    },
-    body: JSON.stringify(newRepoDetails),
-  })
-    .then((res) => res.json())
-    .then((data) => {
-      console.log(data);
-      reset();
-      Swal.fire({
-        position: "top-end",
-        icon: "success",
-        title: "Repository been added",
-        showConfirmButton: false,
-        timer: 1500,
+  //onsubmit function for  posting new repository
+  const onSubmit = (data) => {
+    const { repoDescription, repoName, repoType, repoCategory } = data;
+    const newRepoDetails = {
+      repoName,
+      repoCategory,
+      repoDescription,
+      repoType,
+    };
+
+    // posting new repository
+    fetch(`https://localhost:5000/new-repository`, {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(newRepoDetails),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        reset();
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "Repository been added",
+          showConfirmButton: false,
+          timer: 1500,
+        });
       });
-    });
+  };
 
   return (
     <section className="m-8 bg-white ps-20 py-20">
@@ -40,7 +52,7 @@ const CreateNewRepo = () => {
       </div>
       <div className="divider"></div>
       <div>
-        <form>
+        <form onSubmit={handleSubmit(onSubmit)}>
           {errors.exampleRequired && <span>This field is required</span>}
           <div>
             <label className="text-xl font-bold">Repository Name</label> <br />
@@ -56,7 +68,7 @@ const CreateNewRepo = () => {
             <br />
             <input
               className="my-5 p-4 w-[500px] h-[100px] bg-slate-300"
-              {...register("repoName")}
+              {...register("repoDescription")}
             />
             <br />
             <select
