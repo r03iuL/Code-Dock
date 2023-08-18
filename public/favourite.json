@@ -1,0 +1,102 @@
+[
+    {
+        "id": 1,
+        "repoName": "web-app-project",
+        "authorName": "AlexJohnson",
+        "creationDate": "2023-05-20",
+        "status": "public",
+        "rating": 4.5,
+        "numberOfRatings": 75,
+        "types": ["JavaScript", "HTML", "CSS"]
+    },
+    {
+        "id": 2,
+        "repoName": "data-analysis-tools",
+        "authorName": "EmilyDavis",
+        "creationDate": "2023-02-10",
+        "status": "public",
+        "rating": 4.8,
+        "numberOfRatings": 120,
+        "types": ["Python", "Data Science"]
+    },
+    {
+        "id": 3,
+        "repoName": "game-development-kit",
+        "authorName": "MarkRoberts",
+        "creationDate": "2022-11-18",
+        "status": "public",
+        "rating": 4.6,
+        "numberOfRatings": 90,
+        "types": ["C#", "Unity"]
+    },
+    {
+        "id": 4,
+        "repoName": "mobile-app-template",
+        "authorName": "SophieGarcia",
+        "creationDate": "2023-04-05",
+        "status": "public",
+        "rating": 4.3,
+        "numberOfRatings": 42,
+        "types": ["React Native", "JavaScript"]
+    },
+    {
+        "id": 5,
+        "repoName": "algorithm-library",
+        "authorName": "DanielLee",
+        "creationDate": "2023-01-30",
+        "status": "public",
+        "rating": 4.9,
+        "numberOfRatings": 150,
+        "types": ["C++", "Algorithms"]
+    },
+    {
+        "id": 6,
+        "repoName": "blogging-platform",
+        "authorName": "GraceMiller",
+        "creationDate": "2022-10-12",
+        "status": "public",
+        "rating": 4.4,
+        "numberOfRatings": 62,
+        "types": ["PHP", "MySQL"]
+    },
+    {
+        "id": 7,
+        "repoName": "iot-sensor-project",
+        "authorName": "WilliamBrown",
+        "creationDate": "2023-06-25",
+        "status": "public",
+        "rating": 4.7,
+        "numberOfRatings": 88,
+        "types": ["Arduino", "IoT"]
+    },
+    {
+        "id": 8,
+        "repoName": "machine-learning-examples",
+        "authorName": "LindaSmith",
+        "creationDate": "2023-03-15",
+        "status": "public",
+        "rating": 4.6,
+        "numberOfRatings": 105,
+        "types": ["Python", "Machine Learning"]
+    },
+    {
+        "id": 9,
+        "repoName": "ecommerce-store-backend",
+        "authorName": "KevinJohnson",
+        "creationDate": "2023-07-10",
+        "status": "private",
+        "rating": 4.2,
+        "numberOfRatings": 38,
+        "types": ["Java", "Spring Boot"]
+    },
+    {
+        "id": 10,
+        "repoName": "graphic-design-tools",
+        "authorName": "OliviaSmith",
+        "creationDate": "2023-08-05",
+        "status": "public",
+        "rating": 4.8,
+        "numberOfRatings": 68,
+        "types": ["Adobe Creative Suite", "Design"]
+    }
+]

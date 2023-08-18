@@ -6,7 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Swal from 'sweetalert2'
 import GoogleSignIn from "../Shared/GoogleSignIn";
 import { Player } from '@lottiefiles/react-lottie-player';
-import signUp from '../../src/assets/signUp.json'
+import signUp from '../../src/assets/signup.json'
 
 
 
