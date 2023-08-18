@@ -40,6 +40,7 @@ const Navbar = () => {
         />
       </div>
 
+
       {
             user ? <>
             <span>{user.displayName}</span>
@@ -48,6 +49,7 @@ const Navbar = () => {
                 <Link to='/login'>Login</Link>
             </>
         }
+
     </div>
   );
 
