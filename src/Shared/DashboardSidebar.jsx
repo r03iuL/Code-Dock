@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { BiSolidDashboard, BiSolidTimer, BiLogOutCircle } from "react-icons/bi";
 import { PiChatTextBold } from "react-icons/pi";
 import { IoMdNotifications } from "react-icons/io";
@@ -60,7 +60,7 @@ const DashboardSidebar = () => {
   return (
     <>
       <li className="font-extrabold text-center font-mono text-4xl italic my-5">
-        C0de_&gt;d0ck
+        <Link to="/">C0de_&gt;d0ck</Link>
       </li>
       <li className="mx-auto">
         <div className="avatar ">
