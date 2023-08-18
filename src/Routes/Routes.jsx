@@ -3,10 +3,20 @@ import Main from "../Layout/Main";
 import Homepage from "../Homepage/Home/Homepage";
 import DashboardLayout from "../Layout/DashboardLayout/DashboardLayout";
 
+
+import CreateNewRepo from "../Pages/CreateNewRepo";
+import Login from "../Shared/Login";
+import Repositories from "../DashboardPages/Repositories";
+import Favourites from "../DashboardPages/Favourites";
+import Trending from "../DashboardPages/Trending";
+import RecentRepo from "../DashboardPages/RecentRepo";
+import DashBoard from "../DashboardPages/DashBoard";
+
 import Projects from "../Pages/DashboardFeaturesPage/Projects";
 import Following from "../Pages/DashboardFeaturesPage/Following/Following";
 
-import Login from "../Shared/Login";
+
+
 import SignUp from "../Shared/SignUp";
 import PrivateRoute from "./PrivateRoute";
 import Secret from "../Shared/Secret";
@@ -23,6 +33,7 @@ export const router = createBrowserRouter([
         element: <Homepage></Homepage>,
       },
       {
+
         path:'login',
         element:<Login></Login>
     },
@@ -34,6 +45,7 @@ export const router = createBrowserRouter([
         path:'secret',
         element:<PrivateRoute><Secret></Secret></PrivateRoute>
     }
+
     ],
   },
   {
@@ -42,11 +54,11 @@ export const router = createBrowserRouter([
     children:[
       {
         path: '/dashboard/main',
-        element: 'dashboard 1st children',
+        element: <DashBoard></DashBoard>,
       },
       {
         path: 'recentActivities',
-        element: 'recentActivities',
+        element: <RecentRepo></RecentRepo>,
       },
       {
         path: 'createNew',
@@ -54,7 +66,7 @@ export const router = createBrowserRouter([
       },
       {
         path: 'repositories',
-        element: 'Repositories',
+        element: <Repositories></Repositories>,
       },
       {
         path: 'projects',
@@ -62,7 +74,7 @@ export const router = createBrowserRouter([
       },
       {
         path: 'favourites',
-        element: 'Favourites',
+        element: <Favourites></Favourites>,
       },
       {
         path: 'following',
@@ -70,7 +82,7 @@ export const router = createBrowserRouter([
       },
       {
         path: 'trending',
-        element: 'Trending',
+        element: <Trending></Trending>,
       },
     ]
   }

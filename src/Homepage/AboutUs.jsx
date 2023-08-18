@@ -16,7 +16,7 @@ const AboutUs = () => {
       <div className="text-center my-6 container mx-auto">
       <h2 className="text-center text-3xl lg:text-5xl font-semibold mb-5">About Us</h2>
       <p className="px-6 lg:w-9/12 mx-auto ">
-      We're Reactronauts, a hub for sharing code and ideas. Our platform
+      We`&apos`re Reactronauts, a hub for sharing code and ideas. Our platform
           makes coding collaboration effortless, helping developers connect,
           learn, and create together. Join us to explore the world of code
           sharing and take your projects to new heights.
