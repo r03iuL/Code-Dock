@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { FaSearch } from "react-icons/fa";
-import Favcard from "./favcard";
+import Favcard from "./Favcard";
 
 
 const Favourites = () => {
