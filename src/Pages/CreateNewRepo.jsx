@@ -4,7 +4,11 @@ import { useForm } from "react-hook-form";
 
 const CreateNewRepo = () => {
 
-    const { register, formState: { errors } } = useForm();
+    const onSubmit = data =>{
+        // TO DO : here we need to add post api
+    }
+
+    const { register, handleSubmit, formState: { errors } } = useForm();
 
     return (
         <section className="m-8 bg-white ps-20 py-20">
@@ -14,7 +18,7 @@ const CreateNewRepo = () => {
             </div>
             <div className="divider"></div>
             <div>
-                <form >
+                <form onSubmit={handleSubmit(onSubmit)}>
                     {errors.exampleRequired && <span>This field is required</span>}
                     <div >
 
