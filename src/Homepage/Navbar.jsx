@@ -1,6 +1,15 @@
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../providers/AuthProvider";
 
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
+  const handleLogOut = () => {
+    logOut()
+        .then(() => { })
+        .catch(error => console.log(error));
+
+}
   const navbarStart = (
     <ul className="lg:flex gap-4 text-lg font-semibold">
       <li>
@@ -31,7 +40,14 @@ const Navbar = () => {
         />
       </div>
 
-      <Link>Sign Up</Link>
+      {
+            user ? <>
+            <span>{user.displayName}</span>
+                <button onClick={handleLogOut} className="btn btn-ghost">LogOut</button>
+            </> : <>
+                <Link to='/login'>Login</Link>
+            </>
+        }
     </div>
   );
 
