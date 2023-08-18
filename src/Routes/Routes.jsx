@@ -2,10 +2,15 @@ import { createBrowserRouter } from "react-router-dom";
 import Main from "../Layout/Main";
 import Homepage from "../Homepage/Home/Homepage";
 import DashboardLayout from "../Layout/DashboardLayout/DashboardLayout";
+
+import Projects from "../Pages/DashboardFeaturesPage/Projects";
+import Following from "../Pages/DashboardFeaturesPage/Following/Following";
+
 import Login from "../Shared/Login";
 import SignUp from "../Shared/SignUp";
 import PrivateRoute from "./PrivateRoute";
 import Secret from "../Shared/Secret";
+
 
 
 export const router = createBrowserRouter([
@@ -53,7 +58,7 @@ export const router = createBrowserRouter([
       },
       {
         path: 'projects',
-        element: 'Projects',
+        element: <Projects />,
       },
       {
         path: 'favourites',
@@ -61,7 +66,7 @@ export const router = createBrowserRouter([
       },
       {
         path: 'following',
-        element: 'Following',
+        element: <Following />,
       },
       {
         path: 'trending',

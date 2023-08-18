@@ -12,7 +12,6 @@ const Features = () => {
             </div>
             <div className=" grid  gap-4 mt-7">
                 <div className=" shadow-lg rounded-lg p-3 border-2">
-                    
                     <div className="grid grid-cols-3 items-center">
                        
                         <Player
@@ -27,8 +26,7 @@ const Features = () => {
                     </div>
                 </div>
                 <div className="shadow-lg rounded-lg p-3 border-2">
-                    
-                    <div className=" grid grid-cols-3 items-center">
+                     <div className=" grid grid-cols-3 items-center">
                         <p className="col-span-2">
                         <h2 className="text-2xl font-bold    ">GitHub-Enhanced Text Editor for Collaborative Coding</h2>
                             The GitHub-Enhanced Text Editor for Collaborative Coding seamlessly blends with GitHubs collaboration framework, enabling real-time code editing, syntax refinement, and conflict resolution. It grants direct repository access, empowers comprehensive code review, and offers version history tracking, streamlining collaborative development on GitHub projects. This tool elevates the collaborative coding experience, fostering efficient teamwork and enhanced code quality within the GitHub ecosystem.</p>
@@ -42,8 +40,7 @@ const Features = () => {
                     </div>
                 </div>
                 <div className="shadow-lg rounded-lg p-3 border-2">
-                    
-                    <div className="grid grid-cols-3 items-center">
+                     <div className="grid grid-cols-3 items-center">
                     <Player
                             autoplay
                             loop
@@ -51,10 +48,8 @@ const Features = () => {
                             style={{ height: '200px', }}
                         >
                         </Player>
-
                         <p className="col-span-2">
                         <h2 className="text-2xl font-bold  ">Efficient Version Control for Streamlined Development</h2>Efficient Version Control for Streamlined Development involves using specialized tools and practices to manage and track changes made to a codebase. It enables development teams to collaborate seamlessly, maintain a history of code modifications, and ensure code quality. By creating branches for new features or fixes and merging changes systematically, version control minimizes conflicts and aids in code review. This practice fosters an organized workflow, accountability, and faster development cycles, leading to high-quality software releases.</p>
-                        
                     </div>
                 </div>
             </div>
