@@ -48,23 +48,23 @@ const DashboardSidebar = () => {
         </Link>
 
         {/* user name  */}
-        <p className="text-gray-500 text-xl font-semibold my-[3%]">
+        <p className="text-gray-500 text-base font-semibold mb-[2%]">
           {user.displayName}
         </p>
 
         {/* user options  */}
         <div className="flex justify-center text-xl gap-x-5">
-          <p>
+          <p title="messages">
             <Link to="/user/messages">
               <PiChatTextBold></PiChatTextBold>
             </Link>
           </p>
-          <p>
+          <p title="notifications">
             <Link to="/user/notifications">
               <IoMdNotificationsOutline></IoMdNotificationsOutline>
             </Link>
           </p>
-          <p>
+          <p title="pull requests">
             <Link to="/user/pullrequests">
               <RiGitPullRequestFill></RiGitPullRequestFill>
             </Link>
@@ -73,7 +73,7 @@ const DashboardSidebar = () => {
       </div>
 
       {/* navbar options  */}
-      <div className="">
+      <div className="mt-3">
         <ul>
           <li className="  ">
             <ActiveDashboardLink to="/user/dashboard">
@@ -81,6 +81,62 @@ const DashboardSidebar = () => {
                 <BiSolidDashboard></BiSolidDashboard>
               </div>
               <div className="">Dashboard</div>
+            </ActiveDashboardLink>
+          </li>
+          <li className="  ">
+            <ActiveDashboardLink to="/user/recent">
+              <div className="">
+                <BiSolidTimer></BiSolidTimer>
+              </div>
+              <div className="">recent Activities</div>
+            </ActiveDashboardLink>
+          </li>
+          <li className="  ">
+            <ActiveDashboardLink to="/user/repositories">
+              <div className="">
+                <RiGitRepositoryLine></RiGitRepositoryLine>
+              </div>
+              <div className="">Repositories</div>
+            </ActiveDashboardLink>
+          </li>
+          <li className="  ">
+            <ActiveDashboardLink to="/user/projects">
+              <div className="">
+                <AiFillProject></AiFillProject>
+              </div>
+              <div className="">Projects</div>
+            </ActiveDashboardLink>
+          </li>
+          <li className="  ">
+            <ActiveDashboardLink to="/user/favourites">
+              <div className="">
+                <MdOutlineFavorite></MdOutlineFavorite>
+              </div>
+              <div className="">Favoutites</div>
+            </ActiveDashboardLink>
+          </li>
+          <li className="  ">
+            <ActiveDashboardLink to="/user/following">
+              <div className="">
+                <SlUserFollowing></SlUserFollowing>
+              </div>
+              <div className="">Following</div>
+            </ActiveDashboardLink>
+          </li>
+          <li className="  ">
+            <ActiveDashboardLink to="/user/trending">
+              <div className="">
+                <HiOutlineTrendingUp></HiOutlineTrendingUp>
+              </div>
+              <div className="">Trending</div>
+            </ActiveDashboardLink>
+          </li>
+          <li className="  ">
+            <ActiveDashboardLink to="/">
+              <div className="">
+                <BiLogOutCircle></BiLogOutCircle>
+              </div>
+              <div className="">Log out</div>
             </ActiveDashboardLink>
           </li>
         </ul>

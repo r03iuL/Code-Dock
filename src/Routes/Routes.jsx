@@ -55,7 +55,7 @@ export const router = createBrowserRouter([
         element: <RecentRepo></RecentRepo>,
       },
       {
-        path: "createNew",
+        path: "new",
         element: <CreateNewRepo></CreateNewRepo>,
       },
       {
