@@ -5,7 +5,9 @@ const ActiveDashboardLink = ({ to, children }) => {
   return (
     <NavLink
       to={to}
-      className={({ isActive }) => (isActive ? "active-dashboard-navlink" : "")}
+      className={({ isActive }) =>
+        isActive ? "active-dashboard-navlink" : "dashboard-navlink"
+      }
     >
       {children}
     </NavLink>

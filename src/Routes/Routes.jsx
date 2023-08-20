@@ -47,11 +47,11 @@ export const router = createBrowserRouter([
     element: <DashboardLayout></DashboardLayout>,
     children: [
       {
-        path: "/user/main",
+        path: "dashboard",
         element: <DashBoard></DashBoard>,
       },
       {
-        path: "recentActivities",
+        path: "recent",
         element: <RecentRepo></RecentRepo>,
       },
       {

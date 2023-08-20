@@ -3,16 +3,10 @@
 @tailwind utilities;
 
 
-.activeLink{
-    @apply bg-violet-100 border-l-8 border-violet-600 
-    font-bold text-violet-600 rounded-none py-2 
+.active-dashboard-navlink{
+    @apply flex items-center  px-6 py-4 gap-x-4 text-lg  font-semibold bg-violet-100  text-violet-600 border-l-8 border-violet-600
 }
-.nonActiveLink{
-    @apply border-l-8 border-transparent font-semibold text-gray-600 hover:text-violet-600 hover:border-violet-600 py-2 rounded-none
+.dashboard-navlink{
+    @apply  flex items-center border-l-8 border-transparent hover:border-violet-600 hover:text-violet-600 hover:bg-violet-100 px-6 py-4 gap-x-4 text-lg text-gray-500 font-semibold
 }
 
-
-
-/* .active-dashboard-navlink{
-    @apply
-} */

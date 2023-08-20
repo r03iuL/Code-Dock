@@ -10,6 +10,7 @@ import { SlUserFollowing } from "react-icons/sl";
 import { HiOutlineTrendingUp } from "react-icons/hi";
 import useAuth from "../Hooks/useAuth/useAuth";
 import "./dashboardSidebar.css";
+import ActiveDashboardLink from "../Components/ActiveDashboardLink/ActiveDashboardLink";
 
 const DashboardSidebar = () => {
   const { user } = useAuth();
@@ -29,9 +30,9 @@ const DashboardSidebar = () => {
     <div className="py-[5%]">
       {/* logo  */}
       <div className="logo">
-        <p className="italic  text-4xl text-center fost">
+        <p className="italic  text-3xl text-center fost">
           <Link to="/">
-            Code<span className="text-violet-500">Dock</span>
+            Code<span className="text-violet-600">Dock</span>
           </Link>
         </p>
       </div>
@@ -42,7 +43,7 @@ const DashboardSidebar = () => {
           <img
             src={user?.photoURL}
             alt={user?.displayName}
-            className="mx-auto rounded-[50%] border-4 border-violet-400 w-[80px]"
+            className="mx-auto rounded-[50%] border-4 border-violet-400 w-[70px]"
           />
         </Link>
 
@@ -52,7 +53,7 @@ const DashboardSidebar = () => {
         </p>
 
         {/* user options  */}
-        <div className="flex justify-center text-2xl gap-5">
+        <div className="flex justify-center text-xl gap-x-5">
           <p>
             <Link to="/user/messages">
               <PiChatTextBold></PiChatTextBold>
@@ -64,11 +65,25 @@ const DashboardSidebar = () => {
             </Link>
           </p>
           <p>
-            <Link to="">
+            <Link to="/user/pullrequests">
               <RiGitPullRequestFill></RiGitPullRequestFill>
             </Link>
           </p>
         </div>
+      </div>
+
+      {/* navbar options  */}
+      <div className="">
+        <ul>
+          <li className="  ">
+            <ActiveDashboardLink to="/user/dashboard">
+              <div className="">
+                <BiSolidDashboard></BiSolidDashboard>
+              </div>
+              <div className="">Dashboard</div>
+            </ActiveDashboardLink>
+          </li>
+        </ul>
       </div>
     </div>
   );
