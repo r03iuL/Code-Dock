@@ -4,8 +4,6 @@ import DashboardSidebar from "../../Shared/DashboardSidebar";
 
 const DashboardLayout = () => {
   return (
-    // after polishing
-
     <div className="flex w-full h-screen bg-violet-50">
       <div className=" w-1/5 bg-white h-full fixed top-0 left-0 overflow-y-auto">
         <DashboardSidebar></DashboardSidebar>
