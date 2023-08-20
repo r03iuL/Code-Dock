@@ -21,7 +21,7 @@ const CreateNewRepo = () => {
 
     console.log(newRepoDetails);
     // posting new repository
-    fetch("http://localhost:5000/new", {
+    fetch("https://code-dock-server.vercel.app/new", {
       method: "POST",
       headers: {
         "content-type": "application/json",

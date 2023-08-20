@@ -1,10 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
-import Main from "../Layout/Main";
+import Main from "../Layout/Main/Main";
 import Homepage from "../Homepage/Home/Homepage";
 import DashboardLayout from "../Layout/DashboardLayout/DashboardLayout";
 import CreateNewRepo from "../Pages/CreateNewRepo";
 import Login from "../Shared/Login";
-import Repositories from "../DashboardPages/Repositories";
 import Favourites from "../DashboardPages/Favourites";
 import Trending from "../DashboardPages/Trending";
 import RecentRepo from "../DashboardPages/RecentRepo";
@@ -14,6 +13,7 @@ import Following from "../Pages/DashboardFeaturesPage/Following/Following";
 import SignUp from "../Shared/SignUp";
 import PrivateRoute from "./PrivateRoute";
 import Secret from "../Shared/Secret";
+import Repositories from "../DashboardPages/Repositories";
 
 export const router = createBrowserRouter([
   {
@@ -43,11 +43,11 @@ export const router = createBrowserRouter([
     ],
   },
   {
-    path: "/dashboard",
+    path: "/user",
     element: <DashboardLayout></DashboardLayout>,
     children: [
       {
-        path: "/dashboard/main",
+        path: "/user/main",
         element: <DashBoard></DashBoard>,
       },
       {
