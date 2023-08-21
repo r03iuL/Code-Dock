@@ -1,7 +1,7 @@
 import { RiGitRepositoryLine } from "react-icons/ri";
 import SectionTitle from "../../../Components/SectionTitle/SectionTitle";
 import useRepo from "../../../Hooks/useRepo/useRepo";
-import RepositoryCard from "../../../Shared/DashboardSidebar/RepositoryCard/RepositoryCard";
+import RepositoryCard from "../../../Shared/RepositoryCard/RepositoryCard";
 
 const DashBoard = () => {
   //getting data by using hook but it will work when it will be dynamic.
