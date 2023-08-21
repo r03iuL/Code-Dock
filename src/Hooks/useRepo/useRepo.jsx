@@ -4,7 +4,7 @@ const useRepo = () => {
   const [allRepositories, setAllRepositories] = useState([]);
 
   useEffect(() => {
-    fetch("./../../../public/userRepo.json")
+    fetch("/userRepo.json")
       .then((res) => res.json())
       .then((data) => {
         setAllRepositories(data);
