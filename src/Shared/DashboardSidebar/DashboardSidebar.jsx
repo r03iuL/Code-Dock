@@ -13,7 +13,7 @@ import "./dashboardSidebar.css";
 import ActiveDashboardLink from "../../Components/ActiveDashboardLink/ActiveDashboardLink";
 
 const DashboardSidebar = () => {
-  const { user } = useAuth();
+  const { user, logOut } = useAuth();
   console.log(user?.photoURL);
 
   //beacuse at first loading here user is null...
@@ -25,6 +25,13 @@ const DashboardSidebar = () => {
       </p>
     );
   }
+
+  // function for log out the existing user
+  const handleLogOut = () => {
+    logOut()
+      .then()
+      .catch((error) => console.log(error));
+  };
 
   return (
     <div className="py-[5%]">
@@ -131,7 +138,7 @@ const DashboardSidebar = () => {
               <div className="">Trending</div>
             </ActiveDashboardLink>
           </li>
-          <li className="  ">
+          <li className="  " onClick={handleLogOut}>
             <ActiveDashboardLink to="/">
               <div className="">
                 <BiLogOutCircle></BiLogOutCircle>

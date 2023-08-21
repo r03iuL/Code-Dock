@@ -8,7 +8,7 @@ const DashBoard = () => {
   const [allRepositories] = useRepo();
   // console.log(allRepositories.length);
 
-  //it is for temporary it will be removed
+  //TODO=> it is for temporary it will be removed
   const slicedRepo = allRepositories.slice(0, 3);
   console.log(slicedRepo.length);
 

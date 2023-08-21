@@ -8,12 +8,13 @@ const Repositories = () => {
   const [allRepositories] = useRepo();
   // console.log(allRepositories.length);
 
-  //it is for temporary it will be removed
+  //TODO => it is for temporary it will be removed
   const slicedRepo = allRepositories.slice(0, 3);
   console.log(slicedRepo.length);
 
   return (
     <div className="px-[4%] py-[3%]">
+      {/* this is for search  */}
       <div className="flex justify-between box-style  items-center mb-8 ">
         <div className="relative w-1/3   rounded ">
           <div className="absolute top-[16px] left-2">
@@ -46,6 +47,7 @@ const Repositories = () => {
         </div>
       </div>
 
+      {/* this is for repositories  */}
       <div className="box-style my-[3%]">
         <SectionTitle heading="All Repositories"></SectionTitle>
         <div className="mt-[3%]">
