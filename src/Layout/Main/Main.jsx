@@ -1,8 +1,17 @@
-import { Outlet, useLocation } from "react-router-dom";
+import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import Footer from "../../Homepage/Footer";
 import Navbar from "../../Homepage/Navbar";
+import useAuth from "../../Hooks/useAuth/useAuth";
 
 const Main = () => {
+  // if user exists then navigate to use dashboard page
+  const { user } = useAuth();
+
+  const navigate = useNavigate();
+  if (user) {
+    navigate("/user/dashboard");
+  }
+
   const location = useLocation();
   //   console.log(location);
   const noHeaderFooter =

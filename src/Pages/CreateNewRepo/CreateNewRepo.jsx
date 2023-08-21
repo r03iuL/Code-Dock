@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
-
+import SectionTitle from "../../Components/SectionTitle/SectionTitle";
 const CreateNewRepo = () => {
   const {
     register,
@@ -11,12 +11,14 @@ const CreateNewRepo = () => {
 
   //onsubmit function for  posting new repository
   const onSubmit = (data) => {
-    const { repoDescription, repoName, repoType, repoCategory } = data;
+    const { repoDescription, repoName, repoType, repoCategory, repoStatus } =
+      data;
     const newRepoDetails = {
       repoName,
-      repoCategory,
+      category: repoCategory,
       repoDescription,
-      repoType,
+      types: repoType,
+      status: repoStatus,
     };
 
     console.log(newRepoDetails);
@@ -43,45 +45,68 @@ const CreateNewRepo = () => {
   };
 
   return (
-    <section className="m-8 bg-white ps-20 py-20">
-      <div>
-        <h2 className="text-3xl font-bold">Create a new repository</h2>
-        <p className="mt-2 text-lg">
+    <div className=" px-[4%] py-[3%]">
+      <div className="box-style">
+        <SectionTitle heading="Create new repository"></SectionTitle>
+        <p className="text-gray-500 text-base">
           A repository contains all project files, including the revision
           history. Want to create a repository?
         </p>
-      </div>
-      <div className="divider"></div>
-      <div>
+
+        <div className="h-[3px] w-full bg-violet-600 my-[3%]"></div>
+
         <form onSubmit={handleSubmit(onSubmit)}>
           {errors.exampleRequired && <span>This field is required</span>}
           <div>
-            <label className="text-xl font-bold">Repository Name</label> <br />
+            <label className="text-lg text-gray-500 font-semibold">
+              Repository Name
+            </label>{" "}
+            <br />
             <input
-              className="my-5 p-4 w-[500px] bg-slate-300"
+              className="mt-2 mb-4 p-4 w-1/2 bg-violet-50 rounded focus:outline-none"
+              placeholder="Repository name"
               {...register("repoName", { required: true })}
             />
             <br />
-            <label className="text-xl font-bold">
+            <label className="text-lg text-gray-500 font-semibold">
               Description{" "}
-              <span className="text-lg font-normal">(optional)</span>
+              <span className="text-base font-normal">(optional)</span>
             </label>
             <br />
-            <input
-              className="my-5 p-4 w-[500px] h-[100px] bg-slate-300"
+            <textarea
+              className="border p-2 w-1/2 mb-4 mt-2 bg-violet-50 rounded"
+              placeholder="Enter description"
               {...register("repoDescription")}
+            />
+            {/* <input
+              type="textarea"
+              className="mt-2 mb-4 p-1 5-[500px] h-[100px] bg-slate-300"
+              {...register("repoDescription")}
+            /> */}
+            <br />
+            <label className="text-lg text-gray-500 font-semibold">
+              Type of your repositories{" "}
+              <span className="text-base font-normal">
+                (must be separated by &quot;,&quot;)
+              </span>
+            </label>
+            <br />
+            <textarea
+              className="border p-2 w-1/2 mb-4 mt-2 bg-violet-50 rounded"
+              placeholder="Enter description"
+              {...register("repoType")}
             />
             <br />
             <select
               className="mb-5 p-5 text-2xl bg-indigo-400 rounded-lg"
-              {...register("repoType")}
+              {...register("repocategory")}
             >
               <option value="Single">Single</option>
               <option value="Group">Group</option>
             </select>
             <select
               className="mb-5 ms-8 p-5 text-2xl bg-indigo-400 rounded-lg"
-              {...register("repoCategory")}
+              {...register("repoStatus")}
             >
               <option value="Private">Private</option>
               <option value="Public">Public</option>
@@ -96,7 +121,7 @@ const CreateNewRepo = () => {
           </div>
         </form>
       </div>
-    </section>
+    </div>
   );
 };
 

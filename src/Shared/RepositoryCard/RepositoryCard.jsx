@@ -17,17 +17,20 @@ const RepositoryCard = ({ repo }) => {
     <div className="flex justify-between items-center px-[8%] py-4 my-3 border-b-2 border-violet-600">
       {/* <div className="h-[1px] w-full  bg-purple-700"></div> */}
 
-      <div className="flex items-center gap-x-6">
+      <div className="flex items-center gap-x-6 ">
         <div className="">
           <FaFolder className="text-4xl text-purple-500"></FaFolder>
         </div>
-        <div className="">
+        <div className="w-60">
           <p className="text-gray-600 font-semibold text-xl">{repoName}</p>
           <p className="text-gray-500 text-sm">{authorName}</p>
           <p className="text-gray-500 text-sm">{creationDate}</p>
         </div>
-        <div className="bg-violet-500 text-white text-center rounded-md px-3 py-1 text-base">
+        <div className="bg-violet-500 text-white text-center rounded-md px-3 py-1 text-base ">
           {status}
+        </div>
+        <div className="bg-violet-500 text-white text-center rounded-md px-3 py-1 text-base ">
+          {types}
         </div>
       </div>
       <div className="">

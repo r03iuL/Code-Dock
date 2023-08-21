@@ -3,7 +3,7 @@ import React from "react";
 
 const SectionTitle = ({ heading }) => {
   return (
-    <div>
+    <div className=" pt-5">
       <p className="text-gray-500 font-bold text-xl">{heading}</p>
     </div>
   );
