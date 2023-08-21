@@ -1,19 +1,24 @@
 import { createBrowserRouter } from "react-router-dom";
-import Main from "../Layout/Main";
+import Main from "../Layout/Main/Main";
 import Homepage from "../Homepage/Home/Homepage";
 import DashboardLayout from "../Layout/DashboardLayout/DashboardLayout";
-import CreateNewRepo from "../Pages/CreateNewRepo";
 import Login from "../Shared/Login";
-import Repositories from "../DashboardPages/Repositories";
-import Favourites from "../DashboardPages/Favourites";
-import Trending from "../DashboardPages/Trending";
-import RecentRepo from "../DashboardPages/RecentRepo";
-import DashBoard from "../DashboardPages/DashBoard";
-import Projects from "../Pages/DashboardFeaturesPage/Projects";
-import Following from "../Pages/DashboardFeaturesPage/Following/Following";
+import CreateNewRepo from "../Pages/CreateNewRepo/CreateNewRepo";
 import SignUp from "../Shared/SignUp";
-import PrivateRoute from "./PrivateRoute";
 import Secret from "../Shared/Secret";
+<<<<<<< HEAD
+import CreateNewRepo from "../Pages/CreateNewRepo";
+=======
+import DashBoard from "../Pages/DashboardPages/DashBoard/DashBoard";
+import RecentRepo from "../Pages/DashboardPages/RecentRepo/RecentRepo";
+import Repositories from "../Pages/DashboardPages/Repositories/Repositories";
+import Projects from "../Pages/DashboardPages/Projects/Projects";
+import Favourites from "../Pages/DashboardPages/Favourites/Favourites";
+import Following from "../Pages/DashboardPages/Following/Following";
+import Trending from "../Pages/DashboardPages/Trending/Trending";
+import SettingPage from "../Pages/SettingPage/SettingPage";
+import Blog from "../Homepage/Blog";
+>>>>>>> eabe73264fb08d9e448710681a2c05bbd22295b0
 
 export const router = createBrowserRouter([
   {
@@ -22,9 +27,25 @@ export const router = createBrowserRouter([
     children: [
       {
         path: "/",
+        path: "/",
         element: <Homepage></Homepage>,
       },
       {
+        path: "login",
+        element: <Login></Login>,
+      },
+      {
+        path: "signup",
+        element: <SignUp></SignUp>,
+      },
+      {
+        path: "blog",
+        element: <Blog></Blog>,
+      },
+      {
+        path: "secret",
+        element: <Secret></Secret>,
+      },
         path: "login",
         element: <Login></Login>,
       },
@@ -43,19 +64,31 @@ export const router = createBrowserRouter([
     ],
   },
   {
-    path: "/dashboard",
+    path: "/user",
     element: <DashboardLayout></DashboardLayout>,
     children: [
       {
+<<<<<<< HEAD
         path: "/dashboard/main",
+=======
+        path: "/user",
+        element: <SettingPage></SettingPage>,
+      },
+      {
+        path: "dashboard",
+>>>>>>> eabe73264fb08d9e448710681a2c05bbd22295b0
         element: <DashBoard></DashBoard>,
       },
       {
-        path: "recentActivities",
+        path: "recent",
         element: <RecentRepo></RecentRepo>,
       },
       {
+<<<<<<< HEAD
         path: "createNew",
+=======
+        path: "new",
+>>>>>>> eabe73264fb08d9e448710681a2c05bbd22295b0
         element: <CreateNewRepo></CreateNewRepo>,
       },
       {
@@ -64,7 +97,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "projects",
-        element: <Projects />,
+        element: <Projects></Projects>,
       },
       {
         path: "favourites",
@@ -72,7 +105,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "following",
-        element: <Following />,
+        element: <Following></Following>,
       },
       {
         path: "trending",

@@ -1,14 +1,25 @@
-
 import { useForm } from "react-hook-form";
-
+import Swal from "sweetalert2";
 
 const CreateNewRepo = () => {
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
 
-    const onSubmit = data =>{
-        // TO DO : here we need to add post api
-    }
+  //onsubmit function for  posting new repository
+  const onSubmit = (data) => {
+    const { repoDescription, repoName, repoType, repoCategory } = data;
+    const newRepoDetails = {
+      repoName,
+      repoCategory,
+      repoDescription,
+      repoType,
+    };
 
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    const { register, formState: { errors } } = useForm();
 
     return (
         <section className="m-8 bg-white ps-20 py-20">
@@ -18,7 +29,7 @@ const CreateNewRepo = () => {
             </div>
             <div className="divider"></div>
             <div>
-                <form onSubmit={handleSubmit(onSubmit)}>
+                <form >
                     {errors.exampleRequired && <span>This field is required</span>}
                     <div >
 
