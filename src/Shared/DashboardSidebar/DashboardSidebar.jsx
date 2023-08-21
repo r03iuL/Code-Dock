@@ -8,9 +8,9 @@ import { AiFillProject } from "react-icons/ai";
 import { MdOutlineFavorite } from "react-icons/md";
 import { SlUserFollowing } from "react-icons/sl";
 import { HiOutlineTrendingUp } from "react-icons/hi";
-import useAuth from "../Hooks/useAuth/useAuth";
+import useAuth from "../../Hooks/useAuth/useAuth";
 import "./dashboardSidebar.css";
-import ActiveDashboardLink from "../Components/ActiveDashboardLink/ActiveDashboardLink";
+import ActiveDashboardLink from "../../Components/ActiveDashboardLink/ActiveDashboardLink";
 
 const DashboardSidebar = () => {
   const { user } = useAuth();
