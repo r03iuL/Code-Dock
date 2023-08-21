@@ -5,7 +5,6 @@ import DashboardLayout from "../Layout/DashboardLayout/DashboardLayout";
 import Login from "../Shared/Login";
 import CreateNewRepo from "../Pages/CreateNewRepo/CreateNewRepo";
 import SignUp from "../Shared/SignUp";
-import PrivateRoute from "./PrivateRoute";
 import Secret from "../Shared/Secret";
 import DashBoard from "../Pages/DashboardPages/DashBoard/DashBoard";
 import RecentRepo from "../Pages/DashboardPages/RecentRepo/RecentRepo";
