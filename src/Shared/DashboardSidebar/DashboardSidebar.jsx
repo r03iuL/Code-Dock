@@ -9,7 +9,7 @@ import { MdOutlineFavorite } from "react-icons/md";
 import { SlUserFollowing } from "react-icons/sl";
 import { HiOutlineTrendingUp } from "react-icons/hi";
 import useAuth from "../../Hooks/useAuth/useAuth";
-import "./dashboardSidebar.css";
+import "./DashboardSidebar.css";
 import ActiveDashboardLink from "../../Components/ActiveDashboardLink/ActiveDashboardLink";
 
 const DashboardSidebar = () => {
