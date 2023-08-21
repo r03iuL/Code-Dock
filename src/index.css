@@ -14,5 +14,5 @@
     @apply bg-white rounded-[10px] px-8 py-4  border border-gray-200
 }
 .btn-style{
-    @apply bg-violet-500 text-white rounded px-6 py-3 text-base font-semibold
+    @apply bg-violet-500 text-white rounded px-6 py-3 text-base font-semibold cursor-pointer hover:bg-violet-700
 }

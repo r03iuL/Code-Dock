@@ -97,24 +97,20 @@ const CreateNewRepo = () => {
               {...register("repoType")}
             />
             <br />
-            <select
-              className="mb-5 p-5 text-2xl bg-indigo-400 rounded-lg"
-              {...register("repocategory")}
-            >
-              <option value="Single">Single</option>
-              <option value="Group">Group</option>
-            </select>
-            <select
-              className="mb-5 ms-8 p-5 text-2xl bg-indigo-400 rounded-lg"
-              {...register("repoStatus")}
-            >
-              <option value="Private">Private</option>
-              <option value="Public">Public</option>
-            </select>
+            <div className="flex gap-x-6 mb-5">
+              <select className="btn-style " {...register("repocategory")}>
+                <option value="Single">Single</option>
+                <option value="Group">Group</option>
+              </select>
+              <select className=" btn-style" {...register("repoStatus")}>
+                <option value="Private">Private</option>
+                <option value="Public">Public</option>
+              </select>
+            </div>
           </div>
           <div>
             <input
-              className="btn btn-primary px-16"
+              className="btn-style "
               value="Create Repository"
               type="submit"
             />
