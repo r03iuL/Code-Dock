@@ -4,7 +4,7 @@ const useRepo = () => {
   const [allRepositories, setAllRepositories] = useState([]);
 
   useEffect(() => {
-    fetch("https://code-dock-server.vercel.app/repositories")
+    fetch("./../../../public/userRepo.json")
       .then((res) => res.json())
       .then((data) => {
         setAllRepositories(data);
