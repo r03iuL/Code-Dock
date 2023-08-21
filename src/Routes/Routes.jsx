@@ -6,9 +6,6 @@ import Login from "../Shared/Login";
 import CreateNewRepo from "../Pages/CreateNewRepo/CreateNewRepo";
 import SignUp from "../Shared/SignUp";
 import Secret from "../Shared/Secret";
-<<<<<<< HEAD
-import CreateNewRepo from "../Pages/CreateNewRepo";
-=======
 import DashBoard from "../Pages/DashboardPages/DashBoard/DashBoard";
 import RecentRepo from "../Pages/DashboardPages/RecentRepo/RecentRepo";
 import Repositories from "../Pages/DashboardPages/Repositories/Repositories";
@@ -18,7 +15,6 @@ import Following from "../Pages/DashboardPages/Following/Following";
 import Trending from "../Pages/DashboardPages/Trending/Trending";
 import SettingPage from "../Pages/SettingPage/SettingPage";
 import Blog from "../Homepage/Blog";
->>>>>>> eabe73264fb08d9e448710681a2c05bbd22295b0
 
 export const router = createBrowserRouter([
   {
@@ -68,15 +64,11 @@ export const router = createBrowserRouter([
     element: <DashboardLayout></DashboardLayout>,
     children: [
       {
-<<<<<<< HEAD
-        path: "/dashboard/main",
-=======
         path: "/user",
         element: <SettingPage></SettingPage>,
       },
       {
         path: "dashboard",
->>>>>>> eabe73264fb08d9e448710681a2c05bbd22295b0
         element: <DashBoard></DashBoard>,
       },
       {
@@ -84,11 +76,7 @@ export const router = createBrowserRouter([
         element: <RecentRepo></RecentRepo>,
       },
       {
-<<<<<<< HEAD
         path: "createNew",
-=======
-        path: "new",
->>>>>>> eabe73264fb08d9e448710681a2c05bbd22295b0
         element: <CreateNewRepo></CreateNewRepo>,
       },
       {
