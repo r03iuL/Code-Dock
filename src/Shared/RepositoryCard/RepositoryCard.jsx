@@ -14,7 +14,7 @@ const RepositoryCard = ({ repo }) => {
   } = repo;
 
   return (
-    <div className="flex justify-between items-center px-[8%] py-4 my-3 border-b-2 border-violet-600">
+    <div className="flex justify-between items-center px-[4%] py-4 my-3 border-b-2 border-violet-600">
       {/* <div className="h-[1px] w-full  bg-purple-700"></div> */}
 
       <div className="flex items-center gap-x-6 ">

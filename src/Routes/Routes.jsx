@@ -14,6 +14,8 @@ import Projects from "../Pages/DashboardPages/Projects/Projects";
 import Favourites from "../Pages/DashboardPages/Favourites/Favourites";
 import Following from "../Pages/DashboardPages/Following/Following";
 import Trending from "../Pages/DashboardPages/Trending/Trending";
+import SettingPage from "../Pages/SettingPage/SettingPage";
+import Blog from "../Homepage/Blog";
 
 export const router = createBrowserRouter([
   {
@@ -33,6 +35,10 @@ export const router = createBrowserRouter([
         element: <SignUp></SignUp>,
       },
       {
+        path: "blog",
+        element: <Blog></Blog>,
+      },
+      {
         path: "secret",
         element: (
           <PrivateRoute>
@@ -46,6 +52,10 @@ export const router = createBrowserRouter([
     path: "/user",
     element: <DashboardLayout></DashboardLayout>,
     children: [
+      {
+        path: "/user",
+        element: <SettingPage></SettingPage>,
+      },
       {
         path: "dashboard",
         element: <DashBoard></DashBoard>,

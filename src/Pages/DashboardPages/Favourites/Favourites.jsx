@@ -49,7 +49,7 @@ const Favourites = () => {
 
       {/* this is for repositories  */}
       <div className="box-style my-[3%]">
-        <SectionTitle heading="Trending"></SectionTitle>
+        <SectionTitle heading="Favourites"></SectionTitle>
         <div className="mt-[3%]">
           {slicedRepo.map((repo) => (
             <RepositoryCard key={repo.id} repo={repo}></RepositoryCard>
