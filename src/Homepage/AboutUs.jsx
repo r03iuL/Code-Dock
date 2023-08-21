@@ -36,7 +36,7 @@ const AboutUs = () => {
               <h2 className="text-2xl font-bold py-2 text-center text-black ">
                 {member.name}
               </h2>
-              <div className="flex justify-evenly bg-blue-300 p-3 transition-transform transform-gpu duration-300 hover:scale-110 rounded-md text-3xl">
+              <div className="flex justify-evenly bg-blue-300 p-3 transition-transform transform-gpu duration-300 hover:scale-125 rounded-md text-3xl">
                 <Link to={member.fb}>
                   <FaFacebook></FaFacebook>
                 </Link>
