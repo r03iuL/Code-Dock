@@ -15,6 +15,7 @@ import Following from "../Pages/DashboardPages/Following/Following";
 import Trending from "../Pages/DashboardPages/Trending/Trending";
 import SettingPage from "../Pages/SettingPage/SettingPage";
 import Blog from "../Homepage/Blog";
+import PrivateRoute from './PrivateRoute';
 
 export const router = createBrowserRouter([
   {
@@ -22,7 +23,6 @@ export const router = createBrowserRouter([
     element: <Main></Main>,
     children: [
       {
-        path: "/",
         path: "/",
         element: <Homepage></Homepage>,
       },
@@ -42,7 +42,7 @@ export const router = createBrowserRouter([
         path: "secret",
         element: <Secret></Secret>,
       },
-        path: "login",
+       { path: "login",
         element: <Login></Login>,
       },
       {
