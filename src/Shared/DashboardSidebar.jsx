@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { BiSolidDashboard, BiSolidTimer, BiLogOutCircle } from "react-icons/bi";
 import { PiChatTextBold } from "react-icons/pi";
 import { IoMdNotificationsOutline } from "react-icons/io";

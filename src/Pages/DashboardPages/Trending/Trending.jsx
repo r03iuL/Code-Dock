@@ -1,18 +1,20 @@
 import React, { useEffect, useState } from "react";
 import { FaSearch } from "react-icons/fa";
-import RepoCard from "./RepoCard";
+import RepoCard from "../Repositories/RepoCard";
 
-const RecentRepo = () => {
+const Trending = () => {
   const [repos, setRepos] = useState([]);
 
   useEffect(() => {
-    fetch("../../public/userRepo.json")
+    fetch("../../public/repositories.json")
       .then((res) => res.json())
       .then((data) => setRepos(data));
   }, []);
 
-  // Sort the repositories based on the creationDate in descending order
-  const sortedRepos = [...repos].sort((a, b) => new Date(b.creationDate) - new Date(a.creationDate));
+  // Sort the repositories based on the number of ratings in descending order
+  const sortedRepos = [...repos].sort(
+    (a, b) => b.numberOfRatings - a.numberOfRatings
+  );
 
   return (
     <div className="p-5">
@@ -44,4 +46,4 @@ const RecentRepo = () => {
   );
 };
 
-export default RecentRepo;
+export default Trending;
