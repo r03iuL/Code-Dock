@@ -28,11 +28,11 @@ const AboutUs = () => {
             <div>
               <img
                 src={member.image}
-                className="rounded-2xl h-80 w-80 bg-slate-300 transition-transform transform-gpu duration-300 hover:scale-110"
+                className="rounded-2xl h-80 w-80 bg-slate-300 transition-transform transform-gpu duration-300 hover:scale-110 -mt-1"
                 alt=""
               />
             </div>
-            <div className="h-20 w-60 bg-slate-300 rounded-xl relative bottom-11 ">
+            <div className=" h-20 w-60 bg-slate-300 rounded-xl relative bottom-11 ">
               <h2 className="text-2xl font-bold py-2 text-center text-black ">
                 {member.name}
               </h2>
