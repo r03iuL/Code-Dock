@@ -6,10 +6,9 @@ const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
   const handleLogOut = () => {
     logOut()
-        .then(() => { })
-        .catch(error => console.log(error));
-
-}
+      .then(() => {})
+      .catch((error) => console.log(error));
+  };
   const navbarStart = (
     <ul className="lg:flex gap-4 text-lg font-semibold">
       <li>
@@ -19,13 +18,13 @@ const Navbar = () => {
         <Link>Code Editor</Link>
       </li>
       <li>
-        <Link to="/">Blog</Link>
+        <Link to="/blog">Blog</Link>
       </li>
       <li>
         <Link to="/blog">About Us</Link>
       </li>
       <li>
-        <Link to="/dashboard/main">Dashboard</Link>
+        <Link to="/user/dashboard">Dashboard</Link>
       </li>
     </ul>
   );
@@ -40,16 +39,18 @@ const Navbar = () => {
         />
       </div>
 
-
-      {
-            user ? <>
-            <span>{user.displayName}</span>
-                <button onClick={handleLogOut} className="btn btn-ghost">LogOut</button>
-            </> : <>
-                <Link to='/login'>Login</Link>
-            </>
-        }
-
+      {user ? (
+        <>
+          <span>{user.displayName}</span>
+          <button onClick={handleLogOut} className="btn btn-ghost">
+            LogOut
+          </button>
+        </>
+      ) : (
+        <>
+          <Link to="/login">Login</Link>
+        </>
+      )}
     </div>
   );
 
