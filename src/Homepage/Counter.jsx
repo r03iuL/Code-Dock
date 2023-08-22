@@ -7,20 +7,20 @@ const Counter = () => {
       <div className=" text-center my-8 lg:my-5 lg:mb-[5%] mx-[8%] py-[8%] bg-sky-100 flex flex-col  gap-y-4 lg:flex-row lg:justify-around items-center">
         <div className="flex items-center">
           <div className="">
-            <p className="text-blue-800 text-4xl font-bold">200+</p>
-            <p className="text-[#757575]">Total Git Projects</p>
+            <p className="text-violet-800 text-4xl font-bold">200+</p>
+            <p className="text-[#757575] font-semibold">Total Git Projects</p>
           </div>
         </div>
         <div className="flex items-center">
           <div className="">
-            <p className="text-blue-800 text-4xl font-bold">4.5</p>
-            <p className="text-[#757575]">Ratings</p>
+            <p className="text-violet-800 text-4xl font-bold">4.5</p>
+            <p className="text-[#757575] font-semibold">Ratings</p>
           </div>
         </div>
         <div className="flex items-center">
           <div className="">
-            <p className="text-blue-800 text-4xl font-bold">40+</p>
-            <p className="text-[#757575]">Total Members</p>
+            <p className="text-violet-800 text-4xl font-bold">40+</p>
+            <p className="text-[#757575] font-semibold">Total Members</p>
           </div>
         </div>
       </div>
