@@ -10,6 +10,9 @@ const CreateNewRepo = () => {
   } = useForm();
 
   //onsubmit function for  posting new repository
+
+
+
   const onSubmit = (data) => {
     const { repoDescription, repoName, repoType, repoCategory, repoStatus } =
       data;
@@ -22,8 +25,10 @@ const CreateNewRepo = () => {
     };
 
     console.log(newRepoDetails);
+
+
     // posting new repository
-    fetch("https://code-dock-server.vercel.app/new", {
+    fetch("http://localhost:5000/new", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -83,6 +88,11 @@ const CreateNewRepo = () => {
               className="mt-2 mb-4 p-1 5-[500px] h-[100px] bg-slate-300"
               {...register("repoDescription")}
             /> */}
+
+
+
+
+
             <br />
             <label className="text-lg text-gray-500 font-semibold">
               Type of your repositories{" "}

@@ -32,7 +32,7 @@ const DashboardNavbar = () => {
       {/* navbar options  */}
       <div className="flex gap-x-5 px-[8%] text-2xl">
         <p className="cursor-pointer" title="create new repositories">
-          <Link to="/user/new">
+          <Link to="/user/createNew">
             <BiBookAdd></BiBookAdd>
           </Link>
         </p>
