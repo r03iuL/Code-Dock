@@ -6,7 +6,7 @@ const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
   const handleLogOut = () => {
     logOut()
-      .then(() => {})
+      .then(() => { })
       .catch((error) => console.log(error));
   };
   const navbarStart = (
@@ -42,7 +42,7 @@ const Navbar = () => {
       {user ? (
         <>
           {/* <span>{user.displayName}</span>           */}
-                   
+
           <button onClick={handleLogOut} className="btn btn-ghost border-violet-600">
             LogOut
           </button>
