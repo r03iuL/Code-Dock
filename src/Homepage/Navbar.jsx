@@ -10,18 +10,18 @@ const Navbar = () => {
       .catch((error) => console.log(error));
   };
   const navbarStart = (
-    <ul className="lg:flex gap-4 text-lg font-semibold">
-      <li>
+    <ul className="lg:flex gap-8 text-xl font-semibold ">
+      {/* <li>
         <Link to="/">Features</Link>
       </li>
       <li>
         <Link>Code Editor</Link>
-      </li>
+      </li> */}
       <li>
         <Link to="/blog">Blog</Link>
       </li>
       <li>
-        <Link to="/blog">About Us</Link>
+        <Link to="/about">About Us</Link>
       </li>
       <li>
         {
@@ -38,16 +38,18 @@ const Navbar = () => {
         <input
           type="text"
           placeholder="Search"
-          className="input bg-white input-bordered w-24 md:w-auto"
+          className="input bg-white border-2 border-violet-600 input-bordered w-24 md:w-auto"
         />
       </div>
 
       {user ? (
         <>
-          <span>{user.displayName}</span>
-          <button onClick={handleLogOut} className="btn btn-ghost">
+          {/* <span>{user.displayName}</span>           */}
+
+          <button onClick={handleLogOut} className="btn btn-ghost border-violet-600">
             LogOut
           </button>
+          <span><img className="rounded-full w-[70px] border-2 border-violet-600" src={user.photoURL} alt="User Avatar" /></span>
         </>
       ) : (
         <>
@@ -58,7 +60,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="container mx-auto navbar bg-blue-300 text-black flex justify-between items-center px-5">
+    <div className="container mx-auto navbar  text-black flex justify-between items-center px-5 border-b-4 border-violet-600">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -86,11 +88,13 @@ const Navbar = () => {
           </ul>
         </div>
         <div>
+
           <Link to='/'>
             <h2 className="font-bold font-mono text-3xl">
               C0de<span>_&gt;</span>d0ck
             </h2>
           </Link>
+
         </div>
       </div>
       <div className="navbar p-0 hidden lg:flex justify-between items-center">

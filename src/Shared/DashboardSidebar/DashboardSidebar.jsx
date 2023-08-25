@@ -12,6 +12,7 @@ import useAuth from "../../Hooks/useAuth/useAuth";
 import "./DashboardSidebar.css";
 import ActiveDashboardLink from "../../Components/ActiveDashboardLink/ActiveDashboardLink";
 
+
 const DashboardSidebar = () => {
   const { user, logOut } = useAuth();
   console.log(user?.photoURL);
@@ -23,6 +24,7 @@ const DashboardSidebar = () => {
       <p className="text-center text-2xl font-extrabold text-violet-400">
         Loading...
       </p>
+      
     );
   }
 
