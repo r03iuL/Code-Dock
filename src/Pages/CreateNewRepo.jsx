@@ -1,8 +1,23 @@
-
 import { useForm } from "react-hook-form";
-
+import Swal from "sweetalert2";
 
 const CreateNewRepo = () => {
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
+
+  //onsubmit function for  posting new repository
+  const onSubmit = (data) => {
+    const { repoDescription, repoName, repoType, repoCategory } = data;
+    const newRepoDetails = {
+      repoName,
+      repoCategory,
+      repoDescription,
+      repoType,
+    };
 
     const { register, formState: { errors } } = useForm();
 

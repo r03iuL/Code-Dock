@@ -1,6 +1,6 @@
-import  { useContext } from "react";
+import { useContext } from "react";
 import { FcGoogle } from "react-icons/fc";
-import { AuthContext } from '../providers/AuthProvider';
+import { AuthContext } from "../providers/AuthProvider";
 import { useNavigate } from "react-router-dom";
 
 const GoogleSignIn = () => {
@@ -17,7 +17,7 @@ const GoogleSignIn = () => {
         .then((result) => {
           const user = result.user;
           console.log(user);
-          navigate("/dashboard/main");
+          navigate("/user/dashboard");
         })
         .catch((error) => {
           console.error(error);
