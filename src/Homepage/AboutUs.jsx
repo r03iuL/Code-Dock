@@ -24,11 +24,11 @@ const AboutUs = () => {
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-20">
         {about.map((member) => (
-          <div key={member.id} className="mx-auto flex flex-col items-center justify-center rounded-xl bg-blue-400 shadow-2xl shadow-gray-500">
+          <div key={member.id} className="mx-auto flex flex-col items-center justify-center rounded-xl bg-violet-600 shadow-xl shadow-violet-500/50 ">
             <div>
               <img
                 src={member.image}
-                className="rounded-2xl h-80 w-80 bg-slate-300 transition-transform transform-gpu duration-300 hover:scale-110 -mt-1"
+                className="rounded-lg  h-80 w-80 bg-slate-300 transition-transform transform-gpu duration-300 hover:scale-110 -mt-1"
                 alt=""
               />
             </div>
@@ -36,7 +36,7 @@ const AboutUs = () => {
               <h2 className="text-2xl font-bold py-2 text-center text-black ">
                 {member.name}
               </h2>
-              <div className="flex justify-evenly bg-blue-300 p-3 transition-transform transform-gpu duration-300 hover:scale-125 rounded-md text-3xl">
+              <div className="flex justify-evenly bg-violet-400 p-3 transition-transform transform-gpu duration-300 hover:scale-125 rounded-md text-3xl">
                 <Link to={member.fb}>
                   <FaFacebook></FaFacebook>
                 </Link>
