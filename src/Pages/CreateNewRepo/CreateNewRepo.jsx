@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import SectionTitle from "../../Components/SectionTitle/SectionTitle";
+// import UploadCodeFile from "./UploadCodeFile";
 const CreateNewRepo = () => {
   const {
     register,
@@ -51,6 +52,7 @@ const CreateNewRepo = () => {
 
   return (
     <div className=" px-[4%] py-[3%]">
+      {/* <UploadCodeFile></UploadCodeFile> */}
       <div className="box-style">
         <SectionTitle heading="Create new repository"></SectionTitle>
         <p className="text-gray-500 text-base">
