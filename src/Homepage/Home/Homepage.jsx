@@ -8,7 +8,6 @@ import Faq from "../Faq";
 import Hero from "../Hero";
 
 const Homepage = () => {
-
   return (
     <div className="px-[5%] mx-auto max-w-7xl ">
       <Hero></Hero>
@@ -16,10 +15,9 @@ const Homepage = () => {
       <Features></Features>
       <Faq></Faq>
       <Blog></Blog>
-     <AboutUs></AboutUs>
+      <AboutUs></AboutUs>
     </div>
   );
-
 };
 
 export default Homepage;
