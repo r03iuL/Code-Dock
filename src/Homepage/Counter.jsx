@@ -4,7 +4,7 @@ const Counter = () => {
       <div className=" text-center mx-auto text-3xl font-mono font-semibold py-[2%] flex flex-col ">
         <h1>Trusted by developers worlwide </h1>
       </div>
-      <div className=" text-center my-8 lg:my-5 lg:mb-[5%] mx-[8%] py-[8%] bg-sky-100 flex flex-col  gap-y-4 lg:flex-row lg:justify-around items-center">
+      <div className=" text-center my-8 lg:my-5 lg:mb-[5%] mx-[8%] py-[8%] bg-violet-200 rounded flex flex-col  gap-y-4 lg:flex-row lg:justify-around items-center">
         <div className="flex items-center">
           <div className="">
             <p className="text-violet-800 text-4xl font-bold">200+</p>

@@ -10,8 +10,8 @@ const Features = () => {
                 <h3 className="">FEATURE</h3>
                 <div className="divider "></div>
             </div>
-            <div className=" grid  gap-4 mt-7">
-                <div className=" shadow-lg rounded-lg p-3 border-2">
+            <div className=" grid  gap-4 mt-7 ">
+                <div className=" shadow-lg rounded-lg p-8 border-2  shadow-violet-500/50">
                     <div className="grid grid-cols-3 items-center">
                        
                         <Player
@@ -25,7 +25,7 @@ const Features = () => {
                         <h2 className="text-2xl font-bold    ">Secure Code Hosting Platform</h2>The Secure Code Hosting Platform provides a robust and fortified environment for developers to safely store, manage, and collaborate on their code projects. With advanced security measures, encryption, and access controls, it ensures the confidentiality and integrity of your codebase, fostering seamless teamwork while safeguarding sensitive information.</p>
                     </div>
                 </div>
-                <div className="shadow-lg rounded-lg p-3 border-2">
+                <div className="shadow-lg rounded-lg p-8 border-2  shadow-violet-500/50">
                      <div className=" grid grid-cols-3 items-center">
                         <p className="col-span-2">
                         <h2 className="text-2xl font-bold    ">GitHub-Enhanced Text Editor for Collaborative Coding</h2>
@@ -39,7 +39,7 @@ const Features = () => {
                         </Player>
                     </div>
                 </div>
-                <div className="shadow-lg rounded-lg p-3 border-2">
+                <div className="shadow-lg rounded-lg p-8 border-2  shadow-violet-500/50">
                      <div className="grid grid-cols-3 items-center">
                     <Player
                             autoplay
