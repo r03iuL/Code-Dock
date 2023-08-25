@@ -17,6 +17,7 @@ import SettingPage from "../Pages/SettingPage/SettingPage";
 import Blog from "../Homepage/Blog";
 import PrivateRoute from './PrivateRoute';
 import AboutUs from "../Homepage/AboutUs";
+import Error from "../../Error";
 
 
 export const router = createBrowserRouter([
@@ -110,4 +111,10 @@ export const router = createBrowserRouter([
       },
     ],
   },
+
+  {
+    path: '*',
+    element: <Error></Error>
+  }
+
 ]);
