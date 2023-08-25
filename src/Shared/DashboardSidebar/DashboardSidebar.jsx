@@ -84,7 +84,7 @@ const DashboardSidebar = () => {
       {/* navbar options  */}
       <div className="mt-3">
         <ul>
-          <li className="  ">
+          <li className=" rounded-none ">
             <ActiveDashboardLink to="/user/dashboard">
               <div className="">
                 <BiSolidDashboard></BiSolidDashboard>
