@@ -7,7 +7,7 @@ import "./DashboardNavbar.css";
 
 const DashboardNavbar = () => {
   return (
-    <div className="hidden lg:flex navbar  justify-between px-[8%] py-[1.5%] bg-base-100 border-b-[3px] border-violet-600">
+    <div className="hidden lg:flex navbar justify-between px-[8%] py-[1.5%] bg-base-100 border-b-[3px] border-violet-600">
       {/* navbar search option  */}
       <div className="relative w-1/3   rounded ">
         <div className="absolute my-auto left-2">
