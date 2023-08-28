@@ -1,40 +1,40 @@
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import SectionTitle from "../../Components/SectionTitle/SectionTitle";
+import { useContext } from "react";
+import { AuthContext } from "../../providers/AuthProvider";
 // import UploadCodeFile from "./UploadCodeFile";
 const CreateNewRepo = () => {
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors },
-  } = useForm();
+  const { register, handleSubmit, reset, formState: { errors }} = useForm();
+  const {user} = useContext(AuthContext)
+  // console.log(user)
 
   //onsubmit function for  posting new repository
 
 
 
   const onSubmit = (data) => {
-    const { repoDescription, repoName, repoType, repoCategory, repoStatus } =
-      data;
-    const newRepoDetails = {
-      repoName,
-      category: repoCategory,
-      repoDescription,
-      types: repoType,
-      status: repoStatus,
-    };
+    // const { repoDescription, repoName, repoType, repoCategory, repoStatus } =
+    //   data;
+    // const newRepoDetails = {
+    //   repoName,
+    //   category: repoCategory,
+    //   repoDescription,
+    //   types: repoType,
+    //   status: repoStatus,
+    // };
 
-    console.log(newRepoDetails);
+    // console.log(newRepoDetails);
+    console.log({...data, displayName: user.displayName, email: user.email, photoURL: user.photoURL});
 
 
     // posting new repository
-    fetch("http://localhost:5000/new", {
+    fetch("http://localhost:5000/repositories", {
       method: "POST",
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify(newRepoDetails),
+      body: JSON.stringify({...data, displayName: user.displayName, email: user.email, photoURL: user.photoURL}),
     })
       .then((res) => res.json())
       .then((data) => {
@@ -65,36 +65,26 @@ const CreateNewRepo = () => {
         <form onSubmit={handleSubmit(onSubmit)}>
           {errors.exampleRequired && <span>This field is required</span>}
           <div>
-            <label className="text-lg text-gray-500 font-semibold">
+            <label htmlFor="repoName" className="text-lg text-gray-500 font-semibold">
               Repository Name
             </label>{" "}
             <br />
             <input
-              className="mt-2 mb-4 p-4 w-1/2 bg-violet-50 rounded focus:outline-none"
+              id="repoName" className="mt-2 mb-4 p-4 w-1/2 bg-violet-50 rounded focus:outline-none" type="text"
               placeholder="Repository name"
               {...register("repoName", { required: true })}
             />
             <br />
-            <label className="text-lg text-gray-500 font-semibold">
+            <label htmlFor="repoDescription" className="text-lg text-gray-500 font-semibold">
               Description{" "}
               <span className="text-base font-normal">(optional)</span>
             </label>
             <br />
             <textarea
-              className="border p-2 w-1/2 mb-4 mt-2 bg-violet-50 rounded"
+              id="repoDescription" className="border p-2 w-1/2 mb-4 mt-2 bg-violet-50 rounded"
               placeholder="Enter description"
               {...register("repoDescription")}
             />
-            {/* <input
-              type="textarea"
-              className="mt-2 mb-4 p-1 5-[500px] h-[100px] bg-slate-300"
-              {...register("repoDescription")}
-            /> */}
-
-
-
-
-
             <br />
             <label className="text-lg text-gray-500 font-semibold">
               Type of your repositories{" "}
@@ -109,12 +99,22 @@ const CreateNewRepo = () => {
               {...register("repoType")}
             />
             <br />
+            <label htmlFor="uploadCode" className="text-lg text-gray-500 font-semibold">
+              Upload your Code
+            </label>
+            <br />
+            <input
+              id="uploadCode" className="mt-2 mb-4 p-4 w-1/2 bg-violet-50 rounded focus:outline-none" type="file"
+              // placeholder="Repository name"
+              {...register("uploadCode", { required: true })}
+            />
+            <br />
             <div className="flex gap-x-6 mb-5">
-              <select className="btn-style " {...register("repocategory")}>
+              <select className="select-style " {...register("repocategory")}>
                 <option value="Single">Single</option>
                 <option value="Group">Group</option>
               </select>
-              <select className=" btn-style" {...register("repoStatus")}>
+              <select className="select-style" {...register("repoStatus")}>
                 <option value="Private">Private</option>
                 <option value="Public">Public</option>
               </select>

@@ -15,7 +15,7 @@ import ActiveDashboardLink from "../../Components/ActiveDashboardLink/ActiveDash
 
 const DashboardSidebar = () => {
   const { user, logOut } = useAuth();
-  console.log(user?.photoURL);
+  // console.log(user?.photoURL);
 
   //beacuse at first loading here user is null...
   if (user === null) {
