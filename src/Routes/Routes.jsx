@@ -18,6 +18,7 @@ import Blog from "../Homepage/Blog";
 import PrivateRoute from './PrivateRoute';
 import AboutUs from "../Homepage/AboutUs";
 import Error from "../../Error";
+import CodeEditor from "../CodeEditor/CodeEditor";
 
 
 export const router = createBrowserRouter([
@@ -107,6 +108,11 @@ export const router = createBrowserRouter([
         element: <Trending></Trending>,
       },
     ],
+  },
+
+  {
+    path: 'code-editor',
+    element: <CodeEditor></CodeEditor>
   },
 
   {
