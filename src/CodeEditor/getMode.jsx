@@ -1,12 +1,13 @@
-import CodeMirror from 'codemirror';
+import 'monaco-editor/esm/vs/editor/editor.api';
+import { monaco } from 'react-monaco-editor';
 
 const getMode = (fileName) => {
     const fileExtension = fileName.split('.').pop();
-    const modeInfo = CodeMirror.findModeByExtension(fileExtension);
-    if (modeInfo) {
-        return modeInfo.mode;
+    const mode = monaco.languages.getLanguages().find(lang => lang.extensions.includes(fileExtension));
+    if (mode) {
+        return mode.id;
     }
-    return 'text/plain'; // Default to plain text
+    return 'plaintext';
 };
 
 export default getMode;

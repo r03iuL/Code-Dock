@@ -1,10 +1,6 @@
-// CodeEditor.js
 import React, { useState, useEffect } from 'react';
-import { Controlled as CodeMirror } from 'react-codemirror2';
-import 'codemirror/mode/meta';
-import getMode from './getMode'; // We'll create this helper function
-import 'codemirror/lib/codemirror.css';
-import 'codemirror/theme/material.css';
+import MonacoEditor from 'react-monaco-editor';
+import getMode from './getMode';
 
 const CodeEditor = ({ file }) => {
     const [content, setContent] = useState('');
@@ -15,8 +11,8 @@ const CodeEditor = ({ file }) => {
         }
     }, [file]);
 
-    const handleContentChange = (editor, data, value) => {
-        setContent(value);
+    const handleContentChange = (newContent) => {
+        setContent(newContent);
     };
 
     return (
@@ -24,15 +20,13 @@ const CodeEditor = ({ file }) => {
             {file && (
                 <div>
                     <h2>{file.name}</h2>
-                    <CodeMirror
+                    <MonacoEditor
+                        width="800"
+                        height="600"
+                        language={getMode(file.name)}
+                        theme="vs-dark"
                         value={content}
-                        onBeforeChange={handleContentChange}
-                        options={{
-                            mode: getMode(file.name),
-                            theme: 'material',
-                            lineNumbers: true,
-                            lineWrapping: true,
-                        }}
+                        onChange={handleContentChange}
                     />
                 </div>
             )}
