@@ -19,6 +19,11 @@ import GitBlog from "../Homepage/BlogPage/GitBlog";
 import PrivateRoute from './PrivateRoute';
 import AboutUs from "../Homepage/AboutUs";
 import Error from "../../Error";
+import MainSnippet from "../Components/CodeSnippet/MainSnippet";
+import SnippetView from "../Components/CodeSnippet/SnippetView";
+import CodeView from "../Components/CodeSnippet/CodeView";
+import Editormain from './../CodeEditor/Editormain';
+
 import HtmlBlog from "../Homepage/BlogPage/HtmlBlog";
 import CssBlog from "../Homepage/BlogPage/CssBlog";
 import JavascriptBlog from "../Homepage/BlogPage/JavascriptBlog";
@@ -141,6 +146,24 @@ export const router = createBrowserRouter([
         element: <Trending></Trending>,
       },
     ],
+  },
+
+  {
+    path: 'code-snippet',
+    element: <MainSnippet></MainSnippet>
+  },
+  {
+    path: '/snippet/:id', 
+    element: <SnippetView></SnippetView>
+  },
+  {
+    path: '/view-code/:id', 
+    element: <CodeView></CodeView>
+  },
+
+  {
+    path: 'code-editor',
+    element: <Editormain></Editormain>
   },
 
   {
