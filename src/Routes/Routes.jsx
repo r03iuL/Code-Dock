@@ -18,7 +18,9 @@ import Blog from "../Homepage/Blog";
 import PrivateRoute from './PrivateRoute';
 import AboutUs from "../Homepage/AboutUs";
 import Error from "../../Error";
-import CodeEditor from "../CodeEditor/CodeEditor";
+import MainSnippet from "../Components/CodeSnippet/MainSnippet";
+import SnippetView from "../Components/CodeSnippet/SnippetView";
+import CodeView from "../Components/CodeSnippet/CodeView";
 
 
 export const router = createBrowserRouter([
@@ -50,7 +52,8 @@ export const router = createBrowserRouter([
         path: "secret",
         element: <Secret></Secret>,
       },
-       { path: "login",
+      {
+        path: "login",
         element: <Login></Login>,
       },
       {
@@ -111,8 +114,16 @@ export const router = createBrowserRouter([
   },
 
   {
-    path: 'code-editor',
-    element: <CodeEditor></CodeEditor>
+    path: 'code-snippet',
+    element: <MainSnippet></MainSnippet>
+  },
+  {
+    path: '/snippet/:id', 
+    element: <SnippetView></SnippetView>
+  },
+  {
+    path: '/view-code/:id', 
+    element: <CodeView></CodeView>
   },
 
   {
