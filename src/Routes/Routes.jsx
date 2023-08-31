@@ -21,6 +21,8 @@ import Error from "../../Error";
 import MainSnippet from "../Components/CodeSnippet/MainSnippet";
 import SnippetView from "../Components/CodeSnippet/SnippetView";
 import CodeView from "../Components/CodeSnippet/CodeView";
+import Editormain from './../CodeEditor/Editormain';
+
 
 
 export const router = createBrowserRouter([
@@ -124,6 +126,11 @@ export const router = createBrowserRouter([
   {
     path: '/view-code/:id', 
     element: <CodeView></CodeView>
+  },
+
+  {
+    path: 'code-editor',
+    element: <Editormain></Editormain>
   },
 
   {
