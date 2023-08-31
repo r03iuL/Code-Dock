@@ -66,6 +66,7 @@ const DashboardSidebar = () => {
           <p title="messages">
             <Link to="/user/messages">
               <PiChatTextBold></PiChatTextBold>
+              
             </Link>
           </p>
           <p title="notifications">
