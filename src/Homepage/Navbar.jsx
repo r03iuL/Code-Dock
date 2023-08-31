@@ -18,7 +18,7 @@ const Navbar = () => {
         <Link>Code Editor</Link>
       </li> */}
       <li>
-        <Link to="/blog">Blog</Link>
+        <Link to="/allblog">Blog</Link>
       </li>
       <li>
         <Link to="/about">About Us</Link>
