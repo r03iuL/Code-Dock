@@ -14,10 +14,10 @@ const RepositoryCard = ({ repo }) => {
   } = repo;
 
   return (
-    <div className="flex justify-between items-center px-[4%] py-4 my-3 border-b-2 border-violet-600">
+    <div className="flex flex-col lg:flex-row justify-between items-center px-[4%] py-4 my-3 border-b-2 border-violet-600 ">
       {/* <div className="h-[1px] w-full  bg-purple-700"></div> */}
 
-      <div className="flex items-center gap-x-6 ">
+      <div className="flex flex-col lg:flex-row items-left gap-6 ">
         <div className="">
           <FaFolder className="text-4xl text-purple-500"></FaFolder>
         </div>
@@ -26,14 +26,15 @@ const RepositoryCard = ({ repo }) => {
           <p className="text-gray-500 text-sm">{authorName}</p>
           <p className="text-gray-500 text-sm">{creationDate}</p>
         </div>
-        <div className="bg-violet-500 text-white text-center rounded-md px-3 py-1 text-base ">
-          {status}
+        <div className="flex flex-col gap-3">
+          <p className="bg-violet-500 text-white text-center rounded-md px-3 py-1 text-base">{status}</p>
+          <p className="bg-violet-500 text-white text-center rounded-md px-3 py-1 text-base">{types}</p>
         </div>
-        <div className="bg-violet-500 text-white text-center rounded-md px-3 py-1 text-base ">
+        {/* <div className="bg-violet-500 text-white text-center rounded-md px-3 py-1 text-base ">
           {types}
-        </div>
+        </div> */}
       </div>
-      <div className="">
+      <div className="mt-5 lg:mt-auto">
         <p>
           <FaRegHeart className="text-2xl mx-auto text-purple-500 cursor-pointer"></FaRegHeart>{" "}
         </p>
