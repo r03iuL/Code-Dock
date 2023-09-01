@@ -14,10 +14,22 @@ import Favourites from "../Pages/DashboardPages/Favourites/Favourites";
 import Following from "../Pages/DashboardPages/Following/Following";
 import Trending from "../Pages/DashboardPages/Trending/Trending";
 import SettingPage from "../Pages/SettingPage/SettingPage";
-import Blog from "../Homepage/Blog";
+import Blog from "../Homepage/BlogPage/AllBlog";
+import GitBlog from "../Homepage/BlogPage/GitBlog";
 import PrivateRoute from './PrivateRoute';
 import AboutUs from "../Homepage/AboutUs";
 import Error from "../../Error";
+import MainSnippet from "../Components/CodeSnippet/MainSnippet";
+import SnippetView from "../Components/CodeSnippet/SnippetView";
+import CodeView from "../Components/CodeSnippet/CodeView";
+import Editormain from './../CodeEditor/Editormain';
+
+import HtmlBlog from "../Homepage/BlogPage/HtmlBlog";
+import CssBlog from "../Homepage/BlogPage/CssBlog";
+import JavascriptBlog from "../Homepage/BlogPage/JavascriptBlog";
+import ReactBlog from "../Homepage/BlogPage/ReactBlog";
+import ChatBox from "../Shared/LiveChat/ChatBox";
+
 
 
 export const router = createBrowserRouter([
@@ -38,8 +50,28 @@ export const router = createBrowserRouter([
         element: <SignUp></SignUp>,
       },
       {
-        path: "blog",
+        path: "allblog",
         element: <Blog></Blog>,
+      },
+      {
+        path: "gitblog",
+        element: <GitBlog></GitBlog>
+      },
+      {
+        path: "htmlblog",
+        element: <HtmlBlog></HtmlBlog>
+      },
+      {
+        path: "cssblog",
+        element: <CssBlog></CssBlog>
+      },
+      {
+        path: "javablog",
+        element: <JavascriptBlog></JavascriptBlog>
+      },
+      {
+        path: "reactblog",
+        element: <ReactBlog></ReactBlog>
       },
       {
         path: "about",
@@ -106,10 +138,32 @@ export const router = createBrowserRouter([
         element: <Following></Following>,
       },
       {
+        path: "messages",
+        element: <ChatBox></ChatBox>,
+      },
+      {
         path: "trending",
         element: <Trending></Trending>,
       },
     ],
+  },
+
+  {
+    path: 'code-snippet',
+    element: <MainSnippet></MainSnippet>
+  },
+  {
+    path: '/snippet/:id', 
+    element: <SnippetView></SnippetView>
+  },
+  {
+    path: '/view-code/:id', 
+    element: <CodeView></CodeView>
+  },
+
+  {
+    path: 'code-editor',
+    element: <Editormain></Editormain>
   },
 
   {

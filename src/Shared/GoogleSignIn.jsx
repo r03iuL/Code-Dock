@@ -15,15 +15,34 @@ const GoogleSignIn = () => {
     } else {
       googleLogin()
         .then((result) => {
-          const user = result.user;
+          const loggedInUser = result.user;
           console.log(user);
-          navigate("/user/dashboard");
+
+          // Save user in mongodb after login
+          const saveUser = { name: loggedInUser.displayName, email: loggedInUser.email, img: loggedInUser.photoURL }
+          fetch('http://localhost:5000/users', {
+            method: 'POST',
+            headers: {
+              'content-type': 'application/json'
+            },
+            body: JSON.stringify(saveUser)
+          })
+            .then(res => res.json())
+            .then(data => {
+              if (data.insertedId) {
+                navigate("/user/dashboard");
+              }
+            })
+
         })
+        
         .catch((error) => {
           console.error(error);
         });
     }
   };
+
+
   return (
     <div
       className="mx-8 rounded border border-blue-500 flex text-center text-white cursor-pointer font-semibold"
