@@ -57,7 +57,7 @@ const DashboardSidebar = () => {
         </Link>
 
         {/* user name  */}
-        <p className="text-gray-500 text-base text-lg font-semibold my-[2%]">
+        <p className="text-gray-500 text-lg font-semibold my-[2%]">
           {user.displayName}
         </p>
 
