@@ -125,7 +125,6 @@ export const router = createBrowserRouter([
         path: "code-editor",
         element: <Editormain></Editormain>,
       },
-<<<<<<< HEAD
       // {
       //   path: "code-editor",
       //   element: <Editormain></Editormain>,
@@ -133,15 +132,6 @@ export const router = createBrowserRouter([
       {
         path: "code-snippet",
         element: <MainSnippet></MainSnippet>,
-=======
-      {
-        path: "code-editor",
-        element: <Editormain></Editormain>,
-      },
-      {
-        path: "code-snippet",
-    element:<MainSnippet></MainSnippet>
->>>>>>> 4179f8b7c6c0d3aa02f15771f3a070f8b820f29a
       },
       {
         path: "snippet/:id",
@@ -151,7 +141,6 @@ export const router = createBrowserRouter([
         path: "view-code/:id",
         element: <CodeView></CodeView>,
       },
-<<<<<<< HEAD
       {
         path: "allblog",
         element: <Blog></Blog>,
@@ -176,8 +165,6 @@ export const router = createBrowserRouter([
         path: "reactblog",
         element: <ReactBlog></ReactBlog>,
       },
-=======
->>>>>>> 4179f8b7c6c0d3aa02f15771f3a070f8b820f29a
     ],
   },
   
