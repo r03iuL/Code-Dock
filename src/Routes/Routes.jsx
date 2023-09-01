@@ -23,12 +23,12 @@ import MainSnippet from "../Components/CodeSnippet/MainSnippet";
 import SnippetView from "../Components/CodeSnippet/SnippetView";
 import CodeView from "../Components/CodeSnippet/CodeView";
 import Editormain from './../CodeEditor/Editormain';
-
 import HtmlBlog from "../Homepage/BlogPage/HtmlBlog";
 import CssBlog from "../Homepage/BlogPage/CssBlog";
 import JavascriptBlog from "../Homepage/BlogPage/JavascriptBlog";
 import ReactBlog from "../Homepage/BlogPage/ReactBlog";
 import ChatBox from "../Shared/LiveChat/ChatBox";
+import Chat from "../Shared/LiveChat/Chat";
 
 
 
@@ -85,6 +85,7 @@ export const router = createBrowserRouter([
         path: "login",
         element: <Login></Login>,
       },
+
       {
         path: "signup",
         element: <SignUp></SignUp>,
@@ -139,16 +140,24 @@ export const router = createBrowserRouter([
       },
       {
         path: "messages",
-        element: <ChatBox></ChatBox>,
+        element: <Chat></Chat>,
       },
       {
         path: "trending",
         element: <Trending></Trending>,
       },
+      {
+        path: "code-editor",
+        element: <Editormain></Editormain>,
+      },
     ],
   },
 
   {
+
+    path: "*",
+    element: <Error></Error>,
+
     path: 'code-snippet',
     element: <MainSnippet></MainSnippet>
   },
@@ -164,11 +173,6 @@ export const router = createBrowserRouter([
   {
     path: 'code-editor',
     element: <Editormain></Editormain>
+
   },
-
-  {
-    path: '*',
-    element: <Error></Error>
-  }
-
 ]);

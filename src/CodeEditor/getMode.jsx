@@ -3,7 +3,14 @@ import { monaco } from 'react-monaco-editor';
 
 const getMode = (fileName) => {
     const fileExtension = fileName.split('.').pop();
-    const mode = monaco.languages.getLanguages().find(lang => lang.extensions.includes(fileExtension));
+    console.log('File Extension:', fileExtension); // Log the file extension
+    
+    const supportedLanguages = monaco.languages.getLanguages();
+    console.log('Supported Languages:', supportedLanguages); // Log the supported languages and their extensions
+    
+    const mode = supportedLanguages.find(lang => lang.extensions.includes(fileExtension));
+    console.log('Selected Mode:', mode); // Log the selected mode
+    
     if (mode) {
         return mode.id;
     }
