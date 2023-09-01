@@ -6,7 +6,7 @@ const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
   const handleLogOut = () => {
     logOut()
-      .then(() => {})
+      .then(() => { })
       .catch((error) => console.log(error));
   };
   const navbarStart = (
@@ -18,13 +18,16 @@ const Navbar = () => {
         <Link>Code Editor</Link>
       </li> */}
       <li>
-        <Link to="/blog">Blog</Link>
+        <Link to="/allblog">Blog</Link>
       </li>
       <li>
         <Link to="/about">About Us</Link>
       </li>
       <li>
-        <Link to="/user/dashboard">Dashboard</Link>
+        {
+          user && <Link to="/user/dashboard">Dashboard</Link>
+        }
+
       </li>
     </ul>
   );
@@ -42,7 +45,7 @@ const Navbar = () => {
       {user ? (
         <>
           {/* <span>{user.displayName}</span>           */}
-                   
+
           <button onClick={handleLogOut} className="btn btn-ghost border-violet-600">
             LogOut
           </button>
@@ -85,9 +88,13 @@ const Navbar = () => {
           </ul>
         </div>
         <div>
-          <h2 className="font-bold font-mono text-4xl">
-            C0de<span>_&gt;</span><span className="text-violet-600">d0ck</span>
-          </h2>
+
+          <Link to='/'>
+            <h2 className="font-bold font-mono text-3xl">
+              C0de<span>_&gt;</span>d0ck
+            </h2>
+          </Link>
+
         </div>
       </div>
       <div className="navbar p-0 hidden lg:flex justify-between items-center">

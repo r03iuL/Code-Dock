@@ -1,4 +1,4 @@
-import { blogData } from "../Homepage/Blogs"
+import { blogData } from "../BlogPage/Blogs"
 
 const Blog = () => {
   console.log(blogData)
@@ -9,9 +9,9 @@ const Blog = () => {
 
     <div >
       <h2 className="text-3xl lg:text-5xl font-semibold mb-5 text-center pt-10">
-        Blog
+       Popular Blog
       </h2>
-      <p className="w-[90%] lg:w-7/12 mx-auto pb-10">
+      <p className="w-[90%] lg:w-7/12 text-center mx-auto pb-10">
         Below you'll find answers to the most common questions you may have on CodeDock. Also, please feel free to check out our Facebook & Google Advertising Guides & Academy. If you still can't find the answer your're lokking for, just Contact us!
       </p>
       <div className="grid grid-cols-1 lg:grid-cols-3  gap-5 container  mx-auto mb-24 ">
@@ -20,7 +20,7 @@ const Blog = () => {
             (blog, index) => ( <div key={index}>          
 
 
-              <div className="card  bg-white shadow-xl shadow-violet-500/50 h-full">
+              <div className="card  bg-white shadow-lg shadow-violet-500/50 h-full">
                 <div className="card-body text-gray-600 ">
                   <div className="card-title font-semibold flex items-start">
                     <p className="pt-1">
