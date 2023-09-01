@@ -3,7 +3,7 @@ import { BiBookAdd, BiSearchAlt2 } from "react-icons/bi";
 import { BsChatRightQuote } from "react-icons/bs";
 import { MdSupportAgent } from "react-icons/md";
 import { PiNotePencilBold } from "react-icons/pi";
-
+import { TbWorldShare } from "react-icons/tb";
 import { Link } from "react-router-dom";
 import "./DashboardNavbar.css";
 
@@ -39,6 +39,13 @@ const DashboardNavbar = () => {
           title="Create New Repositories"
         >
           <BiBookAdd></BiBookAdd>
+        </Link>
+        <Link
+          to="/user/code-snippet"
+          className="cursor-pointer text-violet-600"
+          title="Create New Repositories"
+        >
+          <TbWorldShare></TbWorldShare>
         </Link>
         <Link
           to="/user/code-editor"

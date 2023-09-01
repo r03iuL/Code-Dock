@@ -47,30 +47,6 @@ export const router = createBrowserRouter([
         element: <SignUp></SignUp>,
       },
       {
-        path: "allblog",
-        element: <Blog></Blog>,
-      },
-      {
-        path: "gitblog",
-        element: <GitBlog></GitBlog>,
-      },
-      {
-        path: "htmlblog",
-        element: <HtmlBlog></HtmlBlog>,
-      },
-      {
-        path: "cssblog",
-        element: <CssBlog></CssBlog>,
-      },
-      {
-        path: "javablog",
-        element: <JavascriptBlog></JavascriptBlog>,
-      },
-      {
-        path: "reactblog",
-        element: <ReactBlog></ReactBlog>,
-      },
-      {
         path: "about",
         element: <AboutUs></AboutUs>,
       },
@@ -149,13 +125,13 @@ export const router = createBrowserRouter([
         path: "code-editor",
         element: <Editormain></Editormain>,
       },
-      {
-        path: "code-editor",
-        element: <Editormain></Editormain>,
-      },
+      // {
+      //   path: "code-editor",
+      //   element: <Editormain></Editormain>,
+      // },
       {
         path: "code-snippet",
-    element:<MainSnippet></MainSnippet>
+        element: <MainSnippet></MainSnippet>,
       },
       {
         path: "snippet/:id",
@@ -164,6 +140,30 @@ export const router = createBrowserRouter([
       {
         path: "view-code/:id",
         element: <CodeView></CodeView>,
+      },
+      {
+        path: "allblog",
+        element: <Blog></Blog>,
+      },
+      {
+        path: "gitblog",
+        element: <GitBlog></GitBlog>,
+      },
+      {
+        path: "htmlblog",
+        element: <HtmlBlog></HtmlBlog>,
+      },
+      {
+        path: "cssblog",
+        element: <CssBlog></CssBlog>,
+      },
+      {
+        path: "javablog",
+        element: <JavascriptBlog></JavascriptBlog>,
+      },
+      {
+        path: "reactblog",
+        element: <ReactBlog></ReactBlog>,
       },
     ],
   },
