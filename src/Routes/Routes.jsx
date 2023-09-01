@@ -14,6 +14,7 @@ import Favourites from "../Pages/DashboardPages/Favourites/Favourites";
 import Following from "../Pages/DashboardPages/Following/Following";
 import Trending from "../Pages/DashboardPages/Trending/Trending";
 import SettingPage from "../Pages/SettingPage/SettingPage";
+import Editormain from "./../CodeEditor/Editormain";
 import Blog from "../Homepage/BlogPage/AllBlog";
 import GitBlog from "../Homepage/BlogPage/GitBlog";
 import PrivateRoute from './PrivateRoute';
@@ -23,7 +24,6 @@ import MainSnippet from "../Components/CodeSnippet/MainSnippet";
 import SnippetView from "../Components/CodeSnippet/SnippetView";
 import CodeView from "../Components/CodeSnippet/CodeView";
 import Editormain from './../CodeEditor/Editormain';
-
 import HtmlBlog from "../Homepage/BlogPage/HtmlBlog";
 import CssBlog from "../Homepage/BlogPage/CssBlog";
 import JavascriptBlog from "../Homepage/BlogPage/JavascriptBlog";
@@ -86,6 +86,7 @@ export const router = createBrowserRouter([
         path: "login",
         element: <Login></Login>,
       },
+
       {
         path: "signup",
         element: <SignUp></SignUp>,
@@ -146,10 +147,18 @@ export const router = createBrowserRouter([
         path: "trending",
         element: <Trending></Trending>,
       },
+      {
+        path: "code-editor",
+        element: <Editormain></Editormain>,
+      },
     ],
   },
 
   {
+
+    path: "*",
+    element: <Error></Error>,
+
     path: 'code-snippet',
     element: <MainSnippet></MainSnippet>
   },
@@ -165,11 +174,6 @@ export const router = createBrowserRouter([
   {
     path: 'code-editor',
     element: <Editormain></Editormain>
+
   },
-
-  {
-    path: '*',
-    element: <Error></Error>
-  }
-
 ]);

@@ -2,6 +2,7 @@ import React from "react";
 import { BiBookAdd, BiSearchAlt2 } from "react-icons/bi";
 import { BsChatRightQuote } from "react-icons/bs";
 import { MdSupportAgent } from "react-icons/md";
+import { PiNotePencilBold } from "react-icons/pi";
 import { Link } from "react-router-dom";
 import "./DashboardNavbar.css";
 
@@ -31,17 +32,22 @@ const DashboardNavbar = () => {
 
       {/* navbar options  */}
       <div className="flex gap-x-5 px-[8%] text-2xl">
-        <p className="cursor-pointer" title="create new repositories">
+        <p className="cursor-pointer" title="Create New Repositories">
           <Link to="/user/createNew">
             <BiBookAdd></BiBookAdd>
           </Link>
         </p>
-        <p className="cursor-pointer" title="support">
+        <p className="cursor-pointer" title="Code Editor ">
+          <Link to="/user/code-editor">
+            <PiNotePencilBold></PiNotePencilBold>
+          </Link>
+        </p>
+        <p className="cursor-pointer" title="Support">
           <Link to="/support">
             <MdSupportAgent></MdSupportAgent>
           </Link>
         </p>
-        <p className="cursor-pointer" title="give feedback">
+        <p className="cursor-pointer" title="Feedback">
           <Link to="/feedback">
             <BsChatRightQuote></BsChatRightQuote>
           </Link>
