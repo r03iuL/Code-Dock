@@ -29,6 +29,7 @@ import CssBlog from "../Homepage/BlogPage/CssBlog";
 import JavascriptBlog from "../Homepage/BlogPage/JavascriptBlog";
 import ReactBlog from "../Homepage/BlogPage/ReactBlog";
 import ChatBox from "../Shared/LiveChat/ChatBox";
+import Chat from "../Shared/LiveChat/Chat";
 
 
 
@@ -139,7 +140,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "messages",
-        element: <ChatBox></ChatBox>,
+        element: <Chat></Chat>,
       },
       {
         path: "trending",
