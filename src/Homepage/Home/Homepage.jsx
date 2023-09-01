@@ -1,6 +1,6 @@
 import AboutUs from "../AboutUs";
 
-import Blog from "../Blog";
+import Blog from "../BlogPage/Blog";
 import Counter from "../Counter";
 import Features from "../Features";
 import Faq from "../Faq";

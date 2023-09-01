@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+
+# some extra file not working
+useFileUpload.jsx
+UploadCodeFile.jsx
+sample.code.jsx
