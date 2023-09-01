@@ -10,8 +10,7 @@ const useFileUpload = () => {
 
   const CLOUD_NAME = import.meta.env.VITE_cloud_name;
   const UPLOAD_PRESET = import.meta.env.VITE_cloud_upload_preset;
-  const CLOUD_URL =
-    "https://api.cloudinary.com/v1_1/" + CLOUD_NAME + "/auto/upload";
+  const CLOUD_URL = "https://api.cloudinary.com/v1_1/" + CLOUD_NAME + "/auto/upload";
 
   const upload = async (files) => {
     const XUniqueUploadId = +new Date();
