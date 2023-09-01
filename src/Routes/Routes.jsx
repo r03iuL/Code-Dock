@@ -14,7 +14,6 @@ import Favourites from "../Pages/DashboardPages/Favourites/Favourites";
 import Following from "../Pages/DashboardPages/Following/Following";
 import Trending from "../Pages/DashboardPages/Trending/Trending";
 import SettingPage from "../Pages/SettingPage/SettingPage";
-import Editormain from "./../CodeEditor/Editormain";
 import Blog from "../Homepage/BlogPage/AllBlog";
 import GitBlog from "../Homepage/BlogPage/GitBlog";
 import PrivateRoute from './PrivateRoute';
