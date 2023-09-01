@@ -33,14 +33,14 @@ const AllBlog = () => {
             <p className="w-[90%] lg:w-7/12 text-center mx-auto py-10 pb-10 font-semibold">
                 Below you'll find answers to the most common questions you may have on CodeDock. Also, please feel free to check out our Facebook & Google Advertising Guides & Academy. If you still can't find the answer your're lokking for, just Contact us!
             </p>
-            <div className='grid grid-cols-1 lg:grid-cols-4  mx-auto mb-24 container pt-10 gap-12'>
+            <div className='grid grid-cols-1 lg:grid-cols-3  mx-14 mb-24 container pt-10 gap-12'>
 
                 <div className="card bg-white shadow-lg shadow-violet-500/50 h-full border w-96">
                     <div className="card-body">
                         <img src="https://i.ibb.co/85VwNwK/GIT-BLOGs.png" alt="" />
                         <div className="card-actions justify-end">
                             {/* Use the Link component to navigate */}
-                            <Link to="/gitblog" className="btn text-xl text-white bg-violet-600 shadow-lg shadow-violet-500/50">
+                            <Link to="/user/gitblog" className="btn text-xl text-white bg-violet-600 shadow-lg shadow-violet-500/50">
                                 See All
                             </Link>
                         </div>

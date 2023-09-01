@@ -69,7 +69,7 @@ function MainSnippet() {
 
 
     return (
-        <div className="bg-gray-100 min-h-screen flex justify-center items-center">
+        <div className="bg-gray-100 m-10 min-h-screen flex justify-center items-center">
             <div className="container mx-auto w-full p-6 bg-gray-200 rounded-lg shadow-md">
                 <h1 className="text-3xl font-semibold mb-4 text-violet-700">Create a new snippet</h1>
                 <div className="mb-4 flex space-x-4">

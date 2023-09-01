@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { BiSolidDashboard, BiSolidTimer, BiLogOutCircle } from "react-icons/bi";
+import { BiSolidDashboard, BiSolidTimer, BiLogOutCircle, BiBookHeart } from "react-icons/bi";
 import { PiChatTextBold } from "react-icons/pi";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { RiGitRepositoryLine, RiGitPullRequestFill } from "react-icons/ri";
@@ -139,6 +139,14 @@ const DashboardSidebar = () => {
                 <HiOutlineTrendingUp></HiOutlineTrendingUp>
               </div>
               <div className="">Trending</div>
+            </ActiveDashboardLink>
+          </li>
+          <li className="  ">
+            <ActiveDashboardLink to="/user/trending">
+              <div className="">
+                <BiBookHeart></BiBookHeart>
+              </div>
+              <Link to='/user/allblog' className="text-gray-500 hover:text-violet-600">All Blogs</Link>
             </ActiveDashboardLink>
           </li>
           <li className="  " onClick={handleLogOut}>
