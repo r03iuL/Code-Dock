@@ -27,7 +27,6 @@ import HtmlBlog from "../Homepage/BlogPage/HtmlBlog";
 import CssBlog from "../Homepage/BlogPage/CssBlog";
 import JavascriptBlog from "../Homepage/BlogPage/JavascriptBlog";
 import ReactBlog from "../Homepage/BlogPage/ReactBlog";
-// import ChatBox from "../Shared/LiveChat/ChatBox";
 import Chat from "../Shared/LiveChat/Chat";
 
 export const router = createBrowserRouter([
@@ -150,28 +149,27 @@ export const router = createBrowserRouter([
         path: "code-editor",
         element: <Editormain></Editormain>,
       },
+      {
+        path: "code-editor",
+        element: <Editormain></Editormain>,
+      },
+      {
+        path: "code-snippet",
+    element:<MainSnippet></MainSnippet>
+      },
+      {
+        path: "snippet/:id",
+        element: <SnippetView></SnippetView>,
+      },
+      {
+        path: "view-code/:id",
+        element: <CodeView></CodeView>,
+      },
     ],
   },
-
+  
   {
     path: "*",
     element: <Error></Error>,
-  },
-  {
-    path: "code-snippet",
-    element: <MainSnippet></MainSnippet>,
-  },
-  {
-    path: "/snippet/:id",
-    element: <SnippetView></SnippetView>,
-  },
-  {
-    path: "/view-code/:id",
-    element: <CodeView></CodeView>,
-  },
-
-  {
-    path: "code-editor",
-    element: <Editormain></Editormain>,
   },
 ]);
