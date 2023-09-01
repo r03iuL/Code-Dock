@@ -45,17 +45,17 @@ const DashboardSidebar = () => {
       </div>
 
       {/* image and icon under the image  */}
-      <div className="py-[5%] text-center">
+      <div className="py-[10%] text-center">
         <Link to="/user">
           <img
             src={user?.photoURL}
             alt={user?.displayName}
-            className="mx-auto rounded-[50%] border-4 border-violet-400 w-[70px]"
+            className="mx-auto rounded-[50%] border-4 border-violet-400 w-[100px]"
           />
         </Link>
 
         {/* user name  */}
-        <p className="text-gray-500 text-base font-semibold mb-[2%]">
+        <p className="text-gray-500 text-base text-lg font-semibold my-[2%]">
           {user.displayName}
         </p>
 

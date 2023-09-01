@@ -15,12 +15,10 @@ import Following from "../Pages/DashboardPages/Following/Following";
 import Trending from "../Pages/DashboardPages/Trending/Trending";
 import SettingPage from "../Pages/SettingPage/SettingPage";
 import Blog from "../Homepage/Blog";
-import PrivateRoute from './PrivateRoute';
+import PrivateRoute from "./PrivateRoute";
 import AboutUs from "../Homepage/AboutUs";
 import Error from "../../Error";
-import Editormain from './../CodeEditor/Editormain';
-
-
+import Editormain from "./../CodeEditor/Editormain";
 
 export const router = createBrowserRouter([
   {
@@ -51,9 +49,7 @@ export const router = createBrowserRouter([
         path: "secret",
         element: <Secret></Secret>,
       },
-       { path: "login",
-        element: <Login></Login>,
-      },
+      { path: "login", element: <Login></Login> },
       {
         path: "signup",
         element: <SignUp></SignUp>,
@@ -108,17 +104,15 @@ export const router = createBrowserRouter([
         path: "trending",
         element: <Trending></Trending>,
       },
+      {
+        path: "code-editor",
+        element: <Editormain></Editormain>,
+      },
     ],
   },
 
   {
-    path: 'code-editor',
-    element: <Editormain></Editormain>
+    path: "*",
+    element: <Error></Error>,
   },
-
-  {
-    path: '*',
-    element: <Error></Error>
-  }
-
 ]);
