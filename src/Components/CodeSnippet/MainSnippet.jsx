@@ -33,7 +33,7 @@ function MainSnippet() {
         }
 
         try {
-            const response = await fetch('http://localhost:5000/snippets', {
+            const response = await fetch('https://code-dock-backend.vercel.app/snippets', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
