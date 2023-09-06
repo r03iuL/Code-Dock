@@ -5,7 +5,7 @@ import { Link, useParams } from 'react-router-dom';
 function SnippetView() {
     const { id } = useParams();
     const [snippet, setSnippet] = useState(null);
-    const shareableUrl = `http://localhost:5173/snippet/${id}`;
+    const shareableUrl = `http://localhost:5173/user/snippet/${id}`;
 
 
     useEffect(() => {
@@ -44,30 +44,34 @@ function SnippetView() {
                 </h1>
                 <div className='mt-5 mb-16'>
                     <h5 className="text-gray-500 text-sm"></h5>
-                    <h3 className="border-y-2 border-indigo-100"></h3>
-                    <h3 className='mt-5'>
+                    <h3 className="border-y-2 border-indigo-100 mb-10"></h3>
+                    <h4 className='mt-5 font-normal'>
                         From <span className='font-bold'>{snippet.author}</span> , written in <span className='font-bold'>{snippet.language}</span>
-                    </h3>
+                    </h4>
 
-                    <p>
+                    <h4>
                         URL:{" "}
                         <a className='text-blue-400' href={shareableUrl} target="_blank" rel="noopener noreferrer">
                             {shareableUrl}
                         </a>
-                    </p>
+                    </h4>
 
-                    <h1>
+                    <h4>
                         <a
                             href={`data:text/plain;charset=utf-8,${encodeURIComponent(snippet.content)}`}
                             download={`${snippet.title}.txt`}
+                            className='text-blue-400'
                         >
-                            <span className='text-blue-400'>Download</span>
+                            Download
                         </a>{" "}
-                        or <Link to={`/view-code/${snippet._id}`}>
-                            <span className='text-blue-400'>View Code</span>
+                        or{" "}
+                        <Link to={`/user/view-code/${snippet._id}`} className='text-blue-400'>
+                            View Code
                         </Link>
-                    </h1>
-                    <div className='mt-5 flex gap-4'>
+
+                    </h4>
+
+                    <div className='mt-10 flex gap-4'>
                         <FaFacebook className='text-5xl text-blue-700'></FaFacebook>
                         <FaInstagram className='text-5xl text-pink-600'></FaInstagram>
                         <FaTwitter className='text-5xl text-blue-400'></FaTwitter>

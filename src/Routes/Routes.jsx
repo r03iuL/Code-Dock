@@ -125,10 +125,6 @@ export const router = createBrowserRouter([
         path: "code-editor",
         element: <Editormain></Editormain>,
       },
-      // {
-      //   path: "code-editor",
-      //   element: <Editormain></Editormain>,
-      // },
       {
         path: "code-snippet",
         element: <MainSnippet></MainSnippet>,
@@ -141,6 +137,7 @@ export const router = createBrowserRouter([
         path: "view-code/:id",
         element: <CodeView></CodeView>,
       },
+    
       {
         path: "allblog",
         element: <Blog></Blog>,
@@ -167,7 +164,7 @@ export const router = createBrowserRouter([
       },
     ],
   },
-  
+
   {
     path: "*",
     element: <Error></Error>,

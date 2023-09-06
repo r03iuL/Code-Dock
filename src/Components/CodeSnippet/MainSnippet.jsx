@@ -57,7 +57,7 @@ function MainSnippet() {
                     confirmButtonText: 'Cool'
                 }).then(() => {
 
-                    navigate(`/snippet/${data.insertedId}`);
+                    navigate(`/user/snippet/${data.insertedId}`);
                 });
             }
             
