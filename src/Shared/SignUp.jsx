@@ -53,7 +53,7 @@ const SignUp = () => {
     //         // Add other properties as needed
     //     };
 
-    //     fetch('http://localhost:5000/users', {
+    //     fetch('https://code-dock-backend.vercel.app/users', {
     //         method: 'POST',
     //         headers: {
     //             'Content-Type': 'application/json'

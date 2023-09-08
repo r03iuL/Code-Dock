@@ -16,7 +16,7 @@ const Repositories = () => {
   const slicedRepo = allRepositories.slice(0, 3);
   // console.log(slicedRepo.length);
   // useEffect(()=>{
-  //   fetch(`http://localhost:5000/myRepositories/${user?.email}`)
+  //   fetch(`https://code-dock-backend.vercel.app/myRepositories/${user?.email}`)
   //   .then(res => res.json())
   //   .then(data => setAllData(data))
   // },[])
