@@ -48,7 +48,7 @@
 //     setNewMessage('');
 
 //     // Send the new message to the server
-//     await fetch('http://localhost:5000/user/sendMessage', {
+//     await fetch('https://code-dock-backend.vercel.app/user/sendMessage', {
 //       method: 'POST',
 //       headers: {
 //         'Content-Type': 'application/json',
@@ -60,7 +60,7 @@
 //   useEffect(() => {
 //     // Fetch initial messages from the server
 //     // You can replace this with your API endpoint
-//     fetch('http://localhost:5000/user/getMessages')
+//     fetch('https://code-dock-backend.vercel.app/user/getMessages')
 //       .then((response) => response.json())
 //       .then((data) => setMessages(data.messages))
 //       .catch((error) => console.error('Error fetching messages:', error));
