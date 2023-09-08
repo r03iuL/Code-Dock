@@ -29,7 +29,7 @@ const CreateNewRepo = () => {
     });
     // posting new repository
     if(fileUrlList.length > 0){
-      fetch("http://localhost:5000/repositories", {
+      fetch("https://code-dock-backend.vercel.app/repositories", {
       method: "POST",
       headers: {
         "content-type": "application/json",

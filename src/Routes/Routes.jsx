@@ -29,6 +29,7 @@ import JavascriptBlog from "../Homepage/BlogPage/JavascriptBlog";
 import ReactBlog from "../Homepage/BlogPage/ReactBlog";
 import Chat from "../Shared/LiveChat/Chat";
 import UserProfile from "../Pages/DashboardPages/UserProfile/UserProfile";
+import RepoFolder from "../Pages/DashboardPages/Repositories/RepoFolder";
 
 export const router = createBrowserRouter([
   {
@@ -107,6 +108,10 @@ export const router = createBrowserRouter([
         element: <Repositories></Repositories>,
       },
       {
+        path: "repoFolder",
+        element: <RepoFolder></RepoFolder>,
+      },
+      {
         path: "projects",
         element: <Projects></Projects>,
       },
@@ -130,10 +135,6 @@ export const router = createBrowserRouter([
         path: "code-editor",
         element: <Editormain></Editormain>,
       },
-      // {
-      //   path: "code-editor",
-      //   element: <Editormain></Editormain>,
-      // },
       {
         path: "code-snippet",
         element: <MainSnippet></MainSnippet>,
@@ -146,6 +147,7 @@ export const router = createBrowserRouter([
         path: "view-code/:id",
         element: <CodeView></CodeView>,
       },
+    
       {
         path: "allblog",
         element: <Blog></Blog>,
@@ -172,7 +174,7 @@ export const router = createBrowserRouter([
       },
     ],
   },
-  
+
   {
     path: "*",
     element: <Error></Error>,
