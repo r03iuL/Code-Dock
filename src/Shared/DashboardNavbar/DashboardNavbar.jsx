@@ -2,12 +2,14 @@ import React from "react";
 import { BiBookAdd, BiSearchAlt2 } from "react-icons/bi";
 import { BsChatRightQuote } from "react-icons/bs";
 import { MdSupportAgent } from "react-icons/md";
+import { PiNotePencilBold } from "react-icons/pi";
+import { TbWorldShare } from "react-icons/tb";
 import { Link } from "react-router-dom";
 import "./DashboardNavbar.css";
 
 const DashboardNavbar = () => {
   return (
-    <div className="hidden lg:flex navbar  justify-between px-[8%] py-[1.5%] bg-base-100 border-b-[3px] border-violet-600">
+    <div className="hidden lg:flex navbar justify-between items-center px-[8%] py-[1.5%] bg-base-100 border-b-[3px] border-violet-600">
       {/* navbar search option  */}
       <div className="relative w-1/3   rounded ">
         <div className="absolute my-auto left-2">
@@ -30,22 +32,34 @@ const DashboardNavbar = () => {
       </div>
 
       {/* navbar options  */}
-      <div className="flex gap-x-5 px-[8%] text-2xl">
-        <p className="cursor-pointer" title="create new repositories">
-          <Link to="/user/createNew">
-            <BiBookAdd></BiBookAdd>
-          </Link>
-        </p>
-        <p className="cursor-pointer" title="support">
-          <Link to="/support">
-            <MdSupportAgent></MdSupportAgent>
-          </Link>
-        </p>
-        <p className="cursor-pointer" title="give feedback">
-          <Link to="/feedback">
-            <BsChatRightQuote></BsChatRightQuote>
-          </Link>
-        </p>
+      <div className="gap-5 text-3xl ">
+        <Link
+          to="/user/createNew"
+          className="cursor-pointer text-violet-600"
+          title="Create New Repositories"
+        >
+          <BiBookAdd></BiBookAdd>
+        </Link>
+        <Link
+          to="/user/code-snippet"
+          className="cursor-pointer text-violet-600"
+          title="Create New Repositories"
+        >
+          <TbWorldShare></TbWorldShare>
+        </Link>
+        <Link
+          to="/user/code-editor"
+          className="cursor-pointer text-violet-600"
+          title="Code Editor "
+        >
+          <PiNotePencilBold></PiNotePencilBold>
+        </Link>
+        <Link to="/support" className="cursor-pointer text-violet-600" title="Support">
+          <MdSupportAgent></MdSupportAgent>
+        </Link>
+        <Link to="/feedback" className="cursor-pointer text-violet-600" title="Feedback">
+          <BsChatRightQuote></BsChatRightQuote>
+        </Link>
       </div>
     </div>
   );

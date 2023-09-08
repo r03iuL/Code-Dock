@@ -12,7 +12,9 @@ module.exports = {
   rules: {
     'react-refresh/only-export-components': 'warn',
     "react/jsx-uses-react": "error",   
+    // "react/no-unkown-property": "off",   
      "react/jsx-uses-vars": "error" ,
      "react/prop-types": "off",
+     "no-unused-vars": "off",
   },
 }

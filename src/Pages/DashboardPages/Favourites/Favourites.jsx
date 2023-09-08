@@ -10,7 +10,7 @@ const Favourites = () => {
 
   //TODO=> it is for temporary it will be removed
   const slicedRepo = allRepositories.slice(0, 3);
-  console.log(slicedRepo.length);
+  // console.log(slicedRepo.length);
 
   return (
     <div className="px-[4%] py-[3%]">

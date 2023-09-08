@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { BiSolidDashboard, BiSolidTimer, BiLogOutCircle } from "react-icons/bi";
+import { BiSolidDashboard, BiSolidTimer, BiLogOutCircle, BiBookHeart } from "react-icons/bi";
 import { PiChatTextBold } from "react-icons/pi";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { RiGitRepositoryLine, RiGitPullRequestFill } from "react-icons/ri";
@@ -15,7 +15,7 @@ import ActiveDashboardLink from "../../Components/ActiveDashboardLink/ActiveDash
 
 const DashboardSidebar = () => {
   const { user, logOut } = useAuth();
-  console.log(user?.photoURL);
+  // console.log(user?.photoURL);
 
   //beacuse at first loading here user is null...
   if (user === null) {
@@ -47,25 +47,26 @@ const DashboardSidebar = () => {
       </div>
 
       {/* image and icon under the image  */}
-      <div className="py-[5%] text-center">
+      <div className="py-[10%] text-center">
         <Link to="/user">
           <img
             src={user?.photoURL}
             alt={user?.displayName}
-            className="mx-auto rounded-[50%] border-4 border-violet-400 w-[70px]"
+            className="mx-auto rounded-[50%] border-4 border-violet-400 w-[100px]"
           />
         </Link>
 
         {/* user name  */}
-        <p className="text-gray-500 text-base font-semibold mb-[2%]">
+        <Link to="/userprofile"><p className="text-gray-500 text-lg font-semibold my-[2%]">
           {user.displayName}
-        </p>
+        </p></Link>
 
         {/* user options  */}
         <div className="flex justify-center text-xl gap-x-5">
           <p title="messages">
             <Link to="/user/messages">
               <PiChatTextBold></PiChatTextBold>
+              
             </Link>
           </p>
           <p title="notifications">
@@ -84,7 +85,7 @@ const DashboardSidebar = () => {
       {/* navbar options  */}
       <div className="mt-3">
         <ul>
-          <li className="  ">
+          <li className=" rounded-none ">
             <ActiveDashboardLink to="/user/dashboard">
               <div className="">
                 <BiSolidDashboard></BiSolidDashboard>
@@ -138,6 +139,14 @@ const DashboardSidebar = () => {
                 <HiOutlineTrendingUp></HiOutlineTrendingUp>
               </div>
               <div className="">Trending</div>
+            </ActiveDashboardLink>
+          </li>
+          <li className="  ">
+            <ActiveDashboardLink to="/user/trending">
+              <div className="">
+                <BiBookHeart></BiBookHeart>
+              </div>
+              <Link to='/user/allblog' className="text-gray-500 hover:text-violet-600">All Blogs</Link>
             </ActiveDashboardLink>
           </li>
           <li className="  " onClick={handleLogOut}>
