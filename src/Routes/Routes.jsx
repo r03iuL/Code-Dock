@@ -28,6 +28,7 @@ import CssBlog from "../Homepage/BlogPage/CssBlog";
 import JavascriptBlog from "../Homepage/BlogPage/JavascriptBlog";
 import ReactBlog from "../Homepage/BlogPage/ReactBlog";
 import Chat from "../Shared/LiveChat/Chat";
+import RepoFolder from "../Pages/DashboardPages/Repositories/RepoFolder";
 
 export const router = createBrowserRouter([
   {
@@ -100,6 +101,10 @@ export const router = createBrowserRouter([
       {
         path: "repositories",
         element: <Repositories></Repositories>,
+      },
+      {
+        path: "repoFolder",
+        element: <RepoFolder></RepoFolder>,
       },
       {
         path: "projects",
