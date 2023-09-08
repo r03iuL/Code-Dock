@@ -20,12 +20,12 @@ const DashboardNavbar = () => {
         <input
           type="text"
           placeholder="Search"
-          className=" bg-violet-50 w-full rounded-sm  pl-8 h-12 focus:outline-none "
+          className=" bg-violet-50 w-full rounded-sm  pl-8 h-12 focus:outline-none pr-[104px] "
         />
 
         {/* search button  */}
-        <div className="absolute right-[8px]">
-          <button className="bg-violet-500 text-white font-semibold text-base  text-center  rounded-sm   px-5 py-[6px] hover:bg-violet-700">
+        <div className="absolute  right-[8px]">
+          <button className="bg-violet-500 text-white font-semibold text-base  text-center  rounded-sm   px-5 py-[5px] hover:bg-violet-700">
             Search
           </button>
         </div>

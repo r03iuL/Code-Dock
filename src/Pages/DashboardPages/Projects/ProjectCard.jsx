@@ -1,6 +1,7 @@
 import { } from '@smastrom/react-rating';
 import React from 'react';
 import { FaFolder, FaRegHeart, } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const ProjectCard = ({ project }) => {
     const { userName, repoName, types, numberOfRatings, image1, image2, image3, image4, date, status, rating } = project;
@@ -17,6 +18,7 @@ const ProjectCard = ({ project }) => {
                                 <div className="text-2xl font-semibold"> {repoName} </div>
                                 <div className="text-lg font-semibold"> {userName} </div>
                                 <div className="text-lg font-semibold"> {date} </div>
+                               
 
                             </div>
                             <div className="mx-auto">
