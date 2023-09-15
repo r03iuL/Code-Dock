@@ -13,7 +13,7 @@ const Repositories = () => {
   // console.log(allRepositories.length);
 
   //TODO => it is for temporary it will be removed
-  const slicedRepo = allRepositories.slice(0, 3);
+  // const slicedRepo = allRepositories.slice(0, 3);
   // console.log(slicedRepo.length);
   // useEffect(()=>{
   //   fetch(`https://code-dock-backend.vercel.app/myRepositories/${user?.email}`)

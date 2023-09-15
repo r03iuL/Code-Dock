@@ -19,12 +19,12 @@ const DashBoard = () => {
         <div className="box-style">
           <p className="flex items-center justify-between mb-4">
             {/* user repositories number */}
-            <span className="font-semibold text-xl">23</span>
+            <span className="font-semibold text-xl">{allRepositories.length}</span>
             <span className="bg-violet-200 rounded-md p-2 text-2xl">
               <RiGitRepositoryLine></RiGitRepositoryLine>
             </span>
           </p>
-          <p className="text-gray-500 text-lg">Total Repositories</p>p
+          <p className="text-gray-500 text-lg">Total Repositories</p>
         </div>
       </div>
 

@@ -6,7 +6,7 @@ const useRepo = () => {
   const {user} = useContext(AuthContext)
 
   useEffect(() => {
-    fetch(`https://code-dock-backend.vercel.app/myRepositories/${user?.email}`)
+    fetch(`http://localhost:5000/myRepositories/${user?.email}`)
     .then(res => res.json())
     .then(data => setAllRepositories(data))
   }, []);

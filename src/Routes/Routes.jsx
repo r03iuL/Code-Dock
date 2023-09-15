@@ -103,7 +103,7 @@ export const router = createBrowserRouter([
         element: <Repositories></Repositories>,
       },
       {
-        path: "repoFolder",
+        path: "repoFolder/:id",
         element: <RepoFolder></RepoFolder>,
       },
       {

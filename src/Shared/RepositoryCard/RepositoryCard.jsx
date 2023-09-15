@@ -21,9 +21,9 @@ const RepositoryCard = ({ repo, fileUrls }) => {
 
       <div className="flex flex-col lg:flex-row items-left gap-6 ">
         <div onClick={() => getFileData(repo._id)} className="">
-          {/* <Link to="/user/repoFolder"> */}
+          <Link to={`/user/repoFolder/${repo?._id}`}>
             <FaFolder className="text-4xl text-purple-500"></FaFolder>
-          {/* </Link> */}
+          </Link>
         </div>
 
         <div className="w-60">
