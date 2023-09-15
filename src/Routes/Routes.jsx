@@ -30,6 +30,8 @@ import ReactBlog from "../Homepage/BlogPage/ReactBlog";
 import Chat from "../Shared/LiveChat/Chat";
 import AllUser from "../Pages/All User/AllUser";
 import ChatBox from "../Shared/LiveChat/ChatBox";
+import UserProfile from "../Pages/DashboardPages/UserProfile/UserProfile";
+import RepoFolder from "../Pages/DashboardPages/Repositories/RepoFolder";
 
 export const router = createBrowserRouter([
   {
@@ -55,6 +57,10 @@ export const router = createBrowserRouter([
       {
         path: "about",
         element: <AboutUs></AboutUs>,
+      },
+      {
+        path: "userprofile",
+        element: <UserProfile />
       },
       {
         path: "secret",
@@ -110,6 +116,10 @@ export const router = createBrowserRouter([
       {
         path: "repositories",
         element: <Repositories></Repositories>,
+      },
+      {
+        path: "repoFolder",
+        element: <RepoFolder></RepoFolder>,
       },
       {
         path: "projects",

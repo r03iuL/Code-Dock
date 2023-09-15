@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import { Picker } from 'emoji-mart';
 import useAuth from '../../Hooks/useAuth/useAuth';
@@ -65,6 +66,75 @@ const ChatBox = () => {
       .then((data) => setMessages(data.messages))
       .catch((error) => console.error('Error fetching messages:', error));
   }, []);
+
+// import React, { useEffect, useState } from 'react';
+// import { Picker } from 'emoji-mart';
+// import useAuth from '../../Hooks/useAuth/useAuth';
+// // import 'emoji-mart/css/emoji-mart.css';
+
+// const ChatBox = () => {
+//   const { user } = useAuth();
+
+//   // Papia apu's code
+
+//   // const [messages, setMessages] = useState([]);
+//   // const [newMessage, setNewMessage] = useState('');
+//   // const [showEmojiPicker, setShowEmojiPicker] = useState(false);
+
+//   // const handleSendMessage = () => {
+//   //   if (newMessage.trim() !== '') {
+//   //     const currentTime = new Date().toLocaleTimeString();
+//   //     const message = {
+//   //       text: newMessage,
+//   //       sender: 'user',
+//   //       timestamp: currentTime,
+//   //     };
+//   //     setMessages([...messages, message]);
+//   //     setNewMessage('');
+//   //   }
+//   // };
+
+//   // const handleAddEmoji = (emoji) => {
+//   //   setNewMessage(newMessage + emoji.native);
+//   // };
+
+
+//   // Istiak's code
+
+//   const [messages, setMessages] = useState([]);
+//   const [newMessage, setNewMessage] = useState('');
+//   const [showEmojiPicker, setShowEmojiPicker] = useState(false);
+
+//   const handleAddEmoji = (emoji) => {
+//     setNewMessage(newMessage + emoji.native);
+//   };
+
+//   const handleSendMessage = async () => {
+//     if (newMessage.trim() === '') return;
+
+//     const newMessages = [...messages, { text: newMessage, sender: 'user', timestamp: new Date() }];
+//     setMessages(newMessages);
+//     setNewMessage('');
+
+//     // Send the new message to the server
+//     await fetch('https://code-dock-backend.vercel.app/user/sendMessage', {
+//       method: 'POST',
+//       headers: {
+//         'Content-Type': 'application/json',
+//       },
+//       body: JSON.stringify({ text: newMessage }),
+//     });
+//   };
+
+//   useEffect(() => {
+//     // Fetch initial messages from the server
+//     // You can replace this with your API endpoint
+//     fetch('https://code-dock-backend.vercel.app/user/getMessages')
+//       .then((response) => response.json())
+//       .then((data) => setMessages(data.messages))
+//       .catch((error) => console.error('Error fetching messages:', error));
+//   }, []);
+
   
 
 
