@@ -28,7 +28,7 @@ import CssBlog from "../Homepage/BlogPage/CssBlog";
 import JavascriptBlog from "../Homepage/BlogPage/JavascriptBlog";
 import ReactBlog from "../Homepage/BlogPage/ReactBlog";
 import Chat from "../Shared/LiveChat/Chat";
-import AllUser from "../Pages/All User/AllUser";
+import AllUser from "../Pages/AllUser/AllUser";
 import ChatBox from "../Shared/LiveChat/ChatBox";
 import UserProfile from "../Pages/DashboardPages/UserProfile/UserProfile";
 import RepoFolder from "../Pages/DashboardPages/Repositories/RepoFolder";
@@ -42,10 +42,10 @@ export const router = createBrowserRouter([
         path: "/",
         element: <Homepage></Homepage>,
       },
-      {
-        path:"/allUsers",
-        element:<AllUser></AllUser>
-      },
+      // {
+      //   path:"/allUsers",
+      //   element:<AllUser></AllUser>
+      // },
       {
         path: "login",
         element: <Login></Login>,
@@ -182,6 +182,10 @@ export const router = createBrowserRouter([
         path: "reactblog",
         element: <ReactBlog></ReactBlog>,
       },
+      {
+        path: "allUsers",
+        element:<AllUser></AllUser>,
+      }
     ],
   },
 
