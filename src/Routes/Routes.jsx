@@ -31,6 +31,10 @@ import Chat from "../Shared/LiveChat/Chat";
 import AdminDashboard from "../Shared/AdminDashboard/AdminDashboard";
 import UserManagement from "../Shared/AdminDashboard/UserManagement";
 
+import AllUser from "../Pages/AllUser/AllUser";
+import ChatBox from "../Shared/LiveChat/ChatBox";
+import UserProfile from "../Pages/DashboardPages/UserProfile/UserProfile";
+import RepoFolder from "../Pages/DashboardPages/Repositories/RepoFolder";
 
 export const router = createBrowserRouter([
   {
@@ -41,6 +45,10 @@ export const router = createBrowserRouter([
         path: "/",
         element: <Homepage></Homepage>,
       },
+      // {
+      //   path:"/allUsers",
+      //   element:<AllUser></AllUser>
+      // },
       {
         path: "login",
         element: <Login></Login>,
@@ -54,6 +62,10 @@ export const router = createBrowserRouter([
         element: <AboutUs></AboutUs>,
       },
       {
+        path: "userprofile",
+        element: <UserProfile />
+      },
+      {
         path: "secret",
         element: <Secret></Secret>,
       },
@@ -65,6 +77,10 @@ export const router = createBrowserRouter([
       {
         path: "signup",
         element: <SignUp></SignUp>,
+      },
+      {
+        path:'chatbox',
+        element:<ChatBox></ChatBox>
       },
       {
         path: "secret",
@@ -113,6 +129,10 @@ export const router = createBrowserRouter([
         element: <Repositories></Repositories>,
       },
       {
+        path: "repoFolder/:id",
+        element: <RepoFolder></RepoFolder>,
+      },
+      {
         path: "projects",
         element: <Projects></Projects>,
       },
@@ -136,10 +156,6 @@ export const router = createBrowserRouter([
         path: "code-editor",
         element: <Editormain></Editormain>,
       },
-      // {
-      //   path: "code-editor",
-      //   element: <Editormain></Editormain>,
-      // },
       {
         path: "code-snippet",
         element: <MainSnippet></MainSnippet>,
@@ -152,6 +168,7 @@ export const router = createBrowserRouter([
         path: "view-code/:id",
         element: <CodeView></CodeView>,
       },
+    
       {
         path: "allblog",
         element: <Blog></Blog>,
@@ -176,9 +193,13 @@ export const router = createBrowserRouter([
         path: "reactblog",
         element: <ReactBlog></ReactBlog>,
       },
+      {
+        path: "allUsers",
+        element:<AllUser></AllUser>,
+      }
     ],
   },
-  
+
   {
     path: "*",
     element: <Error></Error>,

@@ -57,14 +57,14 @@ const DashboardSidebar = () => {
         </Link>
 
         {/* user name  */}
-        <p className="text-gray-500 text-lg font-semibold my-[2%]">
+        <Link to="/userprofile"><p className="text-gray-500 text-lg font-semibold my-[2%]">
           {user.displayName}
-        </p>
+        </p></Link>
 
         {/* user options  */}
         <div className="flex justify-center text-xl gap-x-5">
           <p title="messages">
-            <Link to="/user/messages">
+            <Link to="">
               <PiChatTextBold></PiChatTextBold>
               
             </Link>
@@ -156,7 +156,7 @@ const DashboardSidebar = () => {
             </ActiveDashboardLink>
           </li>
           <li className="  ">
-            <ActiveDashboardLink to="/user/trending">
+            <ActiveDashboardLink to="/user/allblog">
               <div className="">
                 <BiBookHeart></BiBookHeart>
               </div>

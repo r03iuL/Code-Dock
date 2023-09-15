@@ -2,15 +2,25 @@ import useRepo from "../../../Hooks/useRepo/useRepo";
 import SectionTitle from "../../../Components/SectionTitle/SectionTitle";
 import RepositoryCard from "../../../Shared/RepositoryCard/RepositoryCard";
 import { BiSearchAlt2 } from "react-icons/bi";
+import { useContext, useEffect, useState } from "react";
+import { AuthContext } from "../../../providers/AuthProvider";
 
 const Repositories = () => {
+  const {user} = useContext(AuthContext)
+  const [allData, setAllData] = useState([])
   //getting data by using hook but it will work when it will be dynamic.
   const [allRepositories] = useRepo();
   // console.log(allRepositories.length);
 
   //TODO => it is for temporary it will be removed
-  const slicedRepo = allRepositories.slice(0, 3);
+  // const slicedRepo = allRepositories.slice(0, 3);
   // console.log(slicedRepo.length);
+  // useEffect(()=>{
+  //   fetch(`https://code-dock-backend.vercel.app/myRepositories/${user?.email}`)
+  //   .then(res => res.json())
+  //   .then(data => setAllData(data))
+  // },[])
+  // console.log(allData)
 
   return (
     <div className="px-[4%] py-[3%]">
@@ -51,8 +61,8 @@ const Repositories = () => {
       <div className="box-style my-[3%]">
         <SectionTitle heading="All Repositories"></SectionTitle>
         <div className="mt-[3%]">
-          {slicedRepo.map((repo) => (
-            <RepositoryCard key={repo.id} repo={repo}></RepositoryCard>
+          {allRepositories.map((repo) => (
+            <RepositoryCard key={repo._id} repo={repo} fileUrls={repo?.fileUrlList}></RepositoryCard>
           ))}
         </div>
       </div>

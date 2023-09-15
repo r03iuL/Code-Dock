@@ -1,14 +1,14 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const useRepo = () => {
   const [allRepositories, setAllRepositories] = useState([]);
+  const {user} = useContext(AuthContext)
 
   useEffect(() => {
-    fetch("/userRepo.json")
-      .then((res) => res.json())
-      .then((data) => {
-        setAllRepositories(data);
-      });
+    fetch(`http://localhost:5000/myRepositories/${user?.email}`)
+    .then(res => res.json())
+    .then(data => setAllRepositories(data))
   }, []);
 
   return [allRepositories];
