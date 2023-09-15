@@ -5,7 +5,7 @@ import { Link, useParams } from 'react-router-dom';
 function SnippetView() {
     const { id } = useParams();
     const [snippet, setSnippet] = useState(null);
-    const shareableUrl = `http://localhost:5173/user/snippet/${id}`;
+    const shareableUrl = `https://codedock.netlify.app/user/snippet/${id}`;
 
 
     useEffect(() => {
