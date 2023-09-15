@@ -2,6 +2,7 @@ import { Player } from '@lottiefiles/react-lottie-player';
 import textedit from '../../src/assets/textedit.json'
 import hosting from '../../src/assets/hosting.json'
 import verson from '../../src/assets/verson.json'
+import { Link } from 'react-router-dom';
 
 const Features = () => {
     return (
@@ -50,6 +51,7 @@ const Features = () => {
                         </Player>
                         <p className="col-span-2">
                         <h2 className="text-2xl font-bold  ">Efficient Version Control for Streamlined Development</h2>Efficient Version Control for Streamlined Development involves using specialized tools and practices to manage and track changes made to a codebase. It enables development teams to collaborate seamlessly, maintain a history of code modifications, and ensure code quality. By creating branches for new features or fixes and merging changes systematically, version control minimizes conflicts and aids in code review. This practice fosters an organized workflow, accountability, and faster development cycles, leading to high-quality software releases.</p>
+
                     </div>
                 </div>
             </div>
