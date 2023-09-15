@@ -12,7 +12,7 @@ const RepoFolder = () => {
   const [fileUrlLists, setFileUrlLists] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/myRepositoriesId/${id}`)
+    fetch(`https://code-dock-backend.vercel.app/myRepositoriesId/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setFileUrlLists(data?.fileUrlList || []);

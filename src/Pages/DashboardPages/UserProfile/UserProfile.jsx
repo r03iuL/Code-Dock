@@ -21,7 +21,7 @@ const UserProfile = () => {
     const updatedProfile = {name, email, number, address}
     console.log(updatedProfile)
 
-  fetch(`http://localhost:5000/updateProfile/${user?.email}`, {
+  fetch(`https://code-dock-backend.vercel.app/updateProfile/${user?.email}`, {
     method: 'PUT',
     headers: {
       'content-type': 'application/json'
