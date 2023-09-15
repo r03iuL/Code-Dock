@@ -5,12 +5,12 @@ import { Link, useParams } from 'react-router-dom';
 function SnippetView() {
     const { id } = useParams();
     const [snippet, setSnippet] = useState(null);
-    const shareableUrl = `http://codedock.netlify.app/user/snippet/${id}`;
+    const shareableUrl = `http://localhost:5173/user/snippet/${id}`;
 
 
     useEffect(() => {
         // Fetch snippet data from the backend using your API endpoint
-        fetch(`https://code-dock-backend.vercel.app/snippets/${id}`)
+        fetch(`http://localhost:5000/snippets/${id}`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');

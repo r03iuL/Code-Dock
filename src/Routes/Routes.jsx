@@ -28,6 +28,8 @@ import CssBlog from "../Homepage/BlogPage/CssBlog";
 import JavascriptBlog from "../Homepage/BlogPage/JavascriptBlog";
 import ReactBlog from "../Homepage/BlogPage/ReactBlog";
 import Chat from "../Shared/LiveChat/Chat";
+import AllUser from "../Pages/All User/AllUser";
+import ChatBox from "../Shared/LiveChat/ChatBox";
 
 export const router = createBrowserRouter([
   {
@@ -37,6 +39,10 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Homepage></Homepage>,
+      },
+      {
+        path:"/allUsers",
+        element:<AllUser></AllUser>
       },
       {
         path: "login",
@@ -62,6 +68,10 @@ export const router = createBrowserRouter([
       {
         path: "signup",
         element: <SignUp></SignUp>,
+      },
+      {
+        path:'chatbox',
+        element:<ChatBox></ChatBox>
       },
       {
         path: "secret",

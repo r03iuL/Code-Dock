@@ -54,10 +54,10 @@ const DashboardNavbar = () => {
         >
           <PiNotePencilBold></PiNotePencilBold>
         </Link>
-        <Link to="/support" className="cursor-pointer text-violet-600" title="Support">
+        <Link to="/user/support" className="cursor-pointer text-violet-600" title="Support">
           <MdSupportAgent></MdSupportAgent>
         </Link>
-        <Link to="/feedback" className="cursor-pointer text-violet-600" title="Feedback">
+        <Link to="/allUsers" className="cursor-pointer text-violet-600" title="All Users">
           <BsChatRightQuote></BsChatRightQuote>
         </Link>
       </div>
