@@ -20,12 +20,12 @@ const DashboardNavbar = () => {
         <input
           type="text"
           placeholder="Search"
-          className=" bg-violet-50 w-full rounded-sm  pl-8 h-12 focus:outline-none "
+          className=" bg-violet-50 w-full rounded-sm  pl-8 h-12 focus:outline-none pr-[104px] "
         />
 
         {/* search button  */}
-        <div className="absolute right-[8px]">
-          <button className="bg-violet-500 text-white font-semibold text-base  text-center  rounded-sm   px-5 py-[6px] hover:bg-violet-700">
+        <div className="absolute  right-[8px]">
+          <button className="bg-violet-500 text-white font-semibold text-base  text-center  rounded-sm   px-5 py-[5px] hover:bg-violet-700">
             Search
           </button>
         </div>
@@ -43,7 +43,7 @@ const DashboardNavbar = () => {
         <Link
           to="/user/code-snippet"
           className="cursor-pointer text-violet-600"
-          title="Create New Repositories"
+          title="Share Code Snippet"
         >
           <TbWorldShare></TbWorldShare>
         </Link>
@@ -54,10 +54,12 @@ const DashboardNavbar = () => {
         >
           <PiNotePencilBold></PiNotePencilBold>
         </Link>
-        <Link to="/support" className="cursor-pointer text-violet-600" title="Support">
+
+        <Link to="/user/support" className="cursor-pointer text-violet-600" title="Support">
+
           <MdSupportAgent></MdSupportAgent>
         </Link>
-        <Link to="/feedback" className="cursor-pointer text-violet-600" title="Feedback">
+        <Link to="/allUsers" className="cursor-pointer text-violet-600" title="All Users">
           <BsChatRightQuote></BsChatRightQuote>
         </Link>
       </div>
