@@ -4,6 +4,7 @@
 import React, { useState } from 'react';
 import CodeEditor from './CodeEditor'; // Update the path accordingly
 import FileList from './FileList'; // Update the path accordingly
+import './App.css'; 
 
 // import Homepage from "./Homepage/Home/Homepage";
 
@@ -20,11 +21,18 @@ const App = () => {
         // Add more files
     ];
 
+    
+
+
+    
+
     return (
         <div>
             <h1>Codedock Text Editor</h1>
             <FileList files={files} onFileSelect={handleFileSelect} />
             <CodeEditor file={selectedFile} />
+
+           
         </div>
     );
 };

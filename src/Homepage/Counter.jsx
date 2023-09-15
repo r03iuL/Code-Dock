@@ -1,4 +1,5 @@
 const Counter = () => {
+  
   return (
     <div className="my-5">
       <div className=" text-center mx-auto text-3xl font-mono font-semibold py-[2%] flex flex-col ">

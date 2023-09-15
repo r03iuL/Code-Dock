@@ -8,9 +8,11 @@ import GoogleSignIn from "../Shared/GoogleSignIn";
 import login from '../../src/assets/login.json'
 import { Player } from '@lottiefiles/react-lottie-player';
 
-const Login = () => {
+const Login = ({darkMode}) => {
 
     const [disabled, setDisabled] = useState(true);
+
+    
 
     const { signIn } = useContext(AuthContext);
     const navigate = useNavigate();
@@ -81,7 +83,7 @@ const Login = () => {
                             </Player>
                         </div>
 
-                        <div className="card md:w-1/2 w-full max-w-sm shadow-2xl bg-base-100 border border-blue-500">
+                        <div className="card md:w-1/2 w-full max-w-sm shadow-2xl bg-base-100 border border-blue-500 ">
 
                             <form onSubmit={handleLogin} className="card-body">
                                 <div className="form-control">

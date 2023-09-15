@@ -11,9 +11,10 @@ import { HiOutlineTrendingUp } from "react-icons/hi";
 import useAuth from "../../Hooks/useAuth/useAuth";
 import "./DashboardSidebar.css";
 import ActiveDashboardLink from "../../Components/ActiveDashboardLink/ActiveDashboardLink";
+import { BsMoonStarsFill, BsSunFill } from "react-icons/bs";
 
 
-const DashboardSidebar = () => {
+const DashboardSidebar = ({ darkMode, setDarkMode }) => {
   const { user, logOut } = useAuth();
   // console.log(user?.photoURL);
 
@@ -36,7 +37,7 @@ const DashboardSidebar = () => {
   };
 
   return (
-    <div className="py-[5%]">
+    <div className={`py-[5%] ${darkMode ? "bg-violet  text-white" : "bg-white text-black"}`}>
       {/* logo  */}
       <div className="logo">
         <p className="italic  text-3xl text-center fost">
@@ -63,12 +64,21 @@ const DashboardSidebar = () => {
 
         {/* user options  */}
         <div className="flex justify-center text-xl gap-x-5">
+        <div className=" flex  gap-2 switch-container">
+          <label className="switch">
+            <input type="checkbox" className="toggle" onChange={() => setDarkMode(!darkMode)} />
+            <span className="slider round" />
+          </label>
+          <label className="">{darkMode ? <BsMoonStarsFill/> : <BsSunFill/>}</label>
+
+        </div>
           <p title="messages">
             <Link to="">
               <PiChatTextBold></PiChatTextBold>
               
             </Link>
           </p>
+
           <p title="notifications">
             <Link to="/user/notifications">
               <IoMdNotificationsOutline></IoMdNotificationsOutline>
