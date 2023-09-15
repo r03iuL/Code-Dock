@@ -3,12 +3,17 @@ import { Link, Outlet } from "react-router-dom";
 import DashboardSidebar from "../../Shared/DashboardSidebar/DashboardSidebar";
 import DashboardNavbar from "../../Shared/DashboardNavbar/DashboardNavbar";
 import { BsThreeDotsVertical } from "react-icons/bs";
+import { useState } from "react";
 
 const DashboardLayout = () => {
+
+  const [darkMode, setDarkMode] = useState(false);
+
+
   return (
     <>
     {/* this is header for small screen and in lg screen it will be hidden */}
-      <div className="lg:hidden navbar bg-base-100 fixed top-0 left-0 right-0 z-10 border-b-2 border-violet-600">
+      <div className={`lg:hidden navbar fixed top-0 left-0 right-0 z-10 border-b-2 border-violet-600 ${darkMode? "bg-violet  text-white" : "bg-white text-black"}`}>
         <div className="navbar-start">
           <div className="logo">
             <p className="italic  text-3xl text-center fost">
@@ -34,17 +39,19 @@ const DashboardLayout = () => {
         <div className="drawer lg:drawer-open">
           <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
           <div className="drawer-content">
-            <DashboardNavbar></DashboardNavbar>
+            <DashboardNavbar darkMode={darkMode} setDarkMode={setDarkMode}></DashboardNavbar>
             {/* Page content here */}
-            <div className="mt-16 lg:mt-auto">
-              <Outlet></Outlet>
+            <div className={`mt-16 lg:mt-auto ${darkMode? "bg-violet-600  text-white" : "bg-white text-black"}`} >
+              <Outlet darkMode={darkMode} setDarkMode={setDarkMode} ></Outlet>
             </div>
           </div>
           <div className="drawer-side">
             <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
             <ul className="menu w-80 h-full bg-base-200 text-base-content">
               {/* Sidebar content here */}
-              <DashboardSidebar></DashboardSidebar>
+              <div className="">
+              <DashboardSidebar darkMode={darkMode} setDarkMode={setDarkMode}></DashboardSidebar>
+              </div>
             </ul>
           </div>
         </div>

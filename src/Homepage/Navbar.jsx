@@ -1,14 +1,18 @@
 import { Link } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../providers/AuthProvider";
+import { BsMoonStarsFill, BsSunFill } from "react-icons/bs";
 
-const Navbar = () => {
+const Navbar = ({ darkMode, setDarkMode }) => {
+
   const { user, logOut } = useContext(AuthContext);
   const handleLogOut = () => {
     logOut()
       .then(() => { })
       .catch((error) => console.log(error));
   };
+
+
   const navbarStart = (
     <ul className="lg:flex gap-8 text-xl font-semibold ">
       {/* <li>
@@ -34,12 +38,23 @@ const Navbar = () => {
 
   const navbarEnd = (
     <div className="grid lg:flex lg:gap-5 items-center text-lg font-semibold">
-      <div className="form-control">
+      <div className=" flex  gap-2 switch-container">
+          <label className="switch">
+            <input type="checkbox" className="toggle" onChange={() => setDarkMode(!darkMode)} />
+            <span className="slider round" />
+          </label>
+          <label className="">{darkMode ? <BsMoonStarsFill/> : <BsSunFill/>}</label>
+
+        </div>
+      <div className=" flex form-control ">
+        
+        
         <input
           type="text"
           placeholder="Search"
           className="input bg-white border-2 border-violet-600 input-bordered w-24 md:w-auto"
         />
+        
       </div>
 
       {user ? (
@@ -60,7 +75,8 @@ const Navbar = () => {
   );
 
   return (
-    <div className="container mx-auto navbar  text-black flex justify-between items-center px-5 border-b-4 border-violet-600">
+
+    <div className={`container mx-auto navbar flex justify-between items-center px-5 border-b-4 border-violet-600 ${darkMode ? "bg-black text-white" : "bg-white text-black"}`}>
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -94,6 +110,17 @@ const Navbar = () => {
               C0de<span>_&gt;</span>d0ck
             </h2>
           </Link>
+          {/* <div className="switch-container">
+              <label className="switch">
+                <input type="checkbox" className="toggle" />
+                <span className="slider round" />
+              </label>
+              <label className="switch-label"></label>
+            </div> */}
+
+
+
+
 
         </div>
       </div>

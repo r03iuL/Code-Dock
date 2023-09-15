@@ -3,8 +3,9 @@ import SectionTitle from "../../../Components/SectionTitle/SectionTitle";
 import useRepo from "../../../Hooks/useRepo/useRepo";
 import RepositoryCard from "../../../Shared/RepositoryCard/RepositoryCard";
 
-const DashBoard = () => {
+const DashBoard = ({darkMode}) => {
   //getting data by using hook but it will work when it will be dynamic.
+  
   const [allRepositories] = useRepo();
   // console.log(allRepositories.length);
 
@@ -13,7 +14,7 @@ const DashBoard = () => {
   // console.log(slicedRepo.length);
 
   return (
-    <div className="px-[4%] py-[3%] w-full">
+    <div className={`px-[4%] py-[3%] w-full ${darkMode ? "bg-violet  text-white" : "bg-white text-black"}`}>
       {/* dashboard details  */}
       <div className="flex">
         <div className="box-style">

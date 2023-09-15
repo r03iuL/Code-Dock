@@ -7,9 +7,9 @@ import { TbWorldShare } from "react-icons/tb";
 import { Link } from "react-router-dom";
 import "./DashboardNavbar.css";
 
-const DashboardNavbar = () => {
+const DashboardNavbar = ({darkMode}) => {
   return (
-    <div className="hidden lg:flex navbar justify-between items-center px-[8%] py-[1.5%] bg-base-100 border-b-[3px] border-violet-600">
+    <div className={`hidden lg:flex navbar justify-between items-center px-[8%] py-[1.5%] bg-base-100 border-b-[3px] border-violet-600 ${darkMode? "bg-black text-white" : "bg-violet-100 text-black"}`}>
       {/* navbar search option  */}
       <div className="relative w-1/3   rounded ">
         <div className="absolute my-auto left-2">

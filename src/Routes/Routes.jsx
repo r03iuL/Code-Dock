@@ -35,8 +35,12 @@ import AllUser from "../Pages/AllUser/AllUser";
 import ChatBox from "../Shared/LiveChat/ChatBox";
 import UserProfile from "../Pages/DashboardPages/UserProfile/UserProfile";
 import RepoFolder from "../Pages/DashboardPages/Repositories/RepoFolder";
+import { useState } from "react";
+
+
 
 export const router = createBrowserRouter([
+  
   {
     path: "/",
     element: <Main></Main>,
@@ -92,11 +96,12 @@ export const router = createBrowserRouter([
       },
     ],
   },
+  
   {
     path: "/user",
     element: (
       <PrivateRoute>
-        <DashboardLayout></DashboardLayout>
+        <DashboardLayout ></DashboardLayout>
       </PrivateRoute>
     ),
     children: [
