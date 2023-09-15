@@ -6,44 +6,44 @@ import { Helmet } from "react-helmet";
 const Blog = () => {
     console.log(blogData)
 
-  
+
 
 
     return (
 
         <div >
 
-           
+
             <Helmet>
                 <title>CodeDock | GitBlog </title>
             </Helmet>
-            
+
             <h1 className='text-3xl lg:text-5xl text-center font-bold py-16 h-10 mb-16 ' style={{ margin: 'auto 0' }}>
-                            <span className='text-transparent bg-clip-text  bg-gradient-to-r from-indigo-700 
+                <span className='text-transparent bg-clip-text  bg-gradient-to-r from-indigo-700 
                                   to-violet-500  rounded-xl mb-10' style={{ fontWeight: 'bold' }}>
 
-                                <Typewriter
-                                    words={['Git Hub Related Blogs']}
-                                    loop={false}
-                                    cursor
-                                    cursorStyle='_'
-                                    typeSpeed={70}
-                                    deleteSpeed={50}
-                                    delaySpeed={1000}
+                    <Typewriter
+                        words={['Git Hub Related Blogs']}
+                        loop={false}
+                        cursor
+                        cursorStyle='_'
+                        typeSpeed={70}
+                        deleteSpeed={50}
+                        delaySpeed={1000}
 
-                                />
-                            </span>
-                        </h1>
-            <div className="grid grid-cols-1 lg:grid-cols-3  gap-5 container  mx-auto mb-24 ">
+                    />
+                </span>
+            </h1>
+            <div className="grid grid-cols-1 lg:grid-cols-3  gap-5   container  mx-auto mb-24 ">
                 {
                     blogData?.map(
                         (blog, index) => (<div key={index}>
 
-                            
+
                             <div className="card  bg-white shadow-lg shadow-violet-500/50 h-full border">
 
                                 <div className="card-body text-gray-600 ">
-                                    <img  src={blog.image} alt="" />
+                                    <img src={blog.image} alt="" />
 
                                     <button className="btn text-xl text-white bg-violet-600 shadow-lg shadow-violet-500/50"
                                         onClick={() => document.getElementById(`modal-${blog.id}`).showModal()}>See More</button>
@@ -70,7 +70,7 @@ const Blog = () => {
                                                     </svg>
                                                 </span>
                                                 <span className="text-violet-700">
-                                                {blog.heading}
+                                                    {blog.heading}
                                                 </span>
                                             </h2>
                                             <p className="py-3">{blog.blog}</p>
@@ -105,7 +105,9 @@ const Blog = () => {
 
                         </div>
                         ))}
-            </div></div>
+            </div>
+            
+            </div>
     );
 };
 

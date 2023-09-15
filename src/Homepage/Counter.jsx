@@ -2,7 +2,7 @@ const Counter = () => {
   return (
     <div className="my-5">
       <div className=" text-center mx-auto text-3xl font-mono font-semibold py-[2%] flex flex-col ">
-        <h1>Trusted by developers worlwide </h1>
+        <h1 className="text-3xl lg:text-5xl">Trusted by developers worlwide </h1>
       </div>
       <div className=" text-center my-8 lg:my-5 lg:mb-[5%] mx-[8%] py-[8%] bg-violet-200 rounded flex flex-col  gap-y-4 lg:flex-row lg:justify-around items-center">
         <div className="flex items-center">

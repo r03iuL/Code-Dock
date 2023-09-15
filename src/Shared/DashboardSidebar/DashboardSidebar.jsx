@@ -93,6 +93,20 @@ const DashboardSidebar = () => {
               <div className="">Dashboard</div>
             </ActiveDashboardLink>
           </li>
+
+
+
+          {/* -------- admin dashboard--------------- */}
+          <li className="  ">
+            <ActiveDashboardLink to="/user/admindashboard">
+              <div className="">
+                <BiSolidTimer></BiSolidTimer>
+              </div>
+              <div className="">Admin Dashboard</div>
+            </ActiveDashboardLink>
+          </li>
+
+
           <li className="  ">
             <ActiveDashboardLink to="/user/recent">
               <div className="">
