@@ -1,8 +1,10 @@
 import React from 'react';
 import { Typewriter } from 'react-simple-typewriter';
 import { Helmet } from "react-helmet";
+import { blogData } from "../BlogPage/HtmlBlogs"
 
 const HtmlBlog = () => {
+    console.log(blogData)
     return (
         <div>
              <Helmet>
@@ -25,6 +27,79 @@ const HtmlBlog = () => {
                     />
                 </span>
             </h1>
+
+
+            <div className="grid grid-cols-1 lg:grid-cols-3  gap-5   container  mx-auto mb-24 ">
+                {
+                    blogData?.map(
+                        (blog, index) => (<div key={index}>
+
+
+                            <div className="card  bg-white shadow-lg shadow-violet-500/50 h-full border">
+
+                                <div className="card-body text-gray-600 ">
+                                    <img src={blog.image} alt="" />
+
+                                    <button className="btn text-xl text-white bg-violet-600 shadow-lg shadow-violet-500/50"
+                                        onClick={() => document.getElementById(`modal-${blog.id}`).showModal()}>See More</button>
+
+
+
+
+                                    <dialog id={`modal-${blog.id}`} className="modal">
+
+                                        <form method="dialog" className="modal-box w-11/12 max-w-5xl">
+                                            <img className="shadow-xl mb-10" src={blog.image} alt="" />
+                                            <h2 className="card-title font-semibold">
+                                                <span className="font-bold ">
+
+                                                    <svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        height="1em"
+                                                        viewBox="0 0 448 512"
+                                                    >
+                                                        <path
+                                                            fill="#008000"
+                                                            d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
+                                                        />
+                                                    </svg>
+                                                </span>
+                                                <span className="text-violet-700">
+                                                    {blog.heading}
+                                                </span>
+                                            </h2>
+                                            <p className="py-3">{blog.blog}</p>
+
+                                          
+                                            <div className="modal-action">
+                                                {/* if there is a button, it will close the modal */}
+                                                <button className="btn text-white bg-violet-700 shadow-lg shadow-violet-500/50" onClick={() => document.getElementById(`modal-${blog.id}`).close()}>Close</button>
+
+                                            </div>
+
+                                        </form>
+                                    </dialog>
+
+
+                                </div>
+
+                            </div>
+
+
+
+
+
+
+
+
+                        </div>
+                        ))}
+            </div>
+
+
+
+
+
         </div>
     );
 };

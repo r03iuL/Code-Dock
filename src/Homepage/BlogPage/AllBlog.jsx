@@ -52,7 +52,7 @@ const AllBlog = () => {
                         <img src="https://i.ibb.co/TwVdSgj/GIT-BLOGs-1.png" alt="" />
                         <div className="card-actions justify-end">
                             {/* Use the Link component to navigate */}
-                            <Link to="/htmlblog" className="btn text-xl text-white bg-violet-600 shadow-lg shadow-violet-500/50">
+                            <Link to="/user/htmlblog" className="btn text-xl text-white bg-violet-600 shadow-lg shadow-violet-500/50">
                                 See All
                             </Link>
                         </div>
@@ -63,7 +63,7 @@ const AllBlog = () => {
                         <img src="https://i.ibb.co/2NJRfky/GIT-BLOGs-3.png" alt="" />
                         <div className="card-actions justify-end">
                             {/* Use the Link component to navigate */}
-                            <Link to="/cssblog" className="btn text-xl text-white bg-violet-600 shadow-lg shadow-violet-500/50">
+                            <Link to="/user/cssblog" className="btn text-xl text-white bg-violet-600 shadow-lg shadow-violet-500/50">
                                 See All
                             </Link>
                         </div>
@@ -74,7 +74,7 @@ const AllBlog = () => {
                         <img src="https://i.ibb.co/JR80tSY/GIT-BLOGs-2.png" alt="" />
                         <div className="card-actions justify-end">
                             {/* Use the Link component to navigate */}
-                            <Link to="/javablog" className="btn text-xl text-white bg-violet-600 shadow-lg shadow-violet-500/50">
+                            <Link to="/user/javablog" className="btn text-xl text-white bg-violet-600 shadow-lg shadow-violet-500/50">
                                 See All
                             </Link>
                         </div>
@@ -85,7 +85,7 @@ const AllBlog = () => {
                         <img src="https://i.ibb.co/qdRXGg1/GIT-BLOGs-4.png" alt="" />
                         <div className="card-actions justify-end">
                             {/* Use the Link component to navigate */}
-                            <Link to="/reactblog" className="btn text-xl text-white bg-violet-600 shadow-lg shadow-violet-500/50">
+                            <Link to="/user/reactblog" className="btn text-xl text-white bg-violet-600 shadow-lg shadow-violet-500/50">
                                 See All
                             </Link>
                         </div>

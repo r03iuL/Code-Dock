@@ -7,18 +7,19 @@ const Features = () => {
     return (
         <div className="container max-w-screen-lg mx-auto">
             <div className=" text-center   mx-auto text-3xl uppercase  font-bold py-[2%] flex flex-col w-1/3">
-                <h3 className="">FEATURE</h3>
+                <h3 className="text-3xl lg:text-5xl">FEATURE</h3>
                 <div className="divider "></div>
             </div>
             <div className=" grid  gap-4 mt-7 ">
                 <div className=" shadow-lg rounded-lg p-8 border-2  shadow-violet-500/50">
-                    <div className="grid grid-cols-3 items-center">
+                    <div className="lg:flex items-center ">
                        
                         <Player
                             autoplay
                             loop
                             src={hosting}
                             style={{ height: '120px', }}
+                            className='lg:w-96'
                         >
                         </Player>
                         <p className="col-span-2">
@@ -26,7 +27,7 @@ const Features = () => {
                     </div>
                 </div>
                 <div className="shadow-lg rounded-lg p-8 border-2  shadow-violet-500/50">
-                     <div className=" grid grid-cols-3 items-center">
+                     <div className=" lg:flex items-center">
                         <p className="col-span-2">
                         <h2 className="text-2xl font-bold    ">GitHub-Enhanced Text Editor for Collaborative Coding</h2>
                             The GitHub-Enhanced Text Editor for Collaborative Coding seamlessly blends with GitHubs collaboration framework, enabling real-time code editing, syntax refinement, and conflict resolution. It grants direct repository access, empowers comprehensive code review, and offers version history tracking, streamlining collaborative development on GitHub projects. This tool elevates the collaborative coding experience, fostering efficient teamwork and enhanced code quality within the GitHub ecosystem.</p>
@@ -35,17 +36,19 @@ const Features = () => {
                             loop
                             src={textedit}
                             style={{ height: '180px', }}
+                            className='lg:w-96'
                         >
                         </Player>
                     </div>
                 </div>
                 <div className="shadow-lg rounded-lg p-8 border-2  shadow-violet-500/50">
-                     <div className="grid grid-cols-3 items-center">
+                     <div className="lg:flex items-center ">
                     <Player
                             autoplay
                             loop
                             src={verson}
                             style={{ height: '200px', }}
+                            className='lg:w-96'
                         >
                         </Player>
                         <p className="col-span-2">

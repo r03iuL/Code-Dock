@@ -28,6 +28,9 @@ import CssBlog from "../Homepage/BlogPage/CssBlog";
 import JavascriptBlog from "../Homepage/BlogPage/JavascriptBlog";
 import ReactBlog from "../Homepage/BlogPage/ReactBlog";
 import Chat from "../Shared/LiveChat/Chat";
+import AdminDashboard from "../Shared/AdminDashboard/AdminDashboard";
+import UserManagement from "../Shared/AdminDashboard/UserManagement";
+
 
 export const router = createBrowserRouter([
   {
@@ -88,6 +91,14 @@ export const router = createBrowserRouter([
       {
         path: "dashboard",
         element: <DashBoard></DashBoard>,
+      },
+      {
+        path: "admindashboard",
+        element: <AdminDashboard></AdminDashboard>,
+      },
+      {
+        path: "UserManagement",
+        element: <UserManagement></UserManagement>,
       },
       {
         path: "recent",

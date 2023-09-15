@@ -74,7 +74,8 @@ const Faq = () => {
         autoplay
         loop
         src={faqAnimation}
-        style={{ height: "400px", width: "400px" }}
+        style={{ height: "400px" }}
+        className="w-full max-w-md"
       ></Player>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-10 mx-4">
