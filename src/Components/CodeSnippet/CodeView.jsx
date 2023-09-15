@@ -7,7 +7,7 @@ function CodeView() {
 
     useEffect(() => {
         // Fetch snippet data from the backend using your API endpoint
-        fetch(`https://code-dock-backend.vercel.app/snippets/${id}`)
+        fetch(`http://localhost:5000/snippets/${id}`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
