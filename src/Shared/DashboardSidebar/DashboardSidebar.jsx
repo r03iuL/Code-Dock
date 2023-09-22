@@ -13,6 +13,7 @@ import "./DashboardSidebar.css";
 import ActiveDashboardLink from "../../Components/ActiveDashboardLink/ActiveDashboardLink";
 import { BsMoonStarsFill, BsSunFill } from "react-icons/bs";
 import { FaUserCheck } from "react-icons/fa";
+import useAdmin from "../../Hooks/useAdmin";
 
 
 const DashboardSidebar = ({ darkMode, setDarkMode }) => {
@@ -37,8 +38,9 @@ const DashboardSidebar = ({ darkMode, setDarkMode }) => {
       .catch((error) => console.log(error));
   };
 
-  //TODO : load data from the server to have dynamic isadmin based on data
-  const isAdmin = true;
+  
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [isAdmin] = useAdmin();
 
   return (
     <div className={`py-[5%] ${darkMode ? "bg-violet  text-white" : "bg-white text-black"}`}>
