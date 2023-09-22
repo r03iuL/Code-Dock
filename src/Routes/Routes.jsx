@@ -36,6 +36,7 @@ import ChatBox from "../Shared/LiveChat/ChatBox";
 import UserProfile from "../Pages/DashboardPages/UserProfile/UserProfile";
 import RepoFolder from "../Pages/DashboardPages/Repositories/RepoFolder";
 import { useState } from "react";
+import ManageUsers from "../Pages/DashboardPages/ManageUsers/ManageUsers";
 
 
 
@@ -116,6 +117,10 @@ export const router = createBrowserRouter([
       {
         path: "admindashboard",
         element: <AdminDashboard></AdminDashboard>,
+      },
+      {
+        path: "manage-users",
+        element: <ManageUsers></ManageUsers>
       },
       {
         path: "UserManagement",
