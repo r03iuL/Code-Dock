@@ -12,6 +12,8 @@ import useAuth from "../../Hooks/useAuth/useAuth";
 import "./DashboardSidebar.css";
 import ActiveDashboardLink from "../../Components/ActiveDashboardLink/ActiveDashboardLink";
 import { BsMoonStarsFill, BsSunFill } from "react-icons/bs";
+import { FaUserCheck } from "react-icons/fa";
+import useAdmin from "../../Hooks/useAdmin";
 
 
 const DashboardSidebar = ({ setDarkMode, darkMode,  }) => {
@@ -25,7 +27,7 @@ const DashboardSidebar = ({ setDarkMode, darkMode,  }) => {
       <p className="text-center text-2xl font-extrabold text-violet-400">
         Loading...
       </p>
-      
+
     );
   }
 
@@ -35,6 +37,10 @@ const DashboardSidebar = ({ setDarkMode, darkMode,  }) => {
       .then()
       .catch((error) => console.log(error));
   };
+
+  
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [isAdmin] = useAdmin();
 
   return (
     <div className={`py-[5%] ${darkMode ? "bg-violet  text-white" : "bg-white text-black"}`}>
@@ -64,14 +70,14 @@ const DashboardSidebar = ({ setDarkMode, darkMode,  }) => {
 
         {/* user options  */}
         <div className="flex justify-center text-xl gap-x-5">
-        <div className=" flex  gap-2 switch-container">
-          <label className="switch">
-            <input type="checkbox" className="toggle" onChange={() => setDarkMode(!darkMode)} />
-            <span className="slider round" />
-          </label>
-          <label className="">{darkMode ? <BsMoonStarsFill/> : <BsSunFill/>}</label>
+          <div className=" flex  gap-2 switch-container">
+            <label className="switch">
+              <input type="checkbox" className="toggle" onChange={() => setDarkMode(!darkMode)} />
+              <span className="slider round" />
+            </label>
+            <label className="">{darkMode ? <BsMoonStarsFill /> : <BsSunFill />}</label>
 
-        </div>
+          </div>
           <p title="messages">
             <Link to="/user/chat">
               <PiChatTextBold></PiChatTextBold>
@@ -94,92 +100,174 @@ const DashboardSidebar = ({ setDarkMode, darkMode,  }) => {
       {/* navbar options  */}
       <div className="mt-3">
         <ul>
-          <li className=" rounded-none ">
-            <ActiveDashboardLink to="/user/dashboard">
-              <div className="">
-                <BiSolidDashboard></BiSolidDashboard>
-              </div>
-              <div className="">Dashboard</div>
-            </ActiveDashboardLink>
-          </li>
+
+          {
+            isAdmin ? <>
+
+              {/* -------- admin dashboard--------------- */}
+              <li className="  ">
+                <ActiveDashboardLink to="/user/admindashboard">
+                  <div className="">
+                    <BiSolidTimer></BiSolidTimer>
+                  </div>
+                  <div className="">Admin Dashboard</div>
+                </ActiveDashboardLink>
+              </li>
+
+              <li className="  ">
+                <ActiveDashboardLink to="/user/manage-users">
+                  <div className="">
+                  <FaUserCheck></FaUserCheck>
+                  </div>
+                  <div className="">Manage Users</div>
+                </ActiveDashboardLink>
+              </li>
+
+              <li className="  ">
+                <ActiveDashboardLink to="/user/recent">
+                  <div className="">
+                    <BiSolidTimer></BiSolidTimer>
+                  </div>
+                  <div className="">recent Activities</div>
+                </ActiveDashboardLink>
+              </li>
+              <li className="  ">
+                <ActiveDashboardLink to="/user/repositories">
+                  <div className="">
+                    <RiGitRepositoryLine></RiGitRepositoryLine>
+                  </div>
+                  <div className="">Repositories</div>
+                </ActiveDashboardLink>
+              </li>
+              <li className="  ">
+                <ActiveDashboardLink to="/user/projects">
+                  <div className="">
+                    <AiFillProject></AiFillProject>
+                  </div>
+                  <div className="">Projects</div>
+                </ActiveDashboardLink>
+              </li>
+              <li className="  ">
+                <ActiveDashboardLink to="/user/favourites">
+                  <div className="">
+                    <MdOutlineFavorite></MdOutlineFavorite>
+                  </div>
+                  <div className="">Favoutites</div>
+                </ActiveDashboardLink>
+              </li>
+              <li className="  ">
+                <ActiveDashboardLink to="/user/following">
+                  <div className="">
+                    <SlUserFollowing></SlUserFollowing>
+                  </div>
+                  <div className="">Following</div>
+                </ActiveDashboardLink>
+              </li>
+              <li className="  ">
+                <ActiveDashboardLink to="/user/trending">
+                  <div className="">
+                    <HiOutlineTrendingUp></HiOutlineTrendingUp>
+                  </div>
+                  <div className="">Trending</div>
+                </ActiveDashboardLink>
+              </li>
+              <li className="  ">
+                <ActiveDashboardLink to="/user/allblog">
+                  <div className="">
+                    <BiBookHeart></BiBookHeart>
+                  </div>
+                  <Link to='/user/allblog' className="text-gray-500 hover:text-violet-600">All Blogs</Link>
+                </ActiveDashboardLink>
+              </li>
+              <li className="  " onClick={handleLogOut}>
+                <ActiveDashboardLink to="/">
+                  <div className="">
+                    <BiLogOutCircle></BiLogOutCircle>
+                  </div>
+                  <div className="">Log out</div>
+                </ActiveDashboardLink>
+              </li>
+            </> : <>
+
+              <li className=" rounded-none ">
+                <ActiveDashboardLink to="/user/dashboard">
+                  <div className="">
+                    <BiSolidDashboard></BiSolidDashboard>
+                  </div>
+                  <div className="">Dashboard</div>
+                </ActiveDashboardLink>
+              </li>
+
+              <li className="  ">
+                <ActiveDashboardLink to="/user/recent">
+                  <div className="">
+                    <BiSolidTimer></BiSolidTimer>
+                  </div>
+                  <div className="">recent Activities</div>
+                </ActiveDashboardLink>
+              </li>
+              <li className="  ">
+                <ActiveDashboardLink to="/user/repositories">
+                  <div className="">
+                    <RiGitRepositoryLine></RiGitRepositoryLine>
+                  </div>
+                  <div className="">Repositories</div>
+                </ActiveDashboardLink>
+              </li>
+              <li className="  ">
+                <ActiveDashboardLink to="/user/projects">
+                  <div className="">
+                    <AiFillProject></AiFillProject>
+                  </div>
+                  <div className="">Projects</div>
+                </ActiveDashboardLink>
+              </li>
+              <li className="  ">
+                <ActiveDashboardLink to="/user/favourites">
+                  <div className="">
+                    <MdOutlineFavorite></MdOutlineFavorite>
+                  </div>
+                  <div className="">Favoutites</div>
+                </ActiveDashboardLink>
+              </li>
+              <li className="  ">
+                <ActiveDashboardLink to="/user/following">
+                  <div className="">
+                    <SlUserFollowing></SlUserFollowing>
+                  </div>
+                  <div className="">Following</div>
+                </ActiveDashboardLink>
+              </li>
+              <li className="  ">
+                <ActiveDashboardLink to="/user/trending">
+                  <div className="">
+                    <HiOutlineTrendingUp></HiOutlineTrendingUp>
+                  </div>
+                  <div className="">Trending</div>
+                </ActiveDashboardLink>
+              </li>
+              <li className="  ">
+                <ActiveDashboardLink to="/user/allblog">
+                  <div className="">
+                    <BiBookHeart></BiBookHeart>
+                  </div>
+                  <Link to='/user/allblog' className="text-gray-500 hover:text-violet-600">All Blogs</Link>
+                </ActiveDashboardLink>
+              </li>
+              <li className="  " onClick={handleLogOut}>
+                <ActiveDashboardLink to="/">
+                  <div className="">
+                    <BiLogOutCircle></BiLogOutCircle>
+                  </div>
+                  <div className="">Log out</div>
+                </ActiveDashboardLink>
+              </li>
+
+            </>
+          }
 
 
 
-          {/* -------- admin dashboard--------------- */}
-          <li className="  ">
-            <ActiveDashboardLink to="/user/admindashboard">
-              <div className="">
-                <BiSolidTimer></BiSolidTimer>
-              </div>
-              <div className="">Admin Dashboard</div>
-            </ActiveDashboardLink>
-          </li>
-
-
-          <li className="  ">
-            <ActiveDashboardLink to="/user/recent">
-              <div className="">
-                <BiSolidTimer></BiSolidTimer>
-              </div>
-              <div className="">recent Activities</div>
-            </ActiveDashboardLink>
-          </li>
-          <li className="  ">
-            <ActiveDashboardLink to="/user/repositories">
-              <div className="">
-                <RiGitRepositoryLine></RiGitRepositoryLine>
-              </div>
-              <div className="">Repositories</div>
-            </ActiveDashboardLink>
-          </li>
-          <li className="  ">
-            <ActiveDashboardLink to="/user/projects">
-              <div className="">
-                <AiFillProject></AiFillProject>
-              </div>
-              <div className="">Projects</div>
-            </ActiveDashboardLink>
-          </li>
-          <li className="  ">
-            <ActiveDashboardLink to="/user/favourites">
-              <div className="">
-                <MdOutlineFavorite></MdOutlineFavorite>
-              </div>
-              <div className="">Favoutites</div>
-            </ActiveDashboardLink>
-          </li>
-          <li className="  ">
-            <ActiveDashboardLink to="/user/following">
-              <div className="">
-                <SlUserFollowing></SlUserFollowing>
-              </div>
-              <div className="">Following</div>
-            </ActiveDashboardLink>
-          </li>
-          <li className="  ">
-            <ActiveDashboardLink to="/user/trending">
-              <div className="">
-                <HiOutlineTrendingUp></HiOutlineTrendingUp>
-              </div>
-              <div className="">Trending</div>
-            </ActiveDashboardLink>
-          </li>
-          <li className="  ">
-            <ActiveDashboardLink to="/user/allblog">
-              <div className="">
-                <BiBookHeart></BiBookHeart>
-              </div>
-              <Link to='/user/allblog' className="text-gray-500 hover:text-violet-600">All Blogs</Link>
-            </ActiveDashboardLink>
-          </li>
-          <li className="  " onClick={handleLogOut}>
-            <ActiveDashboardLink to="/">
-              <div className="">
-                <BiLogOutCircle></BiLogOutCircle>
-              </div>
-              <div className="">Log out</div>
-            </ActiveDashboardLink>
-          </li>
         </ul>
       </div>
     </div>

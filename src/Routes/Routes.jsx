@@ -27,15 +27,16 @@ import HtmlBlog from "../Homepage/BlogPage/HtmlBlog";
 import CssBlog from "../Homepage/BlogPage/CssBlog";
 import JavascriptBlog from "../Homepage/BlogPage/JavascriptBlog";
 import ReactBlog from "../Homepage/BlogPage/ReactBlog";
-
 import AdminDashboard from "../Shared/AdminDashboard/AdminDashboard";
 import UserManagement from "../Shared/AdminDashboard/UserManagement";
-
 import AllUser from "../Pages/AllUser/AllUser";
 import UserProfile from "../Pages/DashboardPages/UserProfile/UserProfile";
 import RepoFolder from "../Pages/DashboardPages/Repositories/RepoFolder";
 import Chat from "../Pages/Message/Chat";
 import UserEditProfile from "../Pages/DashboardPages/UserProfile/UserEditProfile";
+import { useState } from "react";
+import ManageUsers from "../Pages/DashboardPages/ManageUsers/ManageUsers";
+
 
 
 
@@ -120,6 +121,10 @@ export const router = createBrowserRouter([
       {
         path: "admindashboard",
         element: <AdminDashboard></AdminDashboard>,
+      },
+      {
+        path: "manage-users",
+        element: <ManageUsers></ManageUsers>
       },
       {
         path: "UserManagement",
@@ -208,6 +213,10 @@ export const router = createBrowserRouter([
       {
         path: "reactblog",
         element: <ReactBlog></ReactBlog>,
+      },
+      {
+        path: 'support',
+        element: <Chat></Chat>
       },
       {
         path: "allUsers",

@@ -45,18 +45,18 @@ const RepositoryCard = ({ repo, fileUrls ,darkMode }) => {
           {types}
         </div> */}
       </div>
-      <div className="mt-5 lg:mt-auto">
-        <p>
-          <FaRegHeart className="text-2xl mx-auto text-purple-500 cursor-pointer"></FaRegHeart>{" "}
-        </p>
+      <div className=" lg:mt-auto">
+        <button>
+          <FaRegHeart className="text-2xl mx-auto text-purple-500 cursor-pointer"></FaRegHeart>
+        </button>
 
         {/* ratings of this repository  */}
-        <p className="text-gray-500 text-base text-center">{repo?.rating}</p>
+        {/* <p className="text-gray-500 text-base text-center">{repo?.rating}</p> */}
 
         {/* total reviews will be here  */}
-        <p className="text-gray-500 text-base">
+        {/* <p className="text-gray-500 text-base">
           {repo?.numberOfRatings} reviews
-        </p>
+        </p> */}
       </div>
     </div>
   );
