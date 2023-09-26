@@ -4,7 +4,7 @@ import { FaFolder, FaRegHeart } from "react-icons/fa";
 import { ImFolderDownload } from "react-icons/im";
 import { Link } from "react-router-dom";
 
-const RepositoryCard = ({ repo, fileUrls }) => {
+const RepositoryCard = ({ repo, fileUrls ,darkMode }) => {
   const [clicked, setClicked, setCountFile] = useState(false);
   // setCountFile(repo?.fileUrlList?.length)
   const abc = repo?.fileUrlList?.map((a) => a);
@@ -16,7 +16,7 @@ const RepositoryCard = ({ repo, fileUrls }) => {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row justify-between items-center px-[4%] py-4 my-3 border-b-2 border-violet-600 ">
+    <div className={`flex flex-col lg:flex-row justify-between items-center px-[4%] py-4 my-3 border-b-2 border-violet-600  ${darkMode ? "bg-violet  text-white" : "bg-white text-black"}`} >
       {/* <div className="h-[1px] w-full  bg-purple-700"></div> */}
 
       <div className="flex flex-col lg:flex-row items-left gap-6 ">

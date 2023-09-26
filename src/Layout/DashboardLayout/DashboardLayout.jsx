@@ -5,6 +5,7 @@ import DashboardNavbar from "../../Shared/DashboardNavbar/DashboardNavbar";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { useState } from "react";
 
+
 const DashboardLayout = () => {
 
   const [darkMode, setDarkMode] = useState(false);
@@ -29,7 +30,7 @@ const DashboardLayout = () => {
             htmlFor="my-drawer-2"
             className="btn bg-violet-50 drawer-button lg:hidden"
           >
-            <BsThreeDotsVertical className="text-xl text-violet-600"></BsThreeDotsVertical>
+            <BsThreeDotsVertical  className="text-xl text-violet-600"></BsThreeDotsVertical>
           </label>
         </div>
       </div>
@@ -41,7 +42,7 @@ const DashboardLayout = () => {
           <div className="drawer-content">
             <DashboardNavbar darkMode={darkMode} setDarkMode={setDarkMode}></DashboardNavbar>
             {/* Page content here */}
-            <div className={`mt-16 lg:mt-auto ${darkMode? "bg-violet-600  text-white" : "bg-white text-black"}`} >
+            <div className={`mt-16 lg:mt-auto ${darkMode? "bg-violet  text-white" : "bg-white text-black"}`} >
               <Outlet darkMode={darkMode} setDarkMode={setDarkMode} ></Outlet>
             </div>
           </div>

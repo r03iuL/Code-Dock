@@ -27,15 +27,15 @@ import HtmlBlog from "../Homepage/BlogPage/HtmlBlog";
 import CssBlog from "../Homepage/BlogPage/CssBlog";
 import JavascriptBlog from "../Homepage/BlogPage/JavascriptBlog";
 import ReactBlog from "../Homepage/BlogPage/ReactBlog";
-import Chat from "../Shared/LiveChat/Chat";
+
 import AdminDashboard from "../Shared/AdminDashboard/AdminDashboard";
 import UserManagement from "../Shared/AdminDashboard/UserManagement";
 
 import AllUser from "../Pages/AllUser/AllUser";
-import ChatBox from "../Shared/LiveChat/ChatBox";
 import UserProfile from "../Pages/DashboardPages/UserProfile/UserProfile";
 import RepoFolder from "../Pages/DashboardPages/Repositories/RepoFolder";
-import { useState } from "react";
+import Chat from "../Pages/Message/Chat";
+import UserEditProfile from "../Pages/DashboardPages/UserProfile/UserEditProfile";
 
 
 
@@ -65,10 +65,8 @@ export const router = createBrowserRouter([
         path: "about",
         element: <AboutUs></AboutUs>,
       },
-      {
-        path: "userprofile",
-        element: <UserProfile />
-      },
+
+
       {
         path: "secret",
         element: <Secret></Secret>,
@@ -82,10 +80,7 @@ export const router = createBrowserRouter([
         path: "signup",
         element: <SignUp></SignUp>,
       },
-      {
-        path:'chatbox',
-        element:<ChatBox></ChatBox>
-      },
+
       {
         path: "secret",
         element: (
@@ -96,7 +91,7 @@ export const router = createBrowserRouter([
       },
     ],
   },
-  
+
   {
     path: "/user",
     element: (
@@ -114,99 +109,113 @@ export const router = createBrowserRouter([
         element: <DashBoard></DashBoard>,
       },
       {
-        path: "admindashboard",
-        element: <AdminDashboard></AdminDashboard>,
+        path: "userprofile",
+        element: <UserProfile />,
       },
       {
-        path: "UserManagement",
-        element: <UserManagement></UserManagement>,
+        path: "setting",
+        element: <UserEditProfile />
       },
-      {
-        path: "recent",
-        element: <RecentRepo></RecentRepo>,
-      },
-      {
-        path: "createNew",
-        element: <CreateNewRepo></CreateNewRepo>,
-      },
-      {
-        path: "repositories",
-        element: <Repositories></Repositories>,
-      },
-      {
-        path: "repoFolder/:id",
-        element: <RepoFolder></RepoFolder>,
-      },
-      {
-        path: "projects",
-        element: <Projects></Projects>,
-      },
-      {
-        path: "favourites",
-        element: <Favourites></Favourites>,
-      },
-      {
-        path: "following",
-        element: <Following></Following>,
-      },
-      {
-        path: "messages",
-        element: <Chat></Chat>,
-      },
-      {
-        path: "trending",
-        element: <Trending></Trending>,
-      },
-      {
-        path: "code-editor",
-        element: <Editormain></Editormain>,
-      },
-      {
-        path: "code-snippet",
-        element: <MainSnippet></MainSnippet>,
-      },
-      {
-        path: "snippet/:id",
-        element: <SnippetView></SnippetView>,
-      },
-      {
-        path: "view-code/:id",
-        element: <CodeView></CodeView>,
-      },
+        
     
-      {
-        path: "allblog",
-        element: <Blog></Blog>,
-      },
-      {
-        path: "gitblog",
-        element: <GitBlog></GitBlog>,
-      },
-      {
-        path: "htmlblog",
-        element: <HtmlBlog></HtmlBlog>,
-      },
-      {
-        path: "cssblog",
-        element: <CssBlog></CssBlog>,
-      },
-      {
-        path: "javablog",
-        element: <JavascriptBlog></JavascriptBlog>,
-      },
-      {
-        path: "reactblog",
-        element: <ReactBlog></ReactBlog>,
-      },
-      {
-        path: "allUsers",
-        element:<AllUser></AllUser>,
-      }
-    ],
+  {
+    path: "admindashboard",
+    element: <AdminDashboard></AdminDashboard>,
+  },
+  {
+    path: "UserManagement",
+    element: <UserManagement></UserManagement>,
+  },
+  {
+    path: "recent",
+    element: <RecentRepo></RecentRepo>,
+  },
+  {
+    path: "createNew",
+    element: <CreateNewRepo></CreateNewRepo>,
+  },
+  {
+    path: "repositories",
+    element: <Repositories></Repositories>,
+  },
+  {
+    path: "repoFolder/:id",
+    element: <RepoFolder></RepoFolder>,
+  },
+  {
+    path: "projects",
+    element: <Projects></Projects>,
+  },
+  {
+    path: "favourites",
+    element: <Favourites></Favourites>,
+  },
+  {
+    path: "following",
+    element: <Following></Following>,
+  },
+  // {
+  //   path: "messages",
+  //   element: <Chat></Chat>,
+  // },
+  {
+    path: "chat",
+    element: <Chat />
+  },
+  {
+    path: "trending",
+    element: <Trending></Trending>,
+  },
+  {
+    path: "code-editor",
+    element: <Editormain></Editormain>,
+  },
+  {
+    path: "code-snippet",
+    element: <MainSnippet></MainSnippet>,
+  },
+  {
+    path: "snippet/:id",
+    element: <SnippetView></SnippetView>,
+  },
+  {
+    path: "view-code/:id",
+    element: <CodeView></CodeView>,
   },
 
   {
-    path: "*",
+    path: "allblog",
+    element: <Blog></Blog>,
+  },
+  {
+    path: "gitblog",
+    element: <GitBlog></GitBlog>,
+  },
+  {
+    path: "htmlblog",
+    element: <HtmlBlog></HtmlBlog>,
+  },
+  {
+    path: "cssblog",
+    element: <CssBlog></CssBlog>,
+  },
+  {
+    path: "javablog",
+    element: <JavascriptBlog></JavascriptBlog>,
+  },
+  {
+    path: "reactblog",
+    element: <ReactBlog></ReactBlog>,
+  },
+  {
+    path: "allUsers",
+    element: <AllUser></AllUser>,
+  }
+],
+  },
+
+{
+  path: "*",
     element: <Error></Error>,
   },
 ]);

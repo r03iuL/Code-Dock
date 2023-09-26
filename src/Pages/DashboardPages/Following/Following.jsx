@@ -4,6 +4,7 @@ import FollowingCard from "./FollowingCard";
 
 const Following = () => {
   const [following, setFollowing] = useState([]);
+  const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
     fetch("/following.json")
@@ -27,7 +28,7 @@ const Following = () => {
         </div>
         <div className="grid md:grid-cols-3 gap-7">
           {following.map((follow) => (
-            <FollowingCard key={follow.id} follow={follow} />
+            <FollowingCard darkMode={darkMode} setDarkMode={setDarkMode} key={follow.id} follow={follow} />
           ))}
         </div>
       </div>
