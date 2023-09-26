@@ -6,6 +6,12 @@ import { BsMoonStarsFill, BsSunFill } from "react-icons/bs";
 const Navbar = ({ darkMode, setDarkMode }) => {
 
   const { user, logOut } = useContext(AuthContext);
+  const [menuOpen, setMenuOpen] = useState(false); // State for mobile menu toggle
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+  
   const handleLogOut = () => {
     logOut()
       .then(() => { })
@@ -14,19 +20,13 @@ const Navbar = ({ darkMode, setDarkMode }) => {
 
 
   const navbarStart = (
-    <ul className="lg:flex gap-8 text-xl font-semibold ">
-      {/* <li>
-        <Link to="/">Features</Link>
-      </li>
-      <li>
-        <Link>Code Editor</Link>
-      </li> */}
-      <li>
-        <Link to="/allblog">Blog</Link>
-      </li>
-      <li>
-        <Link to="/about">About Us</Link>
-      </li>
+    <ul
+    className={`lg:flex gap-8 text-xl font-semibold ${
+      menuOpen ? "block" : "hidden lg:block"
+    }`} // Toggle the display for mobile
+  >
+      
+      
       <li>
         {
           user && <Link to="/user/dashboard">Dashboard</Link>
@@ -37,7 +37,9 @@ const Navbar = ({ darkMode, setDarkMode }) => {
   );
 
   const navbarEnd = (
-    <div className="grid lg:flex lg:gap-5 items-center text-lg font-semibold">
+    <div className={`grid lg:flex gap-2 lg:gap-5 items-center text-lg font-semibold ${
+      menuOpen ? "block" : "hidden lg:block"
+    }`}>
       <div className=" flex  gap-2 switch-container">
           <label className="switch">
             <input type="checkbox" className="toggle" onChange={() => setDarkMode(!darkMode)} />
@@ -56,10 +58,12 @@ const Navbar = ({ darkMode, setDarkMode }) => {
         />
         
       </div>
-
+      
+        <Link to="/about">About Us</Link>
+    
       {user ? (
         <>
-          {/* <span>{user.displayName}</span>           */}
+         
 
           <button onClick={handleLogOut} className="btn btn-ghost border-violet-600">
             LogOut
@@ -79,7 +83,9 @@ const Navbar = ({ darkMode, setDarkMode }) => {
     <div className={`container mx-auto navbar flex justify-between items-center px-5 border-b-4 border-violet-600 ${darkMode ? "bg-black text-white" : "bg-white text-black"}`}>
       <div className="navbar-start">
         <div className="dropdown">
-          <label tabIndex={0} className="btn btn-ghost lg:hidden">
+          <label tabIndex={0} 
+          className="btn btn-ghost lg:hidden"
+          onClick={toggleMenu}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -110,13 +116,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
               C0de<span>_&gt;</span>d0ck
             </h2>
           </Link>
-          {/* <div className="switch-container">
-              <label className="switch">
-                <input type="checkbox" className="toggle" />
-                <span className="slider round" />
-              </label>
-              <label className="switch-label"></label>
-            </div> */}
+          
 
 
 
