@@ -40,7 +40,7 @@ import UserEditProfile from "../Pages/DashboardPages/UserProfile/UserEditProfile
 
 
 export const router = createBrowserRouter([
-  
+
   {
     path: "/",
     element: <Main></Main>,
@@ -116,106 +116,108 @@ export const router = createBrowserRouter([
         path: "setting",
         element: <UserEditProfile />
       },
-        
-    
-  {
-    path: "admindashboard",
-    element: <AdminDashboard></AdminDashboard>,
-  },
-  {
-    path: "UserManagement",
-    element: <UserManagement></UserManagement>,
-  },
-  {
-    path: "recent",
-    element: <RecentRepo></RecentRepo>,
-  },
-  {
-    path: "createNew",
-    element: <CreateNewRepo></CreateNewRepo>,
-  },
-  {
-    path: "repositories",
-    element: <Repositories></Repositories>,
-  },
-  {
-    path: "repoFolder/:id",
-    element: <RepoFolder></RepoFolder>,
-  },
-  {
-    path: "projects",
-    element: <Projects></Projects>,
-  },
-  {
-    path: "favourites",
-    element: <Favourites></Favourites>,
-  },
-  {
-    path: "following",
-    element: <Following></Following>,
-  },
-  // {
-  //   path: "messages",
-  //   element: <Chat></Chat>,
-  // },
-  {
-    path: "chat",
-    element: <Chat />
-  },
-  {
-    path: "trending",
-    element: <Trending></Trending>,
-  },
-  {
-    path: "code-editor",
-    element: <Editormain></Editormain>,
-  },
-  {
-    path: "code-snippet",
-    element: <MainSnippet></MainSnippet>,
-  },
-  {
-    path: "snippet/:id",
-    element: <SnippetView></SnippetView>,
-  },
-  {
-    path: "view-code/:id",
-    element: <CodeView></CodeView>,
+
+      {
+        path: "admindashboard",
+        element: <AdminDashboard></AdminDashboard>,
+      },
+      {
+        path: "UserManagement",
+        element: <UserManagement></UserManagement>,
+      },
+      {
+        path: "recent",
+        element: <RecentRepo></RecentRepo>,
+      },
+      {
+
+      },
+      {
+        path: "createNew",
+        element: <CreateNewRepo></CreateNewRepo>,
+      },
+      {
+        path: "repositories",
+        element: <Repositories></Repositories>,
+      },
+      {
+        path: "repoFolder/:id",
+        element: <RepoFolder></RepoFolder>,
+      },
+      {
+        path: "projects",
+        element: <Projects></Projects>,
+      },
+      {
+        path: "favourites",
+        element: <Favourites></Favourites>,
+      },
+      {
+        path: "following",
+        element: <Following></Following>,
+      },
+      // {
+      //   path: "messages",
+      //   element: <Chat></Chat>,
+      // },
+      {
+        path: "chat",
+        element: <Chat />
+      },
+      {
+        path: "trending",
+        element: <Trending></Trending>,
+      },
+      {
+        path: "code-editor",
+        element: <Editormain></Editormain>,
+      },
+      {
+        path: "code-snippet",
+        element: <MainSnippet></MainSnippet>,
+      },
+      {
+        path: "snippet/:id",
+        element: <SnippetView></SnippetView>,
+      },
+      {
+        path: "view-code/:id",
+        element: <CodeView></CodeView>,
+      },
+
+      {
+        path: "allblog",
+        element: <Blog></Blog>,
+      },
+      {
+        path: "gitblog",
+        element: <GitBlog></GitBlog>,
+      },
+      {
+        path: "htmlblog",
+        element: <HtmlBlog></HtmlBlog>,
+      },
+      {
+        path: "cssblog",
+        element: <CssBlog></CssBlog>,
+      },
+      {
+        path: "javablog",
+        element: <JavascriptBlog></JavascriptBlog>,
+      },
+      {
+        path: "reactblog",
+        element: <ReactBlog></ReactBlog>,
+      },
+      {
+        path: "allUsers",
+        element: <AllUser></AllUser>,
+      }
+    ],
   },
 
   {
-    path: "allblog",
-    element: <Blog></Blog>,
-  },
-  {
-    path: "gitblog",
-    element: <GitBlog></GitBlog>,
-  },
-  {
-    path: "htmlblog",
-    element: <HtmlBlog></HtmlBlog>,
-  },
-  {
-    path: "cssblog",
-    element: <CssBlog></CssBlog>,
-  },
-  {
-    path: "javablog",
-    element: <JavascriptBlog></JavascriptBlog>,
-  },
-  {
-    path: "reactblog",
-    element: <ReactBlog></ReactBlog>,
-  },
-  {
-    path: "allUsers",
-    element: <AllUser></AllUser>,
-  }
-],
-  },
-
-{
-  path: "*",
+    path: "*",
     element: <Error></Error>,
   },
 ]);
