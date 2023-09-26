@@ -204,6 +204,10 @@ export const router = createBrowserRouter([
         element: <ReactBlog></ReactBlog>,
       },
       {
+        path: 'support',
+        element: <Chat></Chat>
+      },
+      {
         path: "allUsers",
         element:<AllUser></AllUser>,
       }
