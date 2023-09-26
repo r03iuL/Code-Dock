@@ -10,12 +10,12 @@ function SnippetView() {
     const [snippet, setSnippet] = useState(null);
 
     // Construct a shareable URL based on the snippet's 'id'
-    const shareableUrl = `http://localhost:5173/user/snippet/${id}`;
+    const shareableUrl = `https://codedock.netlify.app/user/snippet/${id}`;
 
     // Use useEffect to fetch snippet data when the component mounts
     useEffect(() => {
         // Fetch snippet data from the backend using your API endpoint
-        fetch(`http://localhost:5000/snippets/${id}`)
+        fetch(`https://code-dock-backend.vercel.app/snippets/${id}`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');

@@ -11,7 +11,7 @@ function CodeView() {
     // Use useEffect to fetch snippet data when the component mounts
     useEffect(() => {
         // Fetch snippet data from the backend using your API endpoint
-        fetch(`http://localhost:5000/snippets/${id}`)
+        fetch(`https://code-dock-backend.vercel.app/snippets/${id}`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
