@@ -2,10 +2,11 @@ import { RiGitRepositoryLine } from "react-icons/ri";
 import SectionTitle from "../../../Components/SectionTitle/SectionTitle";
 import useRepo from "../../../Hooks/useRepo/useRepo";
 import RepositoryCard from "../../../Shared/RepositoryCard/RepositoryCard";
+import { useState } from "react";
 
-const DashBoard = ({darkMode}) => {
+const DashBoard = () => {
   //getting data by using hook but it will work when it will be dynamic.
-  
+  const [darkMode, setDarkMode] = useState(false);
   const [allRepositories] = useRepo();
   // console.log(allRepositories.length);
 
@@ -22,7 +23,7 @@ const DashBoard = ({darkMode}) => {
             {/* user repositories number */}
             <span className="font-semibold text-xl">{allRepositories.length}</span>
             <span className="bg-violet-200 rounded-md p-2 text-2xl">
-              <RiGitRepositoryLine></RiGitRepositoryLine>
+              <RiGitRepositoryLine ></RiGitRepositoryLine>
             </span>
           </p>
           <p className="text-gray-500 text-lg">Total Repositories</p>
@@ -44,7 +45,7 @@ const DashBoard = ({darkMode}) => {
         <SectionTitle heading="Favourites"></SectionTitle>
         <div className="mt-[3%]">
           {slicedRepo.map((repo) => (
-            <RepositoryCard key={repo.id} repo={repo}></RepositoryCard>
+            <RepositoryCard darkMode={darkMode} setDarkMode={setDarkMode} key={repo.id} repo={repo}></RepositoryCard>
           ))}
         </div>
       </div>

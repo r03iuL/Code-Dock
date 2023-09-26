@@ -27,21 +27,21 @@ import HtmlBlog from "../Homepage/BlogPage/HtmlBlog";
 import CssBlog from "../Homepage/BlogPage/CssBlog";
 import JavascriptBlog from "../Homepage/BlogPage/JavascriptBlog";
 import ReactBlog from "../Homepage/BlogPage/ReactBlog";
-import Chat from "../Shared/LiveChat/Chat";
 import AdminDashboard from "../Shared/AdminDashboard/AdminDashboard";
 import UserManagement from "../Shared/AdminDashboard/UserManagement";
-
 import AllUser from "../Pages/AllUser/AllUser";
-import ChatBox from "../Shared/LiveChat/ChatBox";
 import UserProfile from "../Pages/DashboardPages/UserProfile/UserProfile";
 import RepoFolder from "../Pages/DashboardPages/Repositories/RepoFolder";
+import Chat from "../Pages/Message/Chat";
+import UserEditProfile from "../Pages/DashboardPages/UserProfile/UserEditProfile";
 import { useState } from "react";
 import ManageUsers from "../Pages/DashboardPages/ManageUsers/ManageUsers";
 
 
 
+
 export const router = createBrowserRouter([
-  
+
   {
     path: "/",
     element: <Main></Main>,
@@ -66,10 +66,8 @@ export const router = createBrowserRouter([
         path: "about",
         element: <AboutUs></AboutUs>,
       },
-      {
-        path: "userprofile",
-        element: <UserProfile />
-      },
+
+
       {
         path: "secret",
         element: <Secret></Secret>,
@@ -83,10 +81,7 @@ export const router = createBrowserRouter([
         path: "signup",
         element: <SignUp></SignUp>,
       },
-      {
-        path:'chatbox',
-        element:<ChatBox></ChatBox>
-      },
+
       {
         path: "secret",
         element: (
@@ -97,7 +92,7 @@ export const router = createBrowserRouter([
       },
     ],
   },
-  
+
   {
     path: "/user",
     element: (
@@ -115,6 +110,15 @@ export const router = createBrowserRouter([
         element: <DashBoard></DashBoard>,
       },
       {
+        path: "userprofile",
+        element: <UserProfile />,
+      },
+      {
+        path: "setting",
+        element: <UserEditProfile />
+      },
+
+      {
         path: "admindashboard",
         element: <AdminDashboard></AdminDashboard>,
       },
@@ -129,6 +133,9 @@ export const router = createBrowserRouter([
       {
         path: "recent",
         element: <RecentRepo></RecentRepo>,
+      },
+      {
+
       },
       {
         path: "createNew",
@@ -154,9 +161,13 @@ export const router = createBrowserRouter([
         path: "following",
         element: <Following></Following>,
       },
+      // {
+      //   path: "messages",
+      //   element: <Chat></Chat>,
+      // },
       {
-        path: "messages",
-        element: <Chat></Chat>,
+        path: "chat",
+        element: <Chat />
       },
       {
         path: "trending",
@@ -178,7 +189,7 @@ export const router = createBrowserRouter([
         path: "view-code/:id",
         element: <CodeView></CodeView>,
       },
-    
+
       {
         path: "allblog",
         element: <Blog></Blog>,
@@ -209,7 +220,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "allUsers",
-        element:<AllUser></AllUser>,
+        element: <AllUser></AllUser>,
       }
     ],
   },

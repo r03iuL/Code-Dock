@@ -5,6 +5,8 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 
 const CreateNewRepo = () => {
+  const [darkMode, setDarkMode] = useState(false);
+
   const [files, setFiles] = useState([]);
   const [fileUrlList, setFileUrlList] = useState([]);
   const [submitDisable, setSubmitDisable] = useState(true)
@@ -90,7 +92,7 @@ const CreateNewRepo = () => {
   // console.log(fileUrlList);
 
   return (
-    <div className=" px-[4%] py-[3%]">
+    <div className= {`px-[4%] py-[3%] ${darkMode? "bg-violet text-white" : "bg-white text-black"}`}>
       <div className="box-style">
         <SectionTitle heading="Create new repository"></SectionTitle>
         <p className="text-gray-500 text-base">

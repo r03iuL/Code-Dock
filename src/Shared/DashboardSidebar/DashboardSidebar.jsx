@@ -16,7 +16,7 @@ import { FaUserCheck } from "react-icons/fa";
 import useAdmin from "../../Hooks/useAdmin";
 
 
-const DashboardSidebar = ({ darkMode, setDarkMode }) => {
+const DashboardSidebar = ({ setDarkMode, darkMode,  }) => {
   const { user, logOut } = useAuth();
   // console.log(user?.photoURL);
 
@@ -55,7 +55,7 @@ const DashboardSidebar = ({ darkMode, setDarkMode }) => {
 
       {/* image and icon under the image  */}
       <div className="py-[10%] text-center">
-        <Link to="/user">
+        <Link to="/user/userprofile">
           <img
             src={user?.photoURL}
             alt={user?.displayName}
@@ -64,7 +64,7 @@ const DashboardSidebar = ({ darkMode, setDarkMode }) => {
         </Link>
 
         {/* user name  */}
-        <Link to="/userprofile"><p className="text-gray-500 text-lg font-semibold my-[2%]">
+        <Link to="/user/userprofile"><p className="text-gray-500 text-lg font-semibold my-[2%]">
           {user.displayName}
         </p></Link>
 
@@ -79,9 +79,8 @@ const DashboardSidebar = ({ darkMode, setDarkMode }) => {
 
           </div>
           <p title="messages">
-            <Link to="">
+            <Link to="/user/chat">
               <PiChatTextBold></PiChatTextBold>
-
             </Link>
           </p>
 

@@ -1,14 +1,15 @@
 import { } from '@smastrom/react-rating';
-import React from 'react';
+import React, { useState } from 'react';
 import { FaFolder, FaRegHeart, } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
-const ProjectCard = ({ project }) => {
+const ProjectCard = ({ project, darkMode }) => {
+   
     const { userName, repoName, types, numberOfRatings, image1, image2, image3, image4, date, status, rating } = project;
     console.log(project)
     return (
         <div >
-            <div className=" ">
+            <div className={` ${darkMode ? "bg-violet  text-white" : "bg-white text-black"}`}>
                 <div className="h-1 w-full  bg-purple-700"></div>
                 <div className="">
                     <div className="grid grid-cols-2 py-4 max-w-screen-lg mx-auto items-center">
